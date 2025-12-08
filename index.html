@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Mestre da Clave V2.8</title>
+    <title>Mestre da Clave V2.9</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
         * { box-sizing: border-box; touch-action: manipulation; } 
@@ -18,7 +18,6 @@
             display: flex; flex-direction: column;
         }
 
-        /* TRAVA DE ROTAÇÃO */
         #rotate-message {
             display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: #2c3e50; color: white; z-index: 9999;
@@ -29,84 +28,59 @@
             #main-wrapper { display: none !important; }
         }
 
-        /* CONTAINER PRINCIPAL */
         #main-wrapper { 
             flex: 1; display: flex; flex-direction: column; width: 100%; height: 100%; 
             background: radial-gradient(circle, #fdf6e3 0%, #f0e4d0 100%);
         }
 
-        /* ÁREA DO JOGO (CANVAS) - Flexível */
         #game-area { 
-            flex: 1; /* Ocupa o espaço que sobrar */
-            position: relative; width: 100%; overflow: hidden; 
+            flex: 1; position: relative; width: 100%; overflow: hidden; 
             display: flex; justify-content: center; align-items: center; 
         }
         canvas { display: block; width: 100%; height: 100%; }
 
-        /* HUD - Dentro da área do jogo */
         #hud { position: absolute; top: 5px; left: 10px; right: 10px; display: flex; justify-content: space-between; pointer-events: none; z-index: 5; }
         .hud-pill { background: rgba(255,255,255,0.9); padding: 4px 12px; border-radius: 15px; font-weight: bold; font-size: 0.9rem; color: #2c3e50; border: 1px solid #2c3e50; }
 
-        /* ÁREA DOS CONTROLES - Prioridade de Espaço */
         #controls-container {
-            flex: 0 0 auto; /* Não encolhe */
-            height: auto; /* Altura automática baseada no conteúdo */
-            background: #34495e;
-            display: flex; flex-direction: column;
-            justify-content: center;
-            padding: 5px 5px 10px 5px; /* Padding extra embaixo pro iPhone */
-            gap: 5px;
+            flex: 0 0 auto; height: auto; background: #34495e;
+            display: flex; flex-direction: column; justify-content: center;
+            padding: 5px 5px 10px 5px; gap: 5px;
             box-shadow: 0 -4px 10px rgba(0,0,0,0.3); z-index: 10;
         }
 
-        /* Fileira 1: Modificadores (# b) - Altura reduzida */
         #modifiers-row { display: flex; justify-content: center; gap: 15px; height: 35px; }
         .mod-btn {
-            width: 60px; height: 100%;
-            background: #95a5a6; color: white;
+            width: 60px; height: 100%; background: #95a5a6; color: white;
             border: 2px solid transparent; border-radius: 6px;
             font-size: 1.2rem; line-height: 1; font-weight: bold;
-            cursor: pointer; transition: all 0.1s;
-            display: flex; align-items: center; justify-content: center;
+            cursor: pointer; transition: all 0.1s; display: flex; align-items: center; justify-content: center;
         }
         .mod-btn.active-sharp { background: #e74c3c; border-color: white; box-shadow: 0 0 8px white; }
         .mod-btn.active-flat { background: #3498db; border-color: white; box-shadow: 0 0 8px white; }
 
-        /* Fileira 2: Notas (Dó Ré Mi...) - Altura ajustada */
         #notes-row { display: flex; gap: 4px; height: 45px; }
         .note-btn {
             flex: 1; background: linear-gradient(to bottom, #ecf0f1, #bdc3c7);
-            border: none; border-radius: 4px;
-            font-family: 'Poppins', sans-serif; font-weight: bold; font-size: 0.9rem;
-            color: #2c3e50; cursor: pointer;
-            box-shadow: inset 0 -2px 0 rgba(0,0,0,0.2);
+            border: none; border-radius: 4px; font-family: 'Poppins', sans-serif; font-weight: bold; font-size: 0.9rem;
+            color: #2c3e50; cursor: pointer; box-shadow: inset 0 -2px 0 rgba(0,0,0,0.2);
         }
         .note-btn:active { background: #95a5a6; transform: translateY(2px); }
-        
         .btn-do { border-bottom: 3px solid #e74c3c; } .btn-re { border-bottom: 3px solid #e67e22; }
         .btn-mi { border-bottom: 3px solid #f1c40f; } .btn-fa { border-bottom: 3px solid #2ecc71; }
         .btn-sol { border-bottom: 3px solid #3498db; } .btn-la { border-bottom: 3px solid #9b59b6; }
         .btn-si { border-bottom: 3px solid #34495e; }
 
-        /* OVERLAYS FULLSCREEN */
         .overlay { 
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(44, 62, 80, 0.98);
-            display: flex; flex-direction: column;
-            justify-content: center; align-items: center;
-            z-index: 9999; text-align: center; color: white;
+            background: rgba(44, 62, 80, 0.98); display: flex; flex-direction: column;
+            justify-content: center; align-items: center; z-index: 9999; text-align: center; color: white;
         }
         .hidden { display: none !important; }
-        
         h1 { font-size: 1.8rem; margin: 0 0 10px 0; color: #f1c40f; }
         p { font-size: 1rem; max-width: 80%; margin-bottom: 25px; color: #ecf0f1; }
+        .btn-primary { padding: 12px 40px; font-size: 1.2rem; background-color: #27ae60; color: white; border: none; border-radius: 50px; cursor: pointer; box-shadow: 0 4px 0 #1e8449; }
         
-        .btn-primary { 
-            padding: 12px 40px; font-size: 1.2rem; 
-            background-color: #27ae60; color: white; border: none; border-radius: 50px; 
-            cursor: pointer; box-shadow: 0 4px 0 #1e8449; 
-        }
-
         .feedback { position: absolute; font-weight: 900; font-size: 2rem; animation: popUp 0.8s forwards; pointer-events: none; z-index: 50; text-shadow: 1px 1px 0 #fff; }
         @keyframes popUp { 0% { transform: scale(0.5) translateY(0); opacity: 0; } 100% { transform: scale(1) translateY(-60px); opacity: 0; } }
     </style>
@@ -145,9 +119,9 @@
     </div>
 
     <div id="start-screen" class="overlay">
-        <h1>Mestre da Clave V2.8</h1>
-        <p>Notas com Acidentes?<br>1. Toque no <strong>♯</strong> ou <strong>♭</strong><br>2. Toque na Nota</p>
-        <button class="btn-primary" onclick="startGame()">JOGAR (TELA CHEIA)</button>
+        <h1>Mestre da Clave V2.9</h1>
+        <p>Correção Musical:<br>Sol agudo limpo e Lá suplementar adicionado!</p>
+        <button class="btn-primary" onclick="startGame()">JOGAR</button>
     </div>
 
     <div id="game-over-screen" class="overlay hidden">
@@ -182,16 +156,10 @@
             osc.start(); osc.stop(audioCtx.currentTime + 0.3);
         }
 
-        // --- MÁGICA DO FULLSCREEN ---
         function enterFullScreen() {
             const elem = document.documentElement;
-            if (elem.requestFullscreen) {
-                elem.requestFullscreen().catch(err => console.log(err));
-            } else if (elem.webkitRequestFullscreen) { /* Safari */
-                elem.webkitRequestFullscreen();
-            } else if (elem.msRequestFullscreen) { /* IE11 */
-                elem.msRequestFullscreen();
-            }
+            if (elem.requestFullscreen) { elem.requestFullscreen().catch(err => {}); }
+            else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen(); }
         }
 
         function resize() {
@@ -205,11 +173,14 @@
         class Note {
             constructor() {
                 this.x = canvas.width + 50;
+                // --- DEFINIÇÃO DE NOTAS E POSIÇÕES ---
+                // 0 = Mi (1ª linha). 8 = Fá (5ª linha). 9 = Sol (Espaço sup). 10 = Lá (1ª Linha Sup).
                 const options = [
                     { base: 'Dó', pos: -2 }, { base: 'Ré', pos: -1 }, { base: 'Mi', pos: 0 },
                     { base: 'Fá', pos: 1 },  { base: 'Sol', pos: 2 }, { base: 'Lá', pos: 3 },
                     { base: 'Si', pos: 4 },  { base: 'Dó', pos: 5 },  { base: 'Ré', pos: 6 },
-                    { base: 'Mi', pos: 7 },  { base: 'Fá', pos: 8 },  { base: 'Sol', pos: 9 }
+                    { base: 'Mi', pos: 7 },  { base: 'Fá', pos: 8 },  { base: 'Sol', pos: 9 },
+                    { base: 'Lá', pos: 10 } // ADICIONADO LÁ AGUDO
                 ];
                 const pick = options[Math.floor(Math.random() * options.length)];
                 this.baseName = pick.base; this.pos = pick.pos;
@@ -233,25 +204,38 @@
                 const y = staffCenterY + ((4 - this.pos) * (lineGap / 2));
                 ctx.save(); ctx.translate(this.x, y);
                 
+                // Nota
                 ctx.beginPath(); ctx.rotate(-0.1);
                 ctx.lineWidth = 2; ctx.strokeStyle = this.color;
                 ctx.ellipse(0, 0, lineGap * 0.7, lineGap * 0.45, 0, 0, Math.PI * 2);
                 ctx.stroke(); ctx.rotate(0.1);
 
+                // Acidente
                 if(this.accidental) {
                     ctx.font = `bold ${lineGap*1.3}px serif`;
                     ctx.fillStyle = this.color; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
                     ctx.fillText(this.accidental === 'sharp' ? '♯' : '♭', -lineGap * 1.3, 0);
                 }
                 
+                // --- LINHAS SUPLEMENTARES (LÓGICA CORRIGIDA) ---
                 ctx.lineWidth = 1.5; ctx.strokeStyle = '#555';
+                
+                // Inferiores (Dó Central e abaixo)
                 if (this.pos <= -2) {
                     ctx.beginPath(); ctx.moveTo(-lineGap*0.8, 0); ctx.lineTo(lineGap*0.8, 0); ctx.stroke();
                     if(this.pos === -3) { ctx.beginPath(); ctx.moveTo(-lineGap*0.8, -lineGap); ctx.lineTo(lineGap*0.8, -lineGap); ctx.stroke(); }
                 }
-                if (this.pos >= 8) {
-                    ctx.beginPath(); ctx.moveTo(-lineGap*0.8, 0); ctx.lineTo(lineGap*0.8, 0); ctx.stroke();
+                
+                // Superiores (Apenas para Lá=10 ou superior)
+                // O Sol=9 é espaço, então NÃO entra aqui.
+                if (this.pos >= 10) {
+                    // Desenha a linha na posição relativa correta
+                    // Se a nota é 10 (Lá), a linha é no meio (dy=0).
+                    // Se fosse 11 (Si), a linha seria deslocada para baixo.
+                    const dy = (this.pos - 10) * (lineGap / 2);
+                    ctx.beginPath(); ctx.moveTo(-lineGap*0.8, dy); ctx.lineTo(lineGap*0.8, dy); ctx.stroke();
                 }
+                
                 ctx.restore();
             }
         }
@@ -333,9 +317,7 @@
         }
 
         function startGame() {
-            // Tenta ativar Fullscreen ao clicar
             enterFullScreen();
-            
             gameState = 'PLAYING'; score = 0; lives = 3; gameSpeed = 3.0; spawnInterval = 110; notes = []; activeModifier = null;
             document.querySelectorAll('.mod-btn').forEach(b => b.classList.remove('active-sharp', 'active-flat'));
             document.getElementById('start-screen').classList.add('hidden');
@@ -350,3 +332,4 @@
 </html>
 
 
+                
