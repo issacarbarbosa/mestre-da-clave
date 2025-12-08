@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Mestre da Clave V3.1 (Colorida)</title>
+    <title>Mestre da Clave V3.2 (Fix Cor do Si)</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
         * { box-sizing: border-box; touch-action: manipulation; } 
@@ -63,15 +63,15 @@
         }
         .note-btn:active { background: #95a5a6; transform: translateY(2px); }
         
-        /* CORES PADRONIZADAS (Usadas no botão e na nota) */
-        /* Dó: Vermelho | Ré: Laranja | Mi: Amarelo | Fá: Verde | Sol: Azul Claro | Lá: Roxo | Si: Azul Escuro */
+        /* CORES PADRONIZADAS (V3.2: Si mudou para Ciano) */
         .btn-do { border-bottom: 4px solid #e74c3c; color: #c0392b; } 
         .btn-re { border-bottom: 4px solid #e67e22; color: #d35400; }
         .btn-mi { border-bottom: 4px solid #f1c40f; color: #f39c12; } 
         .btn-fa { border-bottom: 4px solid #2ecc71; color: #27ae60; }
         .btn-sol { border-bottom: 4px solid #3498db; color: #2980b9; } 
         .btn-la { border-bottom: 4px solid #9b59b6; color: #8e44ad; }
-        .btn-si { border-bottom: 4px solid #34495e; color: #2c3e50; }
+        /* COR NOVA DO SI: Ciano Brilhante */
+        .btn-si { border-bottom: 4px solid #00d2d3; color: #008c9e; }
 
         /* --- OVERLAYS --- */
         .overlay { 
@@ -176,7 +176,7 @@
         }
         window.addEventListener('resize', resize); resize();
 
-        // --- MAPA DE CORES DIDÁTICAS ---
+        // --- MAPA DE CORES DIDÁTICAS (V3.2) ---
         const noteColors = {
             'Dó': '#e74c3c', // Vermelho
             'Ré': '#e67e22', // Laranja
@@ -184,7 +184,7 @@
             'Fá': '#2ecc71', // Verde
             'Sol': '#3498db', // Azul Claro
             'Lá': '#9b59b6', // Roxo
-            'Si': '#34495e'  // Azul Escuro/Cinza
+            'Si': '#00d2d3'  // CIANO BRILHANTE (NOVO!)
         };
 
         class Note {
@@ -331,3 +331,6 @@
     </script>
 </body>
 </html>
+
+
+    
