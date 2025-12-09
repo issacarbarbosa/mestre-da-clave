@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Mestre da Clave V3.11 (Fix Vidas e UX)</title>
+    <title>Mestre da Clave V3.13 (Audio Precision)</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
         * { box-sizing: border-box; touch-action: manipulation; } 
@@ -75,10 +75,9 @@
         }
         .note-btn:active { background: #95a5a6; transform: translateY(2px); }
 
-        /* CORES DO BOTÃO (Atualizadas V3.11) */
+        /* CORES DO BOTÃO */
         .btn-do { border-bottom: 4px solid #e74c3c; color: #c0392b; } 
         .btn-re { border-bottom: 4px solid #e67e22; color: #d35400; }
-        /* Mi alterado para Ouro Escuro/Mostarda para contraste */
         .btn-mi { border-bottom: 4px solid #b7950b; color: #7d6608; } 
         .btn-fa { border-bottom: 4px solid #2ecc71; color: #27ae60; }
         .btn-sol { border-bottom: 4px solid #3498db; color: #2980b9; } 
@@ -182,6 +181,93 @@
         const gameArea = document.getElementById('game-area');
         const mainWrapper = document.getElementById('main-wrapper');
 
+        // === AUDIO ENGINE V3.13 (PRECISÃO MUSICAL) ===
+        const AudioEngine = {
+            ctx: new (window.AudioContext || window.webkitAudioContext)(),
+            
+            // MAPA DE FREQUÊNCIAS POR POSIÇÃO VISUAL (POS)
+            // pos 3 = Lá (440Hz) - Âncora
+            // pos -2 = Dó Central (261.63Hz)
+            // pos 5 = Dó Agudo (523.25Hz)
+            posToFreq: {
+                '-3': 246.94, // Si grave (opcional)
+                '-2': 261.63, // Dó (C4)
+                '-1': 293.66, // Ré (D4)
+                '0': 329.63,  // Mi (E4)
+                '1': 349.23,  // Fá (F4)
+                '2': 392.00,  // Sol (G4)
+                '3': 440.00,  // Lá (A4) - PADRÃO DE AFINAÇÃO
+                '4': 493.88,  // Si (B4)
+                '5': 523.25,  // Dó (C5) - Uma oitava acima!
+                '6': 587.33,  // Ré (D5)
+                '7': 659.25,  // Mi (E5)
+                '8': 698.46,  // Fá (F5)
+                '9': 783.99,  // Sol (G5)
+                '10': 880.00  // Lá (A5)
+            },
+
+            init: function() {
+                if (this.ctx.state === 'suspended') this.ctx.resume();
+            },
+
+            // Toca uma nota com envelope suave (Senoide + Triângulo)
+            playTone: function(freq, startTime, duration = 0.5) {
+                const osc1 = this.ctx.createOscillator();
+                const osc2 = this.ctx.createOscillator();
+                const gain = this.ctx.createGain();
+
+                osc1.type = 'triangle'; osc1.frequency.value = freq;
+                osc2.type = 'sine'; osc2.frequency.value = freq;
+
+                const now = startTime || this.ctx.currentTime;
+                gain.gain.setValueAtTime(0, now);
+                gain.gain.linearRampToValueAtTime(0.2, now + 0.02); 
+                gain.gain.exponentialRampToValueAtTime(0.001, now + duration);
+
+                osc1.connect(gain); osc2.connect(gain);
+                gain.connect(this.ctx.destination);
+
+                osc1.start(now); osc2.start(now);
+                osc1.stop(now + duration); osc2.stop(now + duration);
+            },
+
+            // Toca ACORDE MAIOR da tonalidade da nota acertada
+            // Ex: Acertou Ré -> Toca Ré Maior (Ré, Fá#, Lá)
+            playRewardChord: function(pos) {
+                this.init();
+                const rootFreq = this.posToFreq[pos];
+                if (!rootFreq) return;
+
+                // Fatores para Temperamento Igual (Equal Temperament)
+                // Terça Maior (4 semitons) = 2^(4/12) ≈ 1.25992
+                // Quinta Justa (7 semitons) = 2^(7/12) ≈ 1.49831
+                
+                const thirdFreq = rootFreq * 1.25992; // Gera a Terça Maior (ex: Ré -> Fá#)
+                const fifthFreq = rootFreq * 1.49831; // Gera a Quinta Justa (ex: Ré -> Lá)
+
+                const now = this.ctx.currentTime;
+                // Efeito "Strum" (violão/piano)
+                this.playTone(rootFreq, now, 0.7);
+                this.playTone(thirdFreq, now + 0.06, 0.7);
+                this.playTone(fifthFreq, now + 0.12, 0.7);
+            },
+
+            playError: function() {
+                this.init();
+                const osc = this.ctx.createOscillator();
+                const gain = this.ctx.createGain();
+                osc.type = 'sawtooth';
+                osc.frequency.setValueAtTime(110, this.ctx.currentTime); // Lá grave dissonante
+                osc.frequency.linearRampToValueAtTime(80, this.ctx.currentTime + 0.3);
+                
+                gain.gain.setValueAtTime(0.2, this.ctx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.3);
+                
+                osc.connect(gain); gain.connect(this.ctx.destination);
+                osc.start(); osc.stop(this.ctx.currentTime + 0.3);
+            }
+        };
+
         // Partículas
         let particles = [];
         class Particle {
@@ -197,7 +283,7 @@
         }
         function spawnParticles(x, y, color) { for(let i=0; i<10; i++) particles.push(new Particle(x, y, color)); }
 
-        // PROGRESSÃO
+        // PROGRESSÃO (Define qual nota aparece)
         const progressionList = [
             { base: 'Dó', pos: -2 }, { base: 'Ré', pos: -1 }, 
             { base: 'Mi', pos: 0 }, { base: 'Fá', pos: 1 }, { base: 'Sol', pos: 2 }, 
@@ -222,24 +308,10 @@
         let highScore = localStorage.getItem('mestreClave_record') || 0;
         document.getElementById('start-highscore').innerText = highScore;
 
-        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        
-        // [MODIFICAÇÃO V3.11: Cor do Mi Ajustada para #b7950b]
         const noteColors = { 
             'Dó':'#e74c3c', 'Ré':'#e67e22', 'Mi':'#b7950b', 
             'Fá':'#2ecc71', 'Sol':'#3498db', 'Lá':'#9b59b6', 'Si':'#00d2d3' 
         };
-
-        function playSound(freq, type='sine') {
-            if (audioCtx.state === 'suspended') audioCtx.resume();
-            const osc = audioCtx.createOscillator();
-            const gain = audioCtx.createGain();
-            osc.type = type; osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-            gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
-            gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.3);
-            osc.connect(gain); gain.connect(audioCtx.destination);
-            osc.start(); osc.stop(audioCtx.currentTime + 0.3);
-        }
 
         function enterFullScreen() { const el = document.documentElement; if(el.requestFullscreen) el.requestFullscreen().catch(()=>{}); }
         function resize() { canvas.width = gameArea.clientWidth; canvas.height = gameArea.clientHeight; staffCenterY = canvas.height/2; lineGap = Math.min(canvas.height/10, 24); }
@@ -297,30 +369,29 @@
 
         function inputNote(base) {
             if (gameState !== 'PLAYING') return;
+            // Busca nota dentro da zona de acerto
             const target = notes.find(n => n.x > hitZone.start && n.x < hitZone.end && !n.marked);
 
             if (target) {
                 if (target.baseName === base) {
                     score += 10; hitsInLevel++;
-                    playSound(880, 'sine'); target.marked = true;
+                    
+                    // [AUDIO FIX] Passa a POSIÇÃO para pegar a frequência exata e montar o acorde
+                    AudioEngine.playRewardChord(target.pos);
+
+                    target.marked = true;
                     const drawY = staffCenterY + ((4 - target.pos) * (lineGap / 2));
                     spawnParticles(target.x, drawY, target.trueColor);
                     notes = notes.filter(n => n !== target); 
                     
-                    // [MODIFICAÇÃO V3.11: Texto de Feedback = Nome da Nota]
                     showFloatText(target.x, drawY - 50, target.baseName + "!", target.trueColor);
                     
                     checkLevelUp();
                 } else {
-                    lives--; playSound(150, 'sawtooth');
+                    lives--; AudioEngine.playError();
                     triggerShake();
-                    
-                    // [MODIFICAÇÃO V3.11: Game Over no Erro de Clique]
-                    updateHUD(); // Atualiza para mostrar 0 vidas
-                    if (lives <= 0) {
-                        endGame();
-                        return; // Para a execução
-                    }
+                    updateHUD(); 
+                    if (lives <= 0) { endGame(); return; }
 
                     const drawY = staffCenterY + ((4 - target.pos) * (lineGap / 2));
                     showFloatText(target.x, drawY - 50, "Errou!", "#c0392b");
@@ -345,7 +416,10 @@
                 if (currentLevel > 12) subMsg = "Modo Desmame!";
                 if (currentLevel > 17) subMsg = "Mestre Supremo!";
 
-                playSound(1200, 'square'); document.getElementById('xp-bar-fill').style.width = '0%'; 
+                // Toca acorde de Dó Agudo (vitória)
+                AudioEngine.playRewardChord(5); 
+                
+                document.getElementById('xp-bar-fill').style.width = '0%'; 
                 showLevelBanner(msg, subMsg);
                 const flash = document.createElement('div'); flash.className = 'overlay levelup-flash';
                 document.body.appendChild(flash); setTimeout(() => flash.remove(), 500);
@@ -374,7 +448,7 @@
 
         function loseLife() {
             if (gameState !== 'PLAYING') return;
-            lives--; updateHUD(); triggerShake();
+            lives--; updateHUD(); triggerShake(); AudioEngine.playError();
             if (lives <= 0) endGame();
             else { gameArea.style.background = 'rgba(231, 76, 60, 0.3)'; setTimeout(() => gameArea.style.background = '', 150); }
         }
@@ -409,6 +483,7 @@
 
         function startGame() {
             enterFullScreen();
+            AudioEngine.init(); 
             gameState = 'PLAYING'; score = 0; lives = 3; 
             
             currentLevel = 1; hitsInLevel = 0; 
@@ -419,7 +494,6 @@
             notes = []; particles = [];
             document.getElementById('start-screen').classList.add('hidden');
             document.getElementById('game-over-screen').classList.add('hidden');
-            if (audioCtx.state === 'suspended') audioCtx.resume();
             
             resize(); 
             lastTime = performance.now(); 
