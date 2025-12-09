@@ -393,4 +393,25 @@
         function startGame() {
             enterFullScreen();
             gameState = 'PLAYING'; score = 0; lives = 3; 
-            currentLevel = 1; hitsI
+            currentLevel = 1; hitsInLevel = 0; gameSpeed = 2.5; spawnInterval = 120;
+            document.getElementById('xp-bar-fill').style.width = '0%';
+            notes = []; particles = [];
+            document.getElementById('start-screen').classList.add('hidden');
+            document.getElementById('game-over-screen').classList.add('hidden');
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+            resize(); loop(); updateHUD();
+        }
+
+        function endGame() { 
+            gameState = 'GAMEOVER'; cancelAnimationFrame(animationId); 
+            if (score > highScore) { highScore = score; localStorage.setItem('mestreClave_record', highScore); }
+            document.getElementById('final-score').innerText = score;
+            document.getElementById('final-level').innerText = currentLevel;
+            document.getElementById('end-highscore').innerText = highScore;
+            document.getElementById('start-highscore').innerText = highScore;
+            document.getElementById('game-over-screen').classList.remove('hidden'); 
+        }
+        function resetGame() { startGame(); }
+    </script>
+</body>
+</html>
