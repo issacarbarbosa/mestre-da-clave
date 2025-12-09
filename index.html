@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Musical | Issacar Barbosa</title>
+    <!-- Fonte e Ícones -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
+        
+        body {
+            background-color: #f4f6f8;
+            color: #2c3e50;
+            display: flex; flex-direction: column; min-height: 100vh;
+        }
+
+        /* CABEÇALHO */
+        header {
+            background: linear-gradient(135deg, #1a3c5a 0%, #2c5270 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid #c5a059;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        header h1 { font-size: 2.5rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 10px; }
+        header p { font-size: 1.1rem; font-weight: 300; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+
+        /* GRID DE CONTEÚDO */
+        main {
+            flex: 1;
+            max-width: 1200px; margin: 0 auto; width: 100%;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        /* CARTÕES (CARDS) */
+        .card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(0,0,0,0.05);
+            display: flex; flex-direction: column;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(26, 60, 90, 0.15);
+            border-color: #c5a059;
+        }
+
+        .card-header {
+            background: #ecf0f1;
+            height: 140px;
+            display: flex; justify-content: center; align-items: center;
+            font-size: 4rem; color: #1a3c5a;
+            position: relative;
+        }
+        
+        .card-body { padding: 25px; text-align: center; flex: 1; display: flex; flex-direction: column; }
+        
+        .card h2 { color: #1a3c5a; font-size: 1.5rem; margin-bottom: 10px; font-weight: 700; }
+        .card p { color: #7f8c8d; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; flex: 1; }
+
+        .btn-card {
+            background: #1a3c5a; color: white;
+            padding: 12px 0; border-radius: 50px;
+            font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+        .card:hover .btn-card { background: #c5a059; color: #1a3c5a; }
+
+        /* TAGS */
+        .badge {
+            position: absolute; top: 15px; right: 15px;
+            background: #c5a059; color: #1a3c5a;
+            font-size: 0.75rem; font-weight: 800;
+            padding: 5px 12px; border-radius: 20px;
+            text-transform: uppercase; letter-spacing: 0.5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        /* CARD BLOQUEADO */
+        .card.locked { opacity: 0.7; pointer-events: none; filter: grayscale(100%); }
+        .card.locked .badge { background: #95a5a6; color: white; }
+
+        footer { text-align: center; padding: 30px; color: #95a5a6; font-size: 0.9rem; margin-top: auto; }
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <i class="fas fa-music" style="font-size: 3rem; margin-bottom: 15px; color: #c5a059;"></i>
+        <h1>Portal Musical</h1>
+        <p>Ferramentas, Jogos e Materiais de Estudo para Músicos da CCB.</p>
+    </header>
+
+    <main>
+        
+        <!-- CARD 1: O JOGO (Linka para a pasta /jogo) -->
+        <a href="jogo/" class="card">
+            <span class="badge">Novo</span>
+            <div class="card-header" style="background: #e3f2fd;">
+                <i class="fas fa-gamepad" style="color: #3498db;"></i>
+            </div>
+            <div class="card-body">
+                <h2>Mestre da Clave</h2>
+                <p>Treine sua leitura de partitura e reflexos neste jogo dinâmico. Suba de nível e domine as notas!</p>
+                <div class="btn-card">Jogar Agora</div>
+            </div>
+        </a>
+
+        <!-- CARD 2: EM BREVE -->
+        <div class="card locked">
+            <span class="badge">Em Breve</span>
+            <div class="card-header">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="card-body">
+                <h2>Simulado MSA</h2>
+                <p>Teste seus conhecimentos teóricos com questões baseadas no novo método.</p>
+                <div class="btn-card">Aguarde</div>
+            </div>
+        </div>
+
+        <!-- CARD 3: EM BREVE -->
+        <div class="card locked">
+            <span class="badge">Em Breve</span>
+            <div class="card-header">
+                <i class="fas fa-video"></i>
+            </div>
+            <div class="card-body">
+                <h2>Aulas & Cursos</h2>
+                <p>Vídeo-aulas exclusivas com material de apoio, áudio e correções.</p>
+                <div class="btn-card">Aguarde</div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        Desenvolvido por <strong>Issacar Barbosa</strong> • Versão Beta
+    </footer>
+
+</body>
+</html>
