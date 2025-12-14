@@ -66,45 +66,18 @@
         .progress-fill { height: 100%; background: var(--btn-gold); width: 0%; transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1); border-radius: 20px; position: relative; }
         .progress-highlight { position: absolute; top: 3px; left: 0; right: 0; height: 4px; background: rgba(255,255,255,0.3); border-radius: 20px; }
 
-        /* ÁREA DO MASCOTE (FUFU) */
-        .mascot-area {
-            display: flex; align-items: flex-end; gap: 15px;
-            max-width: 800px; margin: 10px auto 10px; width: 100%;
-            padding: 0 20px;
-            min-height: 100px;
-        }
-        
-        .fufu-avatar {
-            width: 80px; height: 80px;
-            font-size: 60px; /* Placeholder Emoji Size */
-            display: flex; align-items: center; justify-content: center;
-            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));
-            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        
-        .speech-bubble {
-            background: white; border: 2px solid #e5e5e5;
-            padding: 12px 18px; border-radius: 18px;
-            border-top-left-radius: 2px;
-            font-weight: 700; color: var(--text-main); font-size: 1rem;
-            position: relative; box-shadow: 0 4px 0 #e5e5e5;
-            flex: 1;
-            transform-origin: left bottom;
-            animation: popIn 0.3s;
-        }
-        .speech-bubble::before {
-            content: ''; position: absolute; left: -12px; top: 0;
-            border-top: 12px solid #e5e5e5; border-left: 12px solid transparent;
-        }
-        .speech-bubble::after {
-            content: ''; position: absolute; left: -8px; top: 2px;
-            border-top: 12px solid white; border-left: 12px solid transparent;
+        /* Ajuste para imagens PNG do Fufu */
+        .mascot-img-menu {
+            width: 120px; height: auto; display: block; margin: 0 auto 10px;
+            animation: float 3s infinite ease-in-out;
+            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.15));
         }
 
         /* CONTEÚDO DO QUIZ */
         .quiz-content {
             flex: 1; max-width: 600px; margin: 0 auto; width: 100%; padding: 0 20px 100px;
             display: flex; flex-direction: column; justify-content: flex-start;
+            padding-top: 20px; /* Mais espaço no topo pois removemos o mascote */
         }
 
         /* CARTÃO DA PERGUNTA */
@@ -132,6 +105,14 @@
             font-size: 1.25rem; color: var(--brand-blue); 
             margin: 0; line-height: 1.5;
             text-align: left; font-weight: 700;
+        }
+
+        .modal-title { 
+            font-size: 2rem; 
+            font-weight: 900; 
+            color: var(--brand-gold); 
+            margin: 10px 0; 
+            letter-spacing: -1px; 
         }
 
         /* OPÇÕES */
@@ -168,16 +149,34 @@
         .duo-btn.wrong { border-color: var(--btn-red); border-bottom-color: var(--btn-red-shade); background: #ffdfe0; color: var(--btn-red-shade); }
         .duo-btn.wrong .option-letter { background: var(--btn-red); color: white; border-color: var(--btn-red); }
 
-        /* CAIXA DE FEEDBACK */
+        /* CAIXA DE FEEDBACK SIMPLIFICADA */
         #feedback-box {
             margin-top: 20px; padding: 20px; border-radius: 16px;
             animation: slideUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); display: none;
+            position: relative; 
+            min-height: 80px; /* Garante altura para a imagem */
         }
         #feedback-box.correct { background: #d7ffb8; color: var(--btn-green-shade); border: 2px solid #b8f28b; }
         #feedback-box.wrong { background: #ffdfe0; color: var(--btn-red-shade); border: 2px solid #ffc1c1; }
 
+        /* Fufu "Sticker" no Feedback */
+        #feedback-fufu-img {
+            position: absolute;
+            top: -45px; /* Sobe para ficar na borda superior */
+            right: 10px;
+            width: 80px; /* Tamanho discreto mas visível */
+            height: auto;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+            z-index: 10;
+            display: none; 
+            animation: popIn 0.4s;
+        }
+
         .feedback-header { font-weight: 800; font-size: 1.2rem; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
-        .feedback-body { color: var(--text-main); font-size: 1rem; line-height: 1.5; }
+        .feedback-body { 
+            color: var(--text-main); font-size: 1rem; line-height: 1.5; 
+            padding-right: 20px; /* Ajustado para 20px pois a imagem está no topo agora */
+        }
         
         .ref-badge {
             display: inline-block; background: rgba(255,255,255,0.8);
@@ -240,21 +239,26 @@
         #menu-screen { text-align: center; padding-top: 30px; max-width: 600px; margin: 0 auto; padding-bottom: 40px;}
         
         .period-grid {
-            display: grid; grid-template-columns: 1fr; gap: 15px; margin-top: 20px;
+            display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 15px;
         }
         @media (min-width: 480px) { .period-grid { grid-template-columns: 1fr 1fr; } }
 
+        /* Card de Período Compacto */
         .period-card {
             background: white; border: 2px solid #e5e5e5; border-bottom: 4px solid #e5e5e5;
-            border-radius: 16px; padding: 20px; text-align: left;
-            transition: transform 0.1s; position: relative; overflow: hidden;
-            display: flex; flex-direction: column; justify-content: space-between;
-            min-height: 140px; cursor: pointer;
+            border-radius: 16px; padding: 15px; text-align: left;
+            transition: all 0.1s; position: relative; overflow: hidden;
+            display: flex; align-items: center; justify-content: space-between;
+            min-height: auto; cursor: pointer;
         }
         .period-card:active { transform: translateY(4px); border-bottom-width: 2px; }
         
-        /* Estado Ativo (Período 1) */
-        .period-card.active { border-color: var(--btn-blue); border-bottom-color: var(--btn-blue-shade); }
+        /* Estado Ativo (Selecionado) */
+        .period-card.active { 
+            border-color: var(--btn-blue); 
+            border-bottom-color: var(--btn-blue-shade); 
+            background-color: #f0f9ff; 
+        }
         .period-card.active .p-icon { color: var(--btn-blue); }
         
         /* Estado Bloqueado */
@@ -264,26 +268,50 @@
         }
         .period-card.locked .p-icon { color: #ccc; }
 
-        .p-header { display: flex; justify-content: space-between; margin-bottom: 10px; }
-        .p-title { font-weight: 800; font-size: 1.1rem; color: var(--text-main); margin: 0; }
-        .p-subtitle { font-size: 0.85rem; color: var(--text-light); margin: 0; }
-        .p-icon { font-size: 1.8rem; }
+        .p-content { flex: 1; }
+        .p-title { font-weight: 800; font-size: 1rem; color: var(--text-main); margin: 0; }
+        .p-subtitle { font-size: 0.8rem; color: var(--text-light); margin: 0; }
+        .p-icon { font-size: 1.2rem; margin-left: 10px; }
 
-        .start-btn-big {
-            background: var(--btn-green); color: white; width: 100%;
-            border: none; border-bottom: 4px solid var(--btn-green-shade);
-            border-radius: 16px; padding: 18px; font-size: 1.2rem; font-weight: 800;
-            text-transform: uppercase; margin-top: 30px; cursor: pointer;
-            box-shadow: 0 4px 10px rgba(88, 204, 2, 0.3);
+        /* Opção Selecionar Todos */
+        .select-all-container {
+            display: flex; align-items: center; justify-content: flex-end;
+            margin-bottom: 10px; font-weight: 700; font-size: 0.9rem; color: var(--brand-blue);
+            cursor: pointer;
         }
-        .start-btn-big:active { transform: translateY(4px); border-bottom: 0; box-shadow: none; }
+        .select-all-container input { margin-right: 8px; transform: scale(1.2); cursor: pointer; }
+
+        /* BOTÕES GRANDES PADRONIZADOS */
+        .btn-big {
+            display: block; width: 100%;
+            border: none; border-radius: 16px; padding: 18px;
+            font-size: 1.2rem; font-weight: 800; text-transform: uppercase;
+            cursor: pointer; margin-top: 15px; text-decoration: none; text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.1s;
+        }
+        .btn-big:active { transform: translateY(4px); border-bottom-width: 0 !important; margin-top: 19px; margin-bottom: -4px; box-shadow: none; }
+        .btn-big:disabled, .btn-big.disabled { background: #e5e5e5; color: #afafaf; border-bottom: 4px solid #cecece; pointer-events: none; box-shadow: none; }
+
+        /* Variantes de Cor */
+        .btn-green { background: var(--btn-green); color: white; border-bottom: 4px solid var(--btn-green-shade); }
+        .btn-red { background: var(--btn-red); color: white; border-bottom: 4px solid var(--btn-red-shade); }
+        .btn-gray { background: var(--btn-gray); color: var(--text-main); border-bottom: 4px solid var(--btn-gray-shade); }
 
         .hidden { display: none !important; }
         .time-sig { background: #eee; padding: 2px 5px; border-radius: 4px; display: inline-block; vertical-align: middle; line-height: 0.9; font-family: 'Noto Music', serif; text-align: center; }
         .time-sig span { display: block; font-size: 0.8em; }
 
+        /* Classe para imagem de resultado grande */
+        .mascot-img-result {
+            width: 140px; height: auto; display: block; margin: 0 auto 20px;
+            animation: float 3s infinite ease-in-out;
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.2));
+        }
+
         @keyframes popIn { 0% { transform: scale(0); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
         @keyframes slideUp { 0% { transform: translateY(10px); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
+        @keyframes float { 0% { transform: translateY(0); } 50% { transform: translateY(-5px); } 100% { transform: translateY(0); } }
     </style>
 </head>
 <body>
@@ -291,80 +319,80 @@
     <!-- MENU INICIAL (SELEÇÃO DE FASES) -->
     <div id="menu-screen">
         <div class="mascot-area" style="justify-content: center; margin-bottom: 0;">
-            <div class="fufu-avatar" style="font-size: 80px;">😺</div>
+            <img src="../assets/fufu-capa-simulado.png" class="mascot-img-menu" alt="Fufu Simulado">
         </div>
-        <h1 style="color: var(--brand-blue); margin-bottom: 5px;">Simulado MSA</h1>
         
-        <p style="color: var(--text-light); margin-bottom: 25px;">Selecione o conteúdo:</p>
+        <!-- TÍTULO -->
+        <h1 class="modal-title">Simulado MSA</h1>
+        
+        <!-- SELEÇÃO DE CONTEÚDO -->
+        <div style="text-align: center; margin-bottom: 15px;">
+            <p style="color: var(--text-light); margin: 0 0 5px 0; font-weight: 700;">Selecione os Períodos:</p>
+            <div class="select-all-container" onclick="toggleSelectAll()" style="justify-content: center;">
+                <input type="checkbox" id="select-all-check" checked> Todos
+            </div>
+        </div>
         
         <div class="period-grid">
-            <!-- Período 1 (Ativo) -->
-            <div class="period-card active" onclick="selectPeriod(1)">
-                <div class="p-header">
-                    <div>
-                        <h3 class="p-title">Período 1</h3>
-                        <p class="p-subtitle">Fases 1, 2 e 3</p>
-                    </div>
-                    <i class="fas fa-book-open p-icon"></i>
+            <!-- Período 1 (Selecionável) - ATIVO POR PADRÃO -->
+            <div id="card-p1" class="period-card active" onclick="selectPeriod(1)">
+                <div class="p-content">
+                    <h3 class="p-title">Período 1</h3>
+                    <p class="p-subtitle">Fases 1, 2 e 3</p>
                 </div>
-                <div style="background: var(--btn-blue); color: white; font-size: 0.7rem; padding: 4px 8px; border-radius: 10px; width: fit-content; font-weight: 800;">SELECIONADO</div>
+                <i class="fas fa-flag p-icon"></i>
             </div>
 
             <!-- Período 2 (Bloqueado) -->
             <div class="period-card locked">
-                <div class="p-header">
-                    <div>
-                        <h3 class="p-title">Período 2</h3>
-                        <p class="p-subtitle">Em Breve</p>
-                    </div>
-                    <i class="fas fa-lock p-icon"></i>
+                <div class="p-content">
+                    <h3 class="p-title">Período 2</h3>
+                    <p class="p-subtitle">Em Breve</p>
                 </div>
+                <i class="fas fa-lock p-icon"></i>
             </div>
 
             <!-- Período 3 (Bloqueado) -->
             <div class="period-card locked">
-                <div class="p-header">
-                    <div>
-                        <h3 class="p-title">Período 3</h3>
-                        <p class="p-subtitle">Em Breve</p>
-                    </div>
-                    <i class="fas fa-lock p-icon"></i>
+                <div class="p-content">
+                    <h3 class="p-title">Período 3</h3>
+                    <p class="p-subtitle">Em Breve</p>
                 </div>
+                <i class="fas fa-lock p-icon"></i>
             </div>
 
             <!-- Período 4 (Bloqueado) -->
             <div class="period-card locked">
-                <div class="p-header">
-                    <div>
-                        <h3 class="p-title">Período 4</h3>
-                        <p class="p-subtitle">Em Breve</p>
-                    </div>
-                    <i class="fas fa-lock p-icon"></i>
+                <div class="p-content">
+                    <h3 class="p-title">Período 4</h3>
+                    <p class="p-subtitle">Em Breve</p>
                 </div>
+                <i class="fas fa-lock p-icon"></i>
             </div>
         </div>
 
-        <button class="start-btn-big" onclick="prepareAndStart()">COMEÇAR SIMULADO</button>
-        <a href="../index.html" style="display: block; margin-top: 20px; color: var(--text-light); text-decoration: none; font-weight: 700;">VOLTAR PARA ACADEMY</a>
+        <!-- Botão COMEÇAR -->
+        <button id="btn-start-quiz" class="btn-big btn-green" onclick="prepareAndStart()">COMEÇAR</button>
+        <a href="../index.html" class="btn-big btn-gray">VOLTAR</a>
     </div>
 
     <!-- TELA DO QUIZ -->
     <div id="quiz-screen" class="hidden">
         
         <div class="top-bar">
-            <!-- Botão de Sair com Confirmação -->
+            <!-- Botão de Sair -->
             <a href="javascript:void(0)" onclick="confirmExit()" class="close-btn"><i class="fas fa-times"></i></a>
             <div class="progress-container"><div class="progress-fill" id="progress-bar"><div class="progress-highlight"></div></div></div>
-            <div style="color: var(--btn-red); font-weight: 800;"><i class="fas fa-heart"></i> ∞</div>
+            <!-- HUD -->
+            <div style="color: var(--brand-blue); font-weight: 800; font-size: 1.1rem;">
+                <span id="q-counter-current">01</span>/<span id="q-counter-total">20</span>
+            </div>
         </div>
 
-        <div class="mascot-area">
-            <div id="fufu-img" class="fufu-avatar">🐱</div>
-            <div id="fufu-speech" class="speech-bubble">Vamos aprender um pouquinho mais hoje?</div>
-        </div>
+        <!-- REMOVIDO MASCOTE AREA SUPERIOR -->
 
         <div class="quiz-content">
-            <!-- PERGUNTA COM FUNDO E NÚMERO -->
+            <!-- PERGUNTA -->
             <div class="question-card">
                 <div id="q-number" class="q-number-badge">1</div>
                 <h2 id="q-text" class="question-text">Carregando pergunta...</h2>
@@ -372,24 +400,29 @@
 
             <div id="options-container" class="options-grid"></div>
             
-            <!-- CAIXA DE FEEDBACK -->
+            <!-- FEEDBACK BOX -->
             <div id="feedback-box">
+                <!-- MINI FUFU (Aparece aqui) -->
+                <img id="feedback-fufu-img" src="" alt="Fufu Reação">
+                
                 <div class="feedback-header" id="feedback-title"></div>
                 <div class="feedback-body" id="feedback-content"></div>
                 <div id="feedback-ref-container"></div>
             </div>
         </div>
 
-        <!-- FOOTER DE AÇÃO -->
+        <!-- FOOTER -->
         <div id="footer-area" class="action-footer">
             <button id="check-btn" class="check-btn disabled" onclick="checkOrNext()">VERIFICAR</button>
         </div>
 
     </div>
 
-    <!-- TELA DE RESULTADO FINAL (ATUALIZADA) -->
+    <!-- TELA DE RESULTADO -->
     <div id="result-screen" class="hidden" style="text-align: center; padding: 40px 20px;">
-        <div id="fufu-result-img" class="fufu-avatar" style="font-size: 120px; margin: 0 auto 20px;">😺</div>
+        <!-- Imagem de Resultado -->
+        <img id="fufu-result-img" src="" class="mascot-img-result" alt="Resultado Fufu">
+        
         <h1 id="result-title" style="color: var(--brand-blue); margin-bottom: 5px;">Treino Concluído!</h1>
         <p id="result-msg" style="color: var(--text-light); margin-bottom: 20px;">Veja como você se saiu</p>
         
@@ -405,46 +438,45 @@
                 </div>
             </div>
 
-            <!-- ÁREA DE REVISÃO (Só aparece se houver erros) -->
             <div id="review-container" class="hidden">
                 <h4 style="text-align: left; color: var(--btn-red); margin-bottom: 10px;"> <i class="fas fa-exclamation-circle"></i> O que precisa melhorar:</h4>
                 <div id="review-list" class="review-section"></div>
             </div>
 
-            <button class="start-btn-big" onclick="location.reload()">NOVO SIMULADO</button>
-            <a href="../index.html" style="display: block; margin-top: 20px; color: var(--text-light); text-decoration: none; font-weight: 700;">VOLTAR PARA ACADEMY</a>
+            <button class="btn-big btn-green" onclick="location.reload()">NOVO SIMULADO</button>
+            <a href="../index.html" class="btn-big btn-red">SAIR</a>
         </div>
     </div>
 
     <script>
-        // === CONFIGURAÇÃO DO FUFU AMOROSO (v1.5) ===
+        // === CONFIGURAÇÃO DO FUFU AMOROSO (v2.0 - Imagens PNG) ===
         const FUFU_STATES = {
-            NEUTRAL: { type: 'emoji', content: '🐱' }, 
-            HAPPY:   { type: 'emoji', content: '😺' },
-            SAD:     { type: 'emoji', content: '😿' }, // Gato com compaixão
-            JUDGE:   { type: 'emoji', content: '🐱' } // Gato neutro atento
+            NEUTRAL: { 
+                type: 'image', 
+                content: '../assets/fufu-neutro.png' 
+            }, 
+            HAPPY: { 
+                type: 'image', 
+                content: [
+                    '../assets/fufu-acerto-piscando.png',
+                    '../assets/fufu-acerto-palmas.png',
+                    '../assets/fufu-acerto-joinha.png',
+                    '../assets/fufu-acerto-festa.png',
+                    '../assets/fufu-acerto-esperto.png',
+                    '../assets/fufu-acerto-aplausos.png'
+                ] 
+            },
+            SAD: { 
+                type: 'image', 
+                content: [
+                    '../assets/fufu-erro-não-desista.png',
+                    '../assets/fufu-erro-carinho.png',
+                    '../assets/fufu-erro-acontece.png'
+                ] 
+            }
         };
 
-        const FUFU_PHRASES = {
-            START: [
-                "Vamos aprender um pouquinho mais hoje?", 
-                "Estou aqui do seu lado. Vamos estudar com alegria!", 
-                "Que bom te ver aqui, músico! O MSA nos espera.", 
-                "Prepare o coração e a mente. Vamos lá?"
-            ],
-            CORRECT: [
-                "Que maravilha! Você está indo muito bem.", 
-                "Miau! Que som agradável de acerto!", 
-                "Isso mesmo! Seu esforço está dando frutos.", 
-                "Glória! Mais um passo na sua jornada."
-            ],
-            WRONG: [
-                "Não desanime! É errando que a gente aprende.", 
-                "Calma, respire. Vamos rever isso juntos?", 
-                "Ainda não. Mas na próxima você acerta!", 
-                "Não fique triste. O estudo exige paciência mesmo."
-            ]
-        };
+        // REMOVIDO: FUFU_PHRASES (Feedback de texto removido)
 
         window.bancoQuestoes = []; 
         let currentQuestions = [];
@@ -454,16 +486,18 @@
         let currentQuestionData = null;
         let isAnswerChecked = false;
         
-        // VARIÁVEIS PARA FEEDBACK RICO
         let quizStartTime;
         let wrongAnswers = [];
 
-        // FUNÇÃO DE FULL SCREEN
+        // Inicialização com Período 1 Selecionado
+        let selectedPeriods = new Set([1]);
+        const availablePeriods = [1]; 
+
         function enterFullScreen() {
             const el = document.documentElement;
             if (el.requestFullscreen) el.requestFullscreen().catch(err => console.log(err));
-            else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen(); // Safari
-            else if (el.msRequestFullscreen) el.msRequestFullscreen(); // IE11
+            else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen(); 
+            else if (el.msRequestFullscreen) el.msRequestFullscreen(); 
         }
 
         function exitFullScreen() {
@@ -478,23 +512,7 @@
             }
         }
 
-        function setFufu(state, text) {
-            const imgEl = document.getElementById('fufu-img');
-            const speechEl = document.getElementById('fufu-speech');
-            
-            if(state.type === 'emoji') {
-                imgEl.innerHTML = state.content;
-                imgEl.removeAttribute('src');
-            } else {
-                imgEl.innerHTML = '';
-                imgEl.src = state.content;
-            }
-
-            imgEl.style.transform = 'scale(0.8)';
-            setTimeout(() => imgEl.style.transform = 'scale(1)', 150);
-
-            if(text) speechEl.innerText = text;
-        }
+        // REMOVIDO: setFufu (Não é mais usado no topo da questão)
 
         function formatMusicText(text) {
             if(!text) return "";
@@ -505,10 +523,55 @@
 
         const periodMap = { 1: ['q_f01.js', 'q_f02.js', 'q_f03.js'] };
 
-        // Função placeholder para seleção de período (futuramente carregará dinamicamente)
         function selectPeriod(p) {
-            if(p !== 1) return; // Só permite 1 por enquanto
-            // Lógica visual já está estática no HTML, futuramente aqui mudaria a classe active
+            if (!availablePeriods.includes(p)) return;
+
+            const card = document.getElementById(`card-p${p}`);
+            
+            if (selectedPeriods.has(p)) {
+                selectedPeriods.delete(p);
+                card.classList.remove('active');
+            } else {
+                selectedPeriods.add(p);
+                card.classList.add('active');
+            }
+            updateStartButton();
+            updateSelectAllCheckbox();
+        }
+
+        function toggleSelectAll() {
+            const checkBox = document.getElementById('select-all-check');
+            const targetState = !checkBox.checked; // Clicou no container, inverte estado atual
+            checkBox.checked = targetState;
+
+            availablePeriods.forEach(p => {
+                const card = document.getElementById(`card-p${p}`);
+                if (targetState) {
+                    selectedPeriods.add(p);
+                    card.classList.add('active');
+                } else {
+                    selectedPeriods.delete(p);
+                    card.classList.remove('active');
+                }
+            });
+            updateStartButton();
+        }
+
+        function updateSelectAllCheckbox() {
+            const checkBox = document.getElementById('select-all-check');
+            const allSelected = availablePeriods.every(p => selectedPeriods.has(p));
+            checkBox.checked = allSelected && availablePeriods.length > 0;
+        }
+
+        function updateStartButton() {
+            const btn = document.getElementById('btn-start-quiz');
+            if (selectedPeriods.size > 0) {
+                btn.classList.remove('disabled');
+                btn.disabled = false;
+            } else {
+                btn.classList.add('disabled');
+                btn.disabled = true;
+            }
         }
 
         async function loadScripts(scripts) {
@@ -523,15 +586,21 @@
         }
 
         async function prepareAndStart() {
-            // Tenta entrar em Full Screen
+            if (selectedPeriods.size === 0) return;
+
             enterFullScreen();
 
-            const btn = document.querySelector('.start-btn-big');
+            const btn = document.getElementById('btn-start-quiz');
             const originalText = btn.innerText;
             btn.innerText = "Carregando...";
             btn.disabled = true;
 
-            await loadScripts(periodMap[1]);
+            let allScripts = [];
+            selectedPeriods.forEach(p => {
+                if (periodMap[p]) allScripts = allScripts.concat(periodMap[p]);
+            });
+
+            await loadScripts(allScripts);
             
             if (!window.bancoQuestoes || window.bancoQuestoes.length === 0) {
                 alert("Erro ao carregar questões. Verifique se os arquivos estão na pasta.");
@@ -540,16 +609,15 @@
                 return;
             }
             
-            // CONFIGURAÇÃO DE 20 PERGUNTAS (ESCALA AUMENTADA)
             currentQuestions = window.bancoQuestoes
                 .filter(q => q.ativo !== false)
                 .sort(() => 0.5 - Math.random())
-                .slice(0, 20); // Agora pega 20
+                .slice(0, 20); 
             
             currentIndex = 0;
             score = 0;
             wrongAnswers = [];
-            quizStartTime = new Date(); // Inicia cronômetro
+            quizStartTime = new Date(); 
             
             document.getElementById('menu-screen').classList.add('hidden');
             document.getElementById('quiz-screen').classList.remove('hidden');
@@ -565,6 +633,9 @@
             document.getElementById('feedback-box').style.display = 'none';
             document.getElementById('feedback-box').className = ''; 
             
+            // Esconde o mini-fufu até haver feedback
+            document.getElementById('feedback-fufu-img').style.display = 'none';
+
             const btn = document.getElementById('check-btn');
             btn.innerText = "VERIFICAR";
             btn.className = "check-btn disabled";
@@ -573,13 +644,14 @@
             const pct = (currentIndex / currentQuestions.length) * 100;
             document.getElementById('progress-bar').style.width = pct + '%';
 
-            const randomPhrase = FUFU_PHRASES.START[Math.floor(Math.random() * FUFU_PHRASES.START.length)];
-            setFufu(FUFU_STATES.NEUTRAL, randomPhrase);
+            // REMOVIDO: setFufu(NEUTRAL)
 
-            // ATUALIZA NÚMERO DA QUESTÃO E TEXTO
             document.getElementById('q-number').innerText = currentIndex + 1;
             document.getElementById('q-text').innerHTML = formatMusicText(currentQuestionData.pergunta);
             
+            document.getElementById('q-counter-current').innerText = (currentIndex + 1).toString().padStart(2, '0');
+            document.getElementById('q-counter-total').innerText = currentQuestions.length;
+
             const container = document.getElementById('options-container');
             container.innerHTML = '';
             
@@ -624,6 +696,7 @@
             const feedbackTitle = document.getElementById('feedback-title');
             const feedbackContent = document.getElementById('feedback-content');
             const feedbackRef = document.getElementById('feedback-ref-container');
+            const feedbackFufuImg = document.getElementById('feedback-fufu-img');
 
             let refBadgeHTML = "";
             if(currentQuestionData.referencia) {
@@ -644,14 +717,17 @@
                 feedbackContent.innerHTML = formatMusicText(selectedOption.data.feedback || "Resposta exata!");
                 feedbackRef.innerHTML = refBadgeHTML;
 
-                const phrase = FUFU_PHRASES.CORRECT[Math.floor(Math.random() * FUFU_PHRASES.CORRECT.length)];
-                setFufu(FUFU_STATES.HAPPY, phrase);
+                // REMOVIDO: setFufu(HAPPY)
                 
+                // Configura Mini-Fufu Feliz
+                const happySrc = FUFU_STATES.HAPPY.content;
+                feedbackFufuImg.src = Array.isArray(happySrc) ? happySrc[Math.floor(Math.random() * happySrc.length)] : happySrc;
+                feedbackFufuImg.style.display = 'block';
+
                 checkBtn.className = "check-btn continue";
             } else {
                 selectedOption.el.classList.add('wrong');
                 
-                // Salva o erro para o relatório final
                 const correctOpt = currentQuestionData.opcoes.find(o => o.correta);
                 wrongAnswers.push({
                     question: currentQuestionData.pergunta,
@@ -681,9 +757,13 @@
                 `;
                 feedbackRef.innerHTML = refBadgeHTML;
 
-                const phrase = FUFU_PHRASES.WRONG[Math.floor(Math.random() * FUFU_PHRASES.WRONG.length)];
-                setFufu(FUFU_STATES.SAD, phrase);
+                // REMOVIDO: setFufu(SAD)
                 
+                // Configura Mini-Fufu Triste
+                const sadSrc = FUFU_STATES.SAD.content;
+                feedbackFufuImg.src = Array.isArray(sadSrc) ? sadSrc[Math.floor(Math.random() * sadSrc.length)] : sadSrc;
+                feedbackFufuImg.style.display = 'block';
+
                 checkBtn.className = "check-btn continue-error";
             }
 
@@ -708,36 +788,38 @@
             document.getElementById('quiz-screen').classList.add('hidden');
             document.getElementById('result-screen').classList.remove('hidden');
             
-            // CÁLCULO DE TEMPO
             const timeSpent = Math.floor((new Date() - quizStartTime) / 1000);
             const minutes = Math.floor(timeSpent / 60);
             const seconds = timeSpent % 60;
             const timeString = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
             document.getElementById('final-time').innerText = timeString;
 
-            // CÁLCULO DE PRECISÃO
             const percentage = Math.round((score / currentQuestions.length) * 100);
             document.getElementById('final-percent').innerText = percentage + "%";
 
-            // FEEDBACK DO FUFU (Misericordioso)
             const fufuImg = document.getElementById('fufu-result-img');
             const resultMsg = document.getElementById('result-msg');
             
+            let finalImage = "";
+
             if (percentage === 100) {
-                fufuImg.innerText = '😻';
+                finalImage = "../assets/fufu-comemorando-troféu-gabarito.png";
                 resultMsg.innerText = "Perfeito! Você é um virtuoso!";
             } else if (percentage >= 80) {
-                fufuImg.innerText = '😺';
+                finalImage = "../assets/fufu-comemorando-troféu-G-clave.png";
                 resultMsg.innerText = "Muito bom! Quase lá.";
             } else if (percentage >= 50) {
-                fufuImg.innerText = '😸';
+                const midImages = ["../assets/fufu-erro-presente.png", "../assets/fufu-erro-encorajador.png"];
+                finalImage = midImages[Math.floor(Math.random() * midImages.length)];
                 resultMsg.innerText = "Bom esforço! Continue estudando que vai dar certo.";
             } else {
-                fufuImg.innerText = '😿';
+                const lowImages = ["../assets/fufu-erro-não-desista.png", "../assets/fufu-erro-carinho.png", "../assets/fufu-erro-acontece.png"];
+                finalImage = lowImages[Math.floor(Math.random() * lowImages.length)];
                 resultMsg.innerText = "O início é trabalhoso mesmo. Não desista!";
             }
 
-            // LISTA DE REVISÃO (SE HOUVER ERROS)
+            fufuImg.src = finalImage;
+
             const reviewContainer = document.getElementById('review-container');
             const reviewList = document.getElementById('review-list');
             

@@ -8,7 +8,6 @@
     <!-- Meta Tags para Redes Sociais (Open Graph) -->
     <meta property="og:title" content="Issa Academy | Aprenda Música">
     <meta property="og:description" content="Plataforma de ensino musical gamificada. Mestre da Clave, Simulado MSA e muito mais.">
-    <!-- CORREÇÃO AQUI: Nome exato do arquivo enviado -->
     <meta property="og:image" content="https://issacarbarbosa.github.io/issa-academy/assets/Issa_Academy-Fufu.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
@@ -95,12 +94,8 @@
             font-size: 1.5rem; color: var(--brand-blue);
         }
 
-        /* MENU ICON (Futuro) */
-        .menu-icon {
-            font-size: 1.5rem; color: var(--color-gray);
-            cursor: pointer; transition: color 0.2s;
-        }
-        .menu-icon:hover { color: var(--brand-blue); }
+        /* MENU ICON (Futuro) - Removido conforme solicitado */
+        /* .menu-icon { ... } */
 
         /* BOAS VINDAS (Clean) */
         .welcome-section {
@@ -110,7 +105,13 @@
             display: flex; align-items: center; gap: 15px;
         }
         
-        .mascot-head { font-size: 50px; animation: float 3s infinite ease-in-out; }
+        /* Ajuste da imagem do mascote nas boas-vindas */
+        .mascot-img {
+            width: 80px; 
+            height: auto;
+            animation: float 3s infinite ease-in-out;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+        }
         
         .welcome-text h2 { font-size: 1.5rem; font-weight: 800; color: var(--text-main); margin: 0; line-height: 1.2; }
         .welcome-text p { font-size: 1rem; color: #777; margin: 5px 0 0; font-weight: 600; line-height: 1.4; }
@@ -138,11 +139,21 @@
         .app-card:active { transform: scale(0.98); background: #f0f0f0; }
 
         .card-icon {
-            width: 60px; height: 60px; flex-shrink: 0;
-            border-radius: 12px;
+            width: 70px; height: 70px; flex-shrink: 0;
+            border-radius: 14px;
             display: flex; align-items: center; justify-content: center;
             font-size: 1.8rem; color: white;
             box-shadow: 0 4px 0 rgba(0,0,0,0.1);
+            overflow: hidden; /* Garante que a imagem respeite a borda */
+            padding: 5px; /* Pequeno respiro para a imagem */
+        }
+        
+        /* Imagem dentro do card */
+        .card-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
         }
 
         .card-info { flex: 1; }
@@ -198,15 +209,16 @@
             <i class="fas fa-graduation-cap logo-icon"></i>
             <span class="logo-text">Issa Academy</span>
         </a>
-        <div class="menu-icon"><i class="fas fa-bars"></i></div>
+        <!-- Ícone de Menu Removido -->
     </header>
 
     <!-- BOAS VINDAS -->
     <div class="welcome-section">
-        <div class="mascot-head">😺</div>
+        <!-- Fufu (Imagem PNG substituindo Emoji) -->
+        <img src="assets/fufu-capa-home-pagge.png" alt="Fufu" class="mascot-img">
         <div class="welcome-text">
             <h2>Miau! Eu sou o Fufu.</h2>
-            <p>Sou o gatinho do Issa Academy! O que vamos treinar hoje?</p>
+            <p>O que vamos treinar hoje?</p>
         </div>
     </div>
 
@@ -215,7 +227,10 @@
         
         <!-- CARD 1: MESTRE DA CLAVE -->
         <a href="mestre-da-clave/" class="app-card card-blue" onclick="gtag('event', 'select_content', {'content_type': 'game', 'item_id': 'mestre_da_clave'});">
-            <div class="card-icon"><i class="fas fa-gamepad"></i></div>
+            <!-- Ícone Personalizado do Fufu -->
+            <div class="card-icon">
+                <img src="assets/fufu-capa-mestre-da-clave.png" alt="Mestre da Clave">
+            </div>
             <div class="card-info">
                 <div class="card-title">Mestre da Clave</div>
                 <div class="card-desc">Leitura rápida e reflexo</div>
@@ -225,8 +240,10 @@
 
         <!-- CARD 2: SIMULADO MSA -->
         <a href="simulado-msa/" class="app-card card-green" onclick="gtag('event', 'select_content', {'content_type': 'quiz', 'item_id': 'simulado_msa'});">
-            <!-- Ícone alterado para Prancheta/Lista -->
-            <div class="card-icon"><i class="fas fa-clipboard-list"></i></div>
+            <!-- Ícone Personalizado do Fufu -->
+            <div class="card-icon">
+                <img src="assets/fufu-capa-simulado.png" alt="Simulado MSA">
+            </div>
             <div class="card-info">
                 <div class="card-title">Simulado MSA <span class="badge-new">NOVO</span></div>
                 <div class="card-desc">Teoria e questões de prova</div>

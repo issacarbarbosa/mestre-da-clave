@@ -184,7 +184,18 @@
         .modal-text { font-size: 1.1rem; color: #666; margin-bottom: 25px; line-height: 1.5; font-weight: 600; }
         .highscore-text { font-size: 0.9rem; color: #999; font-weight: 700; text-transform: uppercase; margin-top: 15px; }
 
-        .fufu-avatar { font-size: 80px; margin-bottom: 10px; display: block; animation: float 3s infinite ease-in-out; }
+        /* Estilos para Imagens do Fufu */
+        .mascot-img-lg {
+            width: 120px; height: auto; display: block; margin: 0 auto 10px;
+            animation: float 3s infinite ease-in-out;
+            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.15));
+        }
+        
+        .mascot-img-md {
+            width: 100px; height: auto; display: block; margin: 0 auto 10px;
+            animation: float 3s infinite ease-in-out;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+        }
 
         /* Botões de Ação Juicy */
         .btn-action {
@@ -198,6 +209,10 @@
 
         .btn-green { background: var(--btn-green); border-bottom: 5px solid var(--shade-green); }
         .btn-red { background: var(--btn-red); border-bottom: 5px solid var(--shade-red); }
+        
+        /* NOVO BOTÃO CINZA (Para Voltar) */
+        .btn-gray { background: var(--btn-gray); color: var(--text-main); border-bottom: 5px solid var(--shade-gray); }
+        
         .btn-transparent { background: transparent; color: #999; border: 2px solid transparent; font-size: 1rem; }
         .btn-transparent:hover { color: var(--text-main); }
 
@@ -278,11 +293,15 @@
     <!-- TELA DE INÍCIO -->
     <div id="start-screen" class="overlay">
         <div class="modal-card">
-            <div class="fufu-avatar">😺</div>
+            <!-- Avatar Inicial: Capa Mestre da Clave -->
+            <img src="../assets/fufu-capa-mestre-da-clave.png" class="mascot-img-lg" alt="Fufu Mestre da Clave">
             <h1 class="modal-title">Mestre da Clave</h1>
             <p class="modal-text">Comece com <strong>Dó e Ré</strong>.<br>Acerte e suba de nível!🚀</p>
             <button class="btn-action btn-green" onclick="startGame()">JOGAR</button>
-            <a href="../index.html" class="btn-action btn-transparent">VOLTAR</a>
+            
+            <!-- Botão Voltar agora é VISÍVEL (Cinza) -->
+            <a href="../index.html" class="btn-action btn-gray">VOLTAR</a>
+            
             <div class="highscore-text">🏆 Seu Recorde: <span id="start-highscore">0</span></div>
         </div>
     </div>
@@ -290,7 +309,8 @@
     <!-- TELA DE PAUSA -->
     <div id="pause-screen" class="overlay pause-overlay hidden">
         <div class="modal-card">
-            <div class="fufu-avatar">🐱</div>
+            <!-- Imagem Pausa (Alternada via JS) -->
+            <img id="pause-fufu-img" src="../assets/fufu-pensativo.png" class="mascot-img-md" alt="Fufu Pausa">
             <h1 class="modal-title" style="font-size: 1.5rem;">Pausado</h1>
             <p class="modal-text">Pausas restantes: <strong id="pause-msg-count" style="color: var(--brand-gold);">3</strong></p>
             <button class="btn-action btn-green" onclick="togglePause()">CONTINUAR</button>
@@ -301,7 +321,8 @@
     <!-- TELA DE GAME OVER -->
     <div id="game-over-screen" class="overlay hidden">
         <div class="modal-card">
-            <div class="fufu-avatar" id="go-fufu">😿</div>
+            <!-- Imagem Game Over (Alternada via JS) -->
+            <img id="go-fufu-img" src="../assets/fufu-erro-acontece.png" class="mascot-img-lg" alt="Fufu Game Over">
             <h1 class="modal-title" style="color: var(--btn-red);">Fim de Jogo!</h1>
             
             <div style="background: #f7f9fa; border-radius: 12px; padding: 15px; margin-bottom: 20px;">
@@ -311,7 +332,10 @@
             </div>
 
             <button class="btn-action btn-green" onclick="resetGame()">JOGAR NOVAMENTE</button>
-            <a href="../index.html" class="btn-action btn-red">SAIR PARA ACADEMY</a>
+            
+            <!-- Botão Sair simplificado -->
+            <a href="../index.html" class="btn-action btn-red">SAIR</a>
+            
             <div class="highscore-text">🏆 Recorde Atual: <span id="end-highscore">0</span></div>
         </div>
     </div>
@@ -549,6 +573,7 @@
 
             const pauseBtn = document.getElementById('btn-pause');
             const pauseScreen = document.getElementById('pause-screen');
+            const pauseImg = document.getElementById('pause-fufu-img');
 
             if (isPaused) {
                 isPaused = false;
@@ -565,6 +590,11 @@
                 document.getElementById('pause-count').innerText = pausesLeft;
                 document.getElementById('pause-msg-count').innerText = pausesLeft;
                 
+                // Lógica de Sorteio de Imagem na Pausa
+                const pauseImages = ["../assets/fufu-pensativo.png", "../assets/fufu-erro-tapinha.png"];
+                const randomPauseImg = pauseImages[Math.floor(Math.random() * pauseImages.length)];
+                pauseImg.src = randomPauseImg;
+
                 pauseScreen.classList.remove('hidden');
                 
                 cancelAnimationFrame(animationId);
@@ -678,8 +708,23 @@
             document.getElementById('final-score').innerText = score; document.getElementById('final-level').innerText = currentLevel;
             document.getElementById('end-highscore').innerText = highScore; document.getElementById('start-highscore').innerText = highScore;
             
-            const goFufu = document.getElementById('go-fufu');
-            goFufu.innerText = score > 100 ? '😺' : '🙀';
+            const goFufuImg = document.getElementById('go-fufu-img');
+            let imgToUse = "";
+
+            if (currentLevel > 30) {
+                // Vitória Suprema
+                imgToUse = "../assets/fufu-comemorando-troféu-G-clave.png";
+            } else if (currentLevel >= 13) {
+                // Níveis Intermediários (13 a 30)
+                const midImages = ["../assets/fufu-erro-encorajador.png", "../assets/fufu-erro-presente.png"];
+                imgToUse = midImages[Math.floor(Math.random() * midImages.length)];
+            } else {
+                // Níveis Iniciais (até 12)
+                const lowImages = ["../assets/fufu-erro-não-desista.png", "../assets/fufu-erro-carinho.png", "../assets/fufu-erro-acontece.png"];
+                imgToUse = lowImages[Math.floor(Math.random() * lowImages.length)];
+            }
+            
+            goFufuImg.src = imgToUse;
             
             document.getElementById('game-over-screen').classList.remove('hidden'); 
         }
