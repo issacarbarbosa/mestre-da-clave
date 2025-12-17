@@ -343,13 +343,13 @@
                 <i class="fas fa-flag p-icon"></i>
             </div>
 
-            <!-- Período 2 (Bloqueado) -->
-            <div class="period-card locked">
+            <!-- Período 2 (Selecionável) - DESBLOQUEADO -->
+            <div id="card-p2" class="period-card" onclick="selectPeriod(2)">
                 <div class="p-content">
                     <h3 class="p-title">Período 2</h3>
-                    <p class="p-subtitle">Em Breve</p>
+                    <p class="p-subtitle">Fases 4 e 5</p>
                 </div>
-                <i class="fas fa-lock p-icon"></i>
+                <i class="fas fa-flag p-icon"></i>
             </div>
 
             <!-- Período 3 (Bloqueado) -->
@@ -489,9 +489,10 @@
         let quizStartTime;
         let wrongAnswers = [];
 
-        // Inicialização com Período 1 Selecionado
+        // Inicialização com Períodos Disponíveis (1 e 2)
+        // Por padrão, o Período 1 vem marcado (selectedPeriods)
         let selectedPeriods = new Set([1]);
-        const availablePeriods = [1]; 
+        const availablePeriods = [1, 2]; 
 
         function enterFullScreen() {
             const el = document.documentElement;
@@ -521,7 +522,11 @@
             });
         }
 
-        const periodMap = { 1: ['q_f01.js', 'q_f02.js', 'q_f03.js'] };
+        // Mapeamento dos Arquivos de Questões por Período
+        const periodMap = { 
+            1: ['q_f01.js', 'q_f02.js', 'q_f03.js'],
+            2: ['q_f04.js', 'q_f05.js']
+        };
 
         function selectPeriod(p) {
             if (!availablePeriods.includes(p)) return;
