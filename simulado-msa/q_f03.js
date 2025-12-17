@@ -1,13 +1,132 @@
 if (!window.bancoQuestoes) window.bancoQuestoes = [];
 
-window.bancoQuestoes = window.bancoQuestoes.concat([
+window.bancoQuestoes = window.bancoQuestoes.concat(
+
+[
   {
-    "id": "f3_q001",
+    "id": "f03_q001",
     "ativo": true,
     "dificuldade": "facil",
-    "pontos": 10,
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "O que a Leitura Rítmica exige do candidato, de acordo com o que foi ensinado no MSA?",
+    "pergunta": "Qual a principal função da Clave (como 𝄞, 𝄡 ou 𝄢) na escrita musical?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.1 Endecagrama",
+      "pagina": 27
+    },
+    "opcoes": [
+      {
+        "texto": "Determinar o andamento (velocidade) da música.",
+        "correta": false,
+        "feedback": "A velocidade é determinada pela marcação de andamento (em bpm) e não pela Clave."
+      },
+      {
+        "texto": "Determinar a duração do som, como se é uma Mínima (𝅗𝅥) ou uma Semínima (𝅘𝅥).",
+        "correta": false,
+        "feedback": "A duração do som é determinada pelas figuras musicais, e não pela Clave."
+      },
+      {
+        "texto": "Determinar o nome e a altura do som da nota escrita em sua linha de referência.",
+        "correta": true,
+        "feedback": "A Clave determina tanto o nome da nota na sua linha de referência quanto a altura do som (aguda, média ou grave)."
+      },
+      {
+        "texto": "Indicar o início ou o fim de um Compasso.",
+        "correta": false,
+        "feedback": "O início ou o fim de um Compasso é indicado pelas Barras de Compasso."
+      }
+    ]
+  },
+  {
+    "id": "f03_q002",
+    "ativo": true,
+    "dificuldade": "facil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "No sistema Endecagrama, o que o Dó Central (Dó3) representa em relação à Clave de Sol (𝄞)?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.1 Endecagrama",
+      "pagina": 27
+    },
+    "opcoes": [
+      {
+        "texto": "A segunda linha do pentagrama, indicando a nota Sol.",
+        "correta": false,
+        "feedback": "O Dó Central não está na segunda linha do pentagrama na Clave de Sol."
+      },
+      {
+        "texto": "A primeira linha suplementar inferior da Clave de Sol (𝄞).",
+        "correta": true,
+        "feedback": "O Dó Central (Dó3) é a primeira linha suplementar inferior da Clave de Sol (𝄞)."
+      },
+      {
+        "texto": "A primeira linha suplementar superior da Clave de Fá (𝄢).",
+        "correta": false,
+        "feedback": "Esta é a posição do Dó Central em relação à Clave de Fá (𝄢), mas não à Clave de Sol (𝄞)."
+      },
+      {
+        "texto": "A quinta linha do pentagrama, indicando a nota Fá.",
+        "correta": false,
+        "feedback": "O Dó Central não está na quinta linha do pentagrama."
+      }
+    ]
+  },
+  {
+    "id": "f03_q003",
+    "ativo": true,
+    "dificuldade": "facil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Como o Endecagrama auxilia na visualização das claves?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.1 Endecagrama",
+      "pagina": 27
+    },
+    "opcoes": [
+      {
+        "texto": "Permite visualizar as três claves simultaneamente, utilizando um sistema de 11 linhas alinhadas pela altura.",
+        "correta": true,
+        "feedback": "Endecagrama (Endeca=onze; grama=linha) é a forma de visualizar as três claves (𝄞, 𝄡, 𝄢) alinhadas em um sistema de 11 linhas para identificar notas de mesma altura."
+      },
+      {
+        "texto": "Define o número de tempos que cabem em um compasso ternário.",
+        "correta": false,
+        "feedback": "O número de tempos do compasso é definido pela Fórmula de Compasso."
+      },
+      {
+        "texto": "Determina a posição das linhas e espaços suplementares superiores, que são ilimitados.",
+        "correta": false,
+        "feedback": "O Endecagrama é um sistema que alinha as claves por altura, facilitando a leitura de notas na região grave, média e aguda."
+      },
+      {
+        "texto": "É um método de memorização das figuras de som e silêncio por meio de números de equivalência.",
+        "correta": false,
+        "feedback": "O Endecagrama é um recurso visual para alinhamento das claves e suas respectivas regiões sonoras."
+      }
+    ]
+  },
+  {
+    "id": "f03_q004",
+    "ativo": true,
+    "dificuldade": "facil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "O que a 'Leitura Rítmica' exige do candidato?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -19,34 +138,229 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "Falar o nome das notas sem entoá-las.",
+        "texto": "Cantar as notas na altura correta, sem se preocupar com a duração.",
         "correta": false,
-        "feedback": "Falar o nome das notas é a definição de Leitura Métrica."
+        "feedback": "Cantar as notas na altura é parte do solfejo, e não da leitura rítmica."
       },
       {
-        "texto": "Cantar as notas musicais na altura correta.",
+        "texto": "Falar o nome das notas (Dó, Ré, Mi...) com precisão rítmica.",
+        "correta": false,
+        "feedback": "Falar o nome das notas com precisão rítmica é a definição de leitura métrica."
+      },
+      {
+        "texto": "Falar a sílaba 'TÁ', executando com precisão o ritmo estabelecido pelas figuras musicais.",
+        "correta": true,
+        "feedback": "A leitura rítmica consiste em pronunciar a sílaba 'TÁ' no ritmo exato ditado pelas figuras e pausas (silêncios)."
+      },
+      {
+        "texto": "Ficar em silêncio e realizar apenas o Movimento de Condução.",
+        "correta": false,
+        "feedback": "A leitura rítmica envolve a execução vocal da sílaba 'TÁ' para marcar o som."
+      }
+    ]
+  },
+  {
+    "id": "f03_q005",
+    "ativo": true,
+    "dificuldade": "facil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Quando um candidato está realizando 'Leitura Métrica', qual ação ele está executando?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.2 Leitura rítmica, leitura métrica e solfejo",
+      "pagina": 27
+    },
+    "opcoes": [
+      {
+        "texto": "Cantar as notas musicais na altura exata da partitura.",
         "correta": false,
         "feedback": "Cantar as notas na altura é a definição de Solfejo."
       },
       {
-        "texto": "Falar a sílaba \"TÁ\", executando com precisão o ritmo estabelecido pelas figuras musicais.",
+        "texto": "Falar o nome da nota, sem cantar, executando o ritmo preciso estabelecido pelas figuras.",
         "correta": true,
-        "feedback": "A Leitura Rítmica consiste em pronunciar a sílaba \"TÁ\" conforme a duração rítmica das figuras."
+        "feedback": "A leitura métrica envolve falar o nome da nota (Dó, Ré, Mi...), respeitando a duração de tempo correta da figura musical."
       },
       {
-        "texto": "Ficar em silêncio, apenas marcando a pulsação com a mão.",
+        "texto": "Falar a sílaba 'TÁ' para identificar a duração da figura musical.",
         "correta": false,
-        "feedback": "A Leitura Rítmica envolve a emissão da sílaba \"TÁ\" junto à marcação rítmica."
+        "feedback": "Falar a sílaba 'TÁ' é a definição de leitura rítmica."
+      },
+      {
+        "texto": "Realizar o Movimento de Condução sem nenhum acompanhamento vocal.",
+        "correta": false,
+        "feedback": "A leitura métrica é uma forma de execução vocal da música escrita."
       }
     ]
   },
   {
-    "id": "f3_q002",
+    "id": "f03_q006",
     "ativo": true,
     "dificuldade": "facil",
-    "pontos": 10,
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Qual a definição correta de Solfejo?",
+    "pergunta": "O que é o Movimento de Condução no contexto do solfejo e leitura rítmica?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.3 Movimentos de condução para solfejo",
+      "pagina": 28
+    },
+    "opcoes": [
+      {
+        "texto": "É um sinal de regência utilizado apenas pelo Instrutor ou Encarregado.",
+        "correta": false,
+        "feedback": "O Movimento de Condução é a representação visual da pulsação utilizada pelos candidatos nos exercícios de leitura rítmica, métrica ou solfejo."
+      },
+      {
+        "texto": "A representação visual da pulsação determinada pela Fórmula de Compasso.",
+        "correta": true,
+        "feedback": "O Movimento de Condução é a forma de representar visualmente os tempos e a pulsação de um compasso (como em 4/4)."
+      },
+      {
+        "texto": "A variação da intensidade do som, que pode ser Piano (P) ou Forte (F).",
+        "correta": false,
+        "feedback": "A variação de intensidade é chamada Dinâmica."
+      },
+      {
+        "texto": "A distância entre dois sons, como um Intervalo de 2ª ou 3ª.",
+        "correta": false,
+        "feedback": "A distância entre dois sons é chamada Intervalo."
+      }
+    ]
+  },
+  {
+    "id": "f03_q007",
+    "ativo": true,
+    "dificuldade": "facil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual a orientação correta sobre a escolha da mão para os Movimentos de Condução?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.3 Movimentos de condução para solfejo",
+      "pagina": 28
+    },
+    "opcoes": [
+      {
+        "texto": "Candidatos destros e canhotos devem usar obrigatoriamente a mão direita.",
+        "correta": false,
+        "feedback": "Candidatos canhotos podem escolher usar a mão direita ou a esquerda, desde que mantenham a escolha."
+      },
+      {
+        "texto": "Candidatos destros usam a mão direita, e canhotos podem escolher entre a direita e a esquerda, mantendo a mão escolhida.",
+        "correta": true,
+        "feedback": "Os destros devem usar a mão direita. Os canhotos têm a opção de escolher entre a direita ou a esquerda, mas a mão escolhida deve ser mantida ao longo do aprendizado."
+      },
+      {
+        "texto": "A mão deve ser trocada regularmente entre as aulas para desenvolver a coordenação motora.",
+        "correta": false,
+        "feedback": "A mão escolhida deve ser mantida durante todo o aprendizado neste Método."
+      },
+      {
+        "texto": "Somente a mão esquerda deve ser usada, pois a direita é utilizada para segurar o MSA.",
+        "correta": false,
+        "feedback": "Os destros devem usar a mão direita. O material pode ser apoiado ou lido digitalmente."
+      }
+    ]
+  },
+  {
+    "id": "f03_q008",
+    "ativo": true,
+    "dificuldade": "facil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual é o conceito da 'Janela de Movimento' no contexto dos Movimentos de Condução?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.3 Movimentos de condução para solfejo",
+      "pagina": 28
+    },
+    "opcoes": [
+      {
+        "texto": "É o espaço imaginário que delimita o movimento, evitando gestos muito pequenos ou exagerados.",
+        "correta": true,
+        "feedback": "A Janela de Movimento é a delimitação espacial imaginária utilizada para garantir que o movimento de condução seja realizado de forma visível e proporcional, sem exageros."
+      },
+      {
+        "texto": "É a linha horizontal que representa o som na leitura rítmica.",
+        "correta": false,
+        "feedback": "A linha horizontal representa o som nos exercícios rítmicos."
+      },
+      {
+        "texto": "É o movimento que se realiza apenas com os dedos do pé para auxiliar a pulsação.",
+        "correta": false,
+        "feedback": "Isto se refere aos movimentos de pulsação no pé, não à Janela de Movimento da mão/braço."
+      },
+      {
+        "texto": "É o ponto onde o primeiro movimento começa e o quarto movimento termina no solfejo em 4/4.",
+        "correta": false,
+        "feedback": "O ponto de início e fim no solfejo em 4/4 é o Ponto 1 (embaixo)."
+      }
+    ]
+  },
+  {
+    "id": "f03_q009",
+    "ativo": true,
+    "dificuldade": "facil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "No Movimento de Solfejo em 4 (para destros), qual o ponto de partida do primeiro movimento?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.4 Movimento de solfejo em 4",
+      "pagina": 30
+    },
+    "opcoes": [
+      {
+        "texto": "O Ponto 4 (em cima).",
+        "correta": false,
+        "feedback": "O primeiro movimento não começa em cima; o quarto movimento termina em cima."
+      },
+      {
+        "texto": "O Ponto 3 (à direita).",
+        "correta": false,
+        "feedback": "O segundo movimento termina no Ponto 3 (à direita)."
+      },
+      {
+        "texto": "O Ponto 1 (centro), embaixo.",
+        "correta": true,
+        "feedback": "No movimento de solfejo em 4, o primeiro movimento começa no Ponto 1 (embaixo)."
+      },
+      {
+        "texto": "O Ponto 2 (à esquerda).",
+        "correta": false,
+        "feedback": "O primeiro movimento termina no Ponto 2 (à esquerda)."
+      }
+    ]
+  },
+  {
+    "id": "f03_q010",
+    "ativo": true,
+    "dificuldade": "facil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual a definição de 'Solfejo'?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -58,112 +372,34 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "Cantar as notas musicais na altura, dentro de um padrão rítmico, conforme escrito na partitura.",
+        "texto": "Falar a sílaba 'TÁ' no ritmo das figuras.",
+        "correta": false,
+        "feedback": "Esta é a definição de Leitura Rítmica."
+      },
+      {
+        "texto": "Cantar as notas musicais na altura (afinação), dentro de um padrão rítmico.",
         "correta": true,
-        "feedback": "O Solfejo combina a precisão rítmica com a entonação da altura das notas."
+        "feedback": "Solfejo consiste em cantar as notas musicais na altura correta, mantendo o ritmo estabelecido pela partitura."
       },
       {
-        "texto": "Falar o nome da nota, sem cantar, respeitando o ritmo.",
+        "texto": "Falar o nome das notas (Dó, Ré, Mi...) sem cantá-las.",
         "correta": false,
-        "feedback": "Essa é a definição de Leitura Métrica."
+        "feedback": "Esta é a definição de Leitura Métrica."
       },
       {
-        "texto": "Falar a sílaba \"TÁ\" de forma constante, sem preocupação com as figuras musicais.",
+        "texto": "Tocar o instrumento seguindo o Movimento de Condução do Instrutor.",
         "correta": false,
-        "feedback": "O Solfejo sempre respeita o ritmo da partitura e envolve a altura da nota."
-      },
-      {
-        "texto": "Apenas ler o nome das notas, ignorando a pulsação e o ritmo.",
-        "correta": false,
-        "feedback": "A prática musical exige precisão em todos os elementos da escrita."
+        "feedback": "O Solfejo é uma atividade vocal (cantar as notas)."
       }
     ]
   },
   {
-    "id": "f3_q003",
+    "id": "f03_q011",
     "ativo": true,
     "dificuldade": "facil",
-    "pontos": 10,
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "De acordo com o MSA, o que representa o Movimento de Condução?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.3 Movimentos de condução para solfejo",
-      "pagina": 28
-    },
-    "opcoes": [
-      {
-        "texto": "A contagem mental dos tempos do compasso.",
-        "correta": false,
-        "feedback": "O movimento de condução é uma representação física e visual."
-      },
-      {
-        "texto": "A representação visual da pulsação determinada pela fórmula de compasso.",
-        "correta": true,
-        "feedback": "O movimento de condução é a externalização visual da pulsação."
-      },
-      {
-        "texto": "O registro gráfico da altura das notas no pentagrama.",
-        "correta": false,
-        "feedback": "O registro gráfico da altura é feito pelas notas, pentagrama e clave."
-      },
-      {
-        "texto": "A articulação correta das figuras de som e de silêncio.",
-        "correta": false,
-        "feedback": "Embora ajude, essa não é a definição primária do movimento de condução."
-      }
-    ]
-  },
-  {
-    "id": "f3_q004",
-    "ativo": true,
-    "dificuldade": "facil",
-    "pontos": 10,
-    "tipo": "texto",
-    "pergunta": "Qual mão deve ser utilizada pelos candidatos destros para realizar os movimentos de condução, conforme as instruções do MSA?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.3 Movimentos de condução para solfejo",
-      "pagina": 28
-    },
-    "opcoes": [
-      {
-        "texto": "A mão esquerda, pois a direita é usada para escrever.",
-        "correta": false,
-        "feedback": "O canhoto tem a opção de escolha, mas o destro deve usar a mão direita."
-      },
-      {
-        "texto": "O canhoto deve usar a mão esquerda, mas o destro tem a liberdade de escolha.",
-        "correta": false,
-        "feedback": "O canhoto pode escolher, mas o destro deve usar a mão direita."
-      },
-      {
-        "texto": "A mão direita.",
-        "correta": true,
-        "feedback": "Candidatos destros devem realizar os movimentos de condução com a mão direita."
-      },
-      {
-        "texto": "Ambas as mãos, simultaneamente, para maior precisão.",
-        "correta": false,
-        "feedback": "Os movimentos de condução são feitos com apenas uma mão."
-      }
-    ]
-  },
-  {
-    "id": "f3_q005",
-    "ativo": true,
-    "dificuldade": "facil",
-    "pontos": 10,
-    "tipo": "texto",
-    "pergunta": "Qual a descrição do metrônomo apresentada no MSA?",
+    "pergunta": "O que é o Metrônomo?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -175,34 +411,34 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "Um aparelho eletrônico que gera vibrações para auxiliar na afinação do instrumento.",
+        "texto": "Um aparelho eletrônico que afina as notas do instrumento musical.",
         "correta": false,
-        "feedback": "Embora alguns modelos tenham afinador, a descrição primária foca nos cliques sonoros."
+        "feedback": "Embora existam metrônomos que também funcionam como afinadores, a função principal do metrônomo é marcar o tempo."
       },
       {
         "texto": "Um equipamento que faz cliques sonoros repetidos a uma velocidade constante e ajustável.",
         "correta": true,
-        "feedback": "O metrônomo é um equipamento que produz cliques sonoros repetidos com velocidade ajustável e constante."
+        "feedback": "O Metrônomo produz cliques sonoros repetidos, e sua velocidade pode ser ajustada (em bpm) para determinar a pulsação."
       },
       {
-        "texto": "Uma ferramenta que calcula a média das batidas por minuto (BPM) de um hino.",
+        "texto": "Uma barra de compasso que indica a repetição de uma seção da música.",
         "correta": false,
-        "feedback": "O metrônomo marca a pulsação em BPM, mas não calcula a média."
+        "feedback": "O Metrônomo é um equipamento para marcação de tempo, não um sinal gráfico na partitura."
       },
       {
-        "texto": "Um instrumento mecânico que utiliza um pêndulo para ditar a intensidade da dinâmica.",
+        "texto": "A indicação de velocidade máxima permitida no início dos hinos (por exemplo, 80 bpm).",
         "correta": false,
-        "feedback": "O metrônomo dita a velocidade/pulsação, não a intensidade da dinâmica."
+        "feedback": "A marcação de velocidade máxima é uma indicação do hinário, o metrônomo é o instrumento que executa essa velocidade."
       }
     ]
   },
   {
-    "id": "f3_q006",
+    "id": "f03_q012",
     "ativo": true,
     "dificuldade": "facil",
-    "pontos": 10,
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Para que serve a velocidade constante das batidas do metrônomo?",
+    "pergunta": "Para que serve o Metrônomo nos estudos musicais?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -214,151 +450,34 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "Para indicar o limite máximo de velocidade (BPM) do hino.",
+        "texto": "Determinar a dinâmica (intensidade) do som da música.",
         "correta": false,
-        "feedback": "O metrônomo auxilia na execução dentro do andamento, mas não se limita a indicar o limite máximo."
+        "feedback": "A dinâmica é definida pelo discurso musical ou por indicações como Piano (P) ou Forte (F)."
       },
       {
-        "texto": "Para definir a altura das notas e a qualidade da afinação.",
-        "correta": false,
-        "feedback": "A altura e afinação são propriedades distintas da pulsação e do ritmo."
-      },
-      {
-        "texto": "Para manter a pulsação musical enquanto se solfeja ou toca o instrumento.",
+        "texto": "Manter a pulsação musical (regularidade e ritmo) durante o solfejo ou a execução instrumental.",
         "correta": true,
-        "feedback": "A principal utilidade do metrônomo é manter a pulsação musical regular."
+        "feedback": "A função essencial do metrônomo é auxiliar o candidato a manter a pulsação constante e desenvolver a percepção rítmica musical."
       },
       {
-        "texto": "Para indicar os acidentes musicais na partitura.",
+        "texto": "Substituir o Instrutor na marcação do tempo durante a Leitura Rítmica.",
         "correta": false,
-        "feedback": "Acidentes são sinais gráficos, não relacionados ao metrônomo."
+        "feedback": "O metrônomo auxilia o aprendizado, mas não substitui a orientação do instrutor."
+      },
+      {
+        "texto": "Calcular o número de Equivalência das figuras de som e silêncio.",
+        "correta": false,
+        "feedback": "O número de equivalência é um conceito teórico fixo das figuras musicais."
       }
     ]
   },
   {
-    "id": "f3_q007",
+    "id": "f03_q013",
     "ativo": true,
     "dificuldade": "facil",
-    "pontos": 10,
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "O que significa a palavra \"Endecagrama\"?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.1 Endecagrama",
-      "pagina": 27
-    },
-    "opcoes": [
-      {
-        "texto": "Sistema de 9 linhas para a leitura de claves.",
-        "correta": false,
-        "feedback": "O pentagrama tem 5 linhas, e o endecagrama é uma expansão para 11 linhas."
-      },
-      {
-        "texto": "Disposição das claves utilizando um sistema de 11 linhas.",
-        "correta": true,
-        "feedback": "Endeca significa 'onze' e grama significa 'linha', representando um sistema de 11 linhas."
-      },
-      {
-        "texto": "Sistema de 7 linhas suplementares para notas agudas.",
-        "correta": false,
-        "feedback": "Linhas suplementares são extensões do pentagrama, mas não definem o endecagrama."
-      },
-      {
-        "texto": "A oitava nota da escala, que repete a primeira.",
-        "correta": false,
-        "feedback": "Isso se refere ao ciclo das notas musicais."
-      }
-    ]
-  },
-  {
-    "id": "f3_q008",
-    "ativo": true,
-    "dificuldade": "facil",
-    "pontos": 10,
-    "tipo": "texto",
-    "pergunta": "Das claves utilizadas no hinário (Sol, Dó na 3ª linha, Fá na 4ª linha), qual é predominantemente utilizada para sons agudos?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.1 Endecagrama",
-      "pagina": 27
-    },
-    "opcoes": [
-      {
-        "texto": "Clave de Dó (3ª linha).",
-        "correta": false,
-        "feedback": "A Clave de Dó é utilizada principalmente para sons médios."
-      },
-      {
-        "texto": "Clave de Sol (2ª linha).",
-        "correta": true,
-        "feedback": "A Clave de Sol, escrita na 2ª linha, é utilizada principalmente para sons agudos."
-      },
-      {
-        "texto": "Clave de Fá (4ª linha).",
-        "correta": false,
-        "feedback": "A Clave de Fá é utilizada principalmente para sons graves."
-      },
-      {
-        "texto": "Todas são usadas igualmente para sons agudos.",
-        "correta": false,
-        "feedback": "Cada clave tem uma região de som predominante."
-      }
-    ]
-  },
-  {
-    "id": "f3_q009",
-    "ativo": true,
-    "dificuldade": "facil",
-    "pontos": 10,
-    "tipo": "texto",
-    "pergunta": "Para dar início ao primeiro movimento de solfejo em 4, qual é o posicionamento inicial da mão do candidato destro?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.4 Movimento de solfejo em 4",
-      "pagina": 30
-    },
-    "opcoes": [
-      {
-        "texto": "Posicionar a mão na altura dos olhos e direcioná-la para o ponto 1 (embaixo).",
-        "correta": false,
-        "feedback": "A mão deve ser posicionada na altura do peito para iniciar o movimento."
-      },
-      {
-        "texto": "Posicionar a mão na altura do peito e bater a mão no ponto número 1 (embaixo/centro).",
-        "correta": true,
-        "feedback": "O movimento inicia com o posicionamento da mão na altura do peito e a batida no ponto 1."
-      },
-      {
-        "texto": "Posicionar a mão na lateral direita e iniciar o movimento para cima (ponto 4).",
-        "correta": false,
-        "feedback": "O movimento sempre começa em baixo."
-      },
-      {
-        "texto": "Iniciar o movimento no ponto 4 (em cima) e descer até o ponto 1 (embaixo).",
-        "correta": false,
-        "feedback": "O movimento em 4 começa na batida (ponto 1), seguindo para o ponto 2."
-      }
-    ]
-  },
-  {
-    "id": "f3_q010",
-    "ativo": true,
-    "dificuldade": "facil",
-    "pontos": 10,
-    "tipo": "texto",
-    "pergunta": "O conceito de \"Mesa Invisível\" aplicado ao movimento de condução sugere que:",
+    "pergunta": "Qual a principal orientação a ser observada ao realizar a pulsação no pé para auxiliar o Movimento de Condução?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -370,346 +489,34 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "O candidato deve manter os pés no chão e as mãos sobre os joelhos durante a pulsação.",
+        "texto": "Bater o calcanhar com força no chão para garantir a audibilidade do pulso.",
         "correta": false,
-        "feedback": "O conceito se refere à firmeza e precisão do gesto da mão."
+        "feedback": "O movimento deve ser leve, sem ruídos, preferencialmente apenas com os dedos do pé, e nunca com o calcanhar ou a planta do pé."
       },
       {
-        "texto": "Cada movimento deve ser feito como se a mão tocasse uma superfície rígida invisível no ar.",
+        "texto": "Realizar movimentos leves, apenas com os dedos dos pés, evitando ruídos.",
         "correta": true,
-        "feedback": "A Mesa Invisível garante a precisão e a firmeza da batida nos pontos de pulsação."
+        "feedback": "Recomenda-se que o movimento seja leve, apenas com os dedos dos pés, para não causar ruídos que atrapalhem o conjunto musical."
       },
       {
-        "texto": "O movimento deve ser arredondado e suave, sem qualquer batida perceptível.",
+        "texto": "Manter a planta do pé e o calcanhar alinhados, subindo a perna a cada pulso.",
         "correta": false,
-        "feedback": "O conceito de Mesa Invisível implica a sensação de toque ou batida no ponto."
+        "feedback": "O movimento deve ser leve e discreto, sem movimentos exagerados da perna."
       },
       {
-        "texto": "Os movimentos devem ser restritos à área do pulso, sem envolver o antebraço.",
+        "texto": "Usar o pé apenas para marcar a Fermata (𝄐).",
         "correta": false,
-        "feedback": "O movimento deve envolver o braço, evitando mover apenas o pulso."
+        "feedback": "O pé auxilia a manter a pulsação e o ritmo geral, não apenas a Fermata (𝄐)."
       }
     ]
   },
   {
-    "id": "f3_q011",
+    "id": "f03_q014",
     "ativo": true,
     "dificuldade": "facil",
-    "pontos": 10,
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Qual é a condição essencial para que o candidato possa realizar a Leitura Métrica?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.2 Leitura rítmica, leitura métrica e solfejo",
-      "pagina": 27
-    },
-    "opcoes": [
-      {
-        "texto": "As notas já devem estar escritas no pentagrama, com a clave.",
-        "correta": true,
-        "feedback": "Para falar o nome das notas (leitura métrica), é necessário que as notas estejam escritas no pentagrama e com a clave indicada."
-      },
-      {
-        "texto": "Apenas a fórmula de compasso é suficiente, sem a necessidade da clave.",
-        "correta": false,
-        "feedback": "Sem a clave, não é possível saber o nome das notas."
-      },
-      {
-        "texto": "O exercício deve conter apenas figuras de tempo simples.",
-        "correta": false,
-        "feedback": "A natureza do compasso não define se a leitura é métrica."
-      },
-      {
-        "texto": "A sílaba 'TÁ' deve ser cantada em diferentes alturas para representar as notas.",
-        "correta": false,
-        "feedback": "A Leitura Métrica é a fala do nome da nota, não o canto da sílaba 'TÁ'."
-      }
-    ]
-  },
-  {
-    "id": "f3_q012",
-    "ativo": true,
-    "dificuldade": "facil",
-    "pontos": 10,
-    "tipo": "texto",
-    "pergunta": "No Movimento de Solfejo em 4 para destros, como é realizado o primeiro movimento?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.4 Movimento de solfejo em 4",
-      "pagina": 30
-    },
-    "opcoes": [
-      {
-        "texto": "Começa no ponto 4 (em cima) e termina no ponto 1 (embaixo/centro).",
-        "correta": false,
-        "feedback": "Este é o quarto movimento."
-      },
-      {
-        "texto": "Começa no ponto 1 (embaixo/centro) e termina no ponto 2 (à esquerda/para dentro do corpo).",
-        "correta": true,
-        "feedback": "O primeiro movimento inicia embaixo e é direcionado para a esquerda (ou para dentro do corpo)."
-      },
-      {
-        "texto": "Começa no ponto 2 (à esquerda) e termina no ponto 3 (à direita).",
-        "correta": false,
-        "feedback": "Este é o segundo movimento."
-      },
-      {
-        "texto": "Começa no ponto 3 (à direita) e termina no ponto 4 (em cima).",
-        "correta": false,
-        "feedback": "Este é o terceiro movimento."
-      }
-    ]
-  },
-  {
-    "id": "f3_q013",
-    "ativo": true,
-    "dificuldade": "facil",
-    "pontos": 10,
-    "tipo": "texto",
-    "pergunta": "No Movimento de Solfejo em 4 para destros, como é realizado o segundo movimento?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.4 Movimento de solfejo em 4",
-      "pagina": 30
-    },
-    "opcoes": [
-      {
-        "texto": "Começa no ponto 4 (em cima) e termina no ponto 1 (embaixo/centro).",
-        "correta": false,
-        "feedback": "Este é o quarto movimento."
-      },
-      {
-        "texto": "Começa no ponto 1 (embaixo/centro) e termina no ponto 2 (à esquerda).",
-        "correta": false,
-        "feedback": "Este é o primeiro movimento."
-      },
-      {
-        "texto": "Começa no ponto 2 (à esquerda) e termina no ponto 3 (à direita/para fora do corpo).",
-        "correta": true,
-        "feedback": "O segundo movimento se desloca da esquerda (ponto 2) para a direita (ponto 3, ou para fora do corpo)."
-      },
-      {
-        "texto": "Começa no ponto 3 (à direita) e termina no ponto 4 (em cima).",
-        "correta": false,
-        "feedback": "Este é o terceiro movimento."
-      }
-    ]
-  },
-  {
-    "id": "f3_q014",
-    "ativo": true,
-    "dificuldade": "facil",
-    "pontos": 10,
-    "tipo": "texto",
-    "pergunta": "No Movimento de Solfejo em 4 para destros, como é realizado o terceiro movimento?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.4 Movimento de solfejo em 4",
-      "pagina": 30
-    },
-    "opcoes": [
-      {
-        "texto": "Começa no ponto 4 (em cima) e termina no ponto 1 (embaixo/centro).",
-        "correta": false,
-        "feedback": "Este é o quarto movimento."
-      },
-      {
-        "texto": "Começa no ponto 1 (embaixo/centro) e termina no ponto 2 (à esquerda).",
-        "correta": false,
-        "feedback": "Este é o primeiro movimento."
-      },
-      {
-        "texto": "Começa no ponto 2 (à esquerda) e termina no ponto 3 (à direita).",
-        "correta": false,
-        "feedback": "Este é o segundo movimento."
-      },
-      {
-        "texto": "Começa no ponto 3 (à direita) e termina no ponto 4 (em cima).",
-        "correta": true,
-        "feedback": "O terceiro movimento se desloca da direita (ponto 3) para cima (ponto 4)."
-      }
-    ]
-  },
-  {
-    "id": "f3_q015",
-    "ativo": true,
-    "dificuldade": "facil",
-    "pontos": 10,
-    "tipo": "texto",
-    "pergunta": "No Movimento de Solfejo em 4 para destros, como é realizado o quarto movimento?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.4 Movimento de solfejo em 4",
-      "pagina": 30
-    },
-    "opcoes": [
-      {
-        "texto": "Começa no ponto 4 (em cima) e termina no ponto 1 (embaixo/centro).",
-        "correta": true,
-        "feedback": "O quarto movimento se desloca de cima (ponto 4) para baixo (ponto 1), finalizando o compasso."
-      },
-      {
-        "texto": "Começa no ponto 1 (embaixo/centro) e termina no ponto 2 (à esquerda).",
-        "correta": false,
-        "feedback": "Este é o primeiro movimento."
-      },
-      {
-        "texto": "Começa no ponto 2 (à esquerda) e termina no ponto 3 (à direita).",
-        "correta": false,
-        "feedback": "Este é o segundo movimento."
-      },
-      {
-        "texto": "Começa no ponto 3 (à direita) e termina no ponto 4 (em cima).",
-        "correta": false,
-        "feedback": "Este é o terceiro movimento."
-      }
-    ]
-  },
-  {
-    "id": "f3_q016",
-    "ativo": true,
-    "dificuldade": "facil",
-    "pontos": 10,
-    "tipo": "texto",
-    "pergunta": "O Metrônomo de Maelzel (M.M.) é um exemplo de qual tipo de metrônomo?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.5 Metrônomo",
-      "pagina": 31
-    },
-    "opcoes": [
-      {
-        "texto": "Metrônomo digital.",
-        "correta": false,
-        "feedback": "O M.M. é um instrumento mecânico."
-      },
-      {
-        "texto": "Metrônomo de aplicativo.",
-        "correta": false,
-        "feedback": "O M.M. é um instrumento mecânico, antecessor dos aplicativos."
-      },
-      {
-        "texto": "Metrônomo mecânico.",
-        "correta": true,
-        "feedback": "O metrônomo Maelzel (M.M.) é o modelo mecânico, com um pêndulo oscilante."
-      },
-      {
-        "texto": "Metrônomo compensado.",
-        "correta": false,
-        "feedback": "Compensado é um termo técnico usado para alguns instrumentos de sopro (metais)."
-      }
-    ]
-  },
-  {
-    "id": "f3_q017",
-    "ativo": true,
-    "dificuldade": "facil",
-    "pontos": 10,
-    "tipo": "texto",
-    "pergunta": "Qual é a unidade de medida utilizada para indicar a velocidade do metrônomo, frequentemente abreviada como BPM?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.5 Metrônomo",
-      "pagina": 31
-    },
-    "opcoes": [
-      {
-        "texto": "Batidas por Minuto.",
-        "correta": true,
-        "feedback": "BPM significa Batidas por Minuto, a forma de indicar a velocidade do metrônomo."
-      },
-      {
-        "texto": "Batidas por Metrônomo.",
-        "correta": false,
-        "feedback": "A abreviatura se refere ao tempo."
-      },
-      {
-        "texto": "Batidas por Mínima.",
-        "correta": false,
-        "feedback": "A abreviatura se refere ao tempo."
-      },
-      {
-        "texto": "Batidas por Música.",
-        "correta": false,
-        "feedback": "A abreviatura se refere ao tempo."
-      }
-    ]
-  },
-  {
-    "id": "f3_q018",
-    "ativo": true,
-    "dificuldade": "facil",
-    "pontos": 10,
-    "tipo": "texto",
-    "pergunta": "Das claves utilizadas no hinário (Sol, Dó na 3ª linha, Fá na 4ª linha), qual é utilizada principalmente para sons graves?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "1.6 Claves",
-      "pagina": 13
-    },
-    "opcoes": [
-      {
-        "texto": "Clave de Sol (2ª linha).",
-        "correta": false,
-        "feedback": "A Clave de Sol é utilizada principalmente para sons agudos."
-      },
-      {
-        "texto": "Clave de Dó (3ª linha).",
-        "correta": false,
-        "feedback": "A Clave de Dó é utilizada principalmente para sons médios."
-      },
-      {
-        "texto": "Clave de Fá (4ª linha).",
-        "correta": true,
-        "feedback": "A Clave de Fá, escrita na 4ª linha, é utilizada principalmente para sons graves."
-      },
-      {
-        "texto": "Todas são usadas igualmente para sons graves.",
-        "correta": false,
-        "feedback": "Cada clave tem uma região de som predominante."
-      }
-    ]
-  },
-  {
-    "id": "f3_q019",
-    "ativo": true,
-    "dificuldade": "facil",
-    "pontos": 10,
-    "tipo": "texto",
-    "pergunta": "Qual a recomendação do MSA sobre a execução de movimentos de pulsação com o pé?",
+    "pergunta": "Qual o conceito da 'Mesa Invisível' nos Movimentos de Condução?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -721,34 +528,34 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "O movimento deve ser realizado com a planta do pé ou o calcanhar, desde que seja constante.",
+        "texto": "É a linha reta que a mão deve seguir ao subir, evitando curvas.",
         "correta": false,
-        "feedback": "O movimento da planta do pé ou calcanhar não é recomendado, devendo ser apenas com os dedos."
+        "feedback": "A linha reta (invisível) se refere ao trajeto do movimento, mas não é a 'Mesa Invisível'."
       },
       {
-        "texto": "Deve ser evitado em todas as fases do aprendizado, pois pode criar ruídos indevidos.",
+        "texto": "O ponto onde o movimento é mais fraco (Piano).",
         "correta": false,
-        "feedback": "É permitido, mas de forma leve, para auxiliar a pulsação no início dos estudos."
+        "feedback": "A Mesa Invisível se refere à sensação de superfície rígida em que a mão 'bate'."
       },
       {
-        "texto": "Os movimentos devem ser leves, apenas com os dedos dos pés, para auxiliar na pulsação inicial.",
+        "texto": "É a superfície rígida e invisível que a mão deve simular tocar a cada movimento do solfejo.",
         "correta": true,
-        "feedback": "Recomenda-se movimentos leves, apenas com os dedos dos pés, evitando ruídos e movimentos muito fortes."
+        "feedback": "A Mesa Invisível é a orientação de que cada movimento deve ser realizado como se a mão tocasse uma superfície rígida invisível no ar."
       },
       {
-        "texto": "O movimento no pé deve ser feito de forma forte e ruidosa para marcar a pulsação do grupo.",
+        "texto": "O espaço de tempo entre uma batida e outra do pulso.",
         "correta": false,
-        "feedback": "O movimento deve ser leve e discreto, para evitar ruídos perceptíveis."
+        "feedback": "O espaço de tempo entre batidas é o intervalo que define a pulsação."
       }
     ]
   },
   {
-    "id": "f3_q020",
+    "id": "f03_q015",
     "ativo": true,
     "dificuldade": "facil",
-    "pontos": 10,
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Qual o principal erro que o candidato deve evitar ao realizar o movimento de condução com a mão?",
+    "pergunta": "Na Fórmula de Compasso 4/4, para a execução do Movimento de Solfejo em 4, o que é recomendado para o movimento do braço?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -760,424 +567,73 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "Fazer movimentos muito amplos ou arredondados, saindo da Janela de Movimento.",
+        "texto": "Movimentar apenas o pulso e os dedos, mantendo o antebraço imóvel.",
         "correta": false,
-        "feedback": "Embora seja um erro a ser evitado, o erro principal aqui se refere à articulação do braço e da mão."
+        "feedback": "Não se deve movimentar apenas o pulso; os movimentos devem ser realizados com o braço e a mão, mantendo o pulso firme."
       },
       {
-        "texto": "Movimentar somente o pulso, mantendo o antebraço e a mão alinhados.",
+        "texto": "Mexer o cotovelo de forma exagerada para que o movimento seja mais amplo.",
         "correta": false,
-        "feedback": "O pulso não deve ser movimentado, mas sim o antebraço e a mão."
+        "feedback": "Os movimentos devem ser naturais, leves e dentro da janela de movimento, sem exagerar nos gestos."
       },
       {
-        "texto": "Movimentar apenas o pulso, não o antebraço.",
+        "texto": "Movimentar apenas o antebraço e a mão, mantendo o cotovelo imóvel e o pulso firme.",
         "correta": true,
-        "feedback": "O movimento deve ser feito movimentando o braço (antebraço e mão), e não apenas o pulso."
+        "feedback": "Para uma condução correta, o candidato deve movimentar apenas o antebraço e a mão, de forma firme, sem mexer o pulso e mantendo o cotovelo imóvel."
       },
       {
-        "texto": "Enrijecer a mão e o braço, forçando o movimento.",
-        "correta": false,
-        "feedback": "Embora deva ser evitado, o erro principal aqui se refere à articulação do braço e da mão."
-      }
-    ]
-  },
-  {
-    "id": "f3_q021",
-    "ativo": true,
-    "dificuldade": "medio",
-    "pontos": 15,
-    "tipo": "texto",
-    "pergunta": "Qual a principal função didática do Endecagrama?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.1 Endecagrama",
-      "pagina": 27
-    },
-    "opcoes": [
-      {
-        "texto": "Ajudar a memorizar a ordem dos sustenidos e bemóis na armadura de clave.",
-        "correta": false,
-        "feedback": "O endecagrama não está diretamente ligado à armadura de clave, mas à visualização de diferentes alturas."
-      },
-      {
-        "texto": "Visualizar as três claves (Sol, Dó e Fá) simultaneamente, posicionando as notas para melhor identificação do Dó Central e a equivalência de alturas.",
-        "correta": true,
-        "feedback": "O endecagrama é a disposição das três claves, facilitando a visualização das notas iguais (Dó3) em alturas diferentes."
-      },
-      {
-        "texto": "Substituir o pentagrama, eliminando a necessidade de linhas suplementares.",
-        "correta": false,
-        "feedback": "O endecagrama é um sistema didático, não substitui o pentagrama."
-      },
-      {
-        "texto": "Determinar a pulsação correta da música e a distribuição dos tempos.",
-        "correta": false,
-        "feedback": "Isso é função da fórmula de compasso e do metrônomo."
-      }
-    ]
-  },
-  {
-    "id": "f3_q022",
-    "ativo": true,
-    "dificuldade": "medio",
-    "pontos": 15,
-    "tipo": "texto",
-    "pergunta": "Considerando o sistema Endecagrama, o Dó Central (Dó3) ocupa qual posição?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.1 Endecagrama",
-      "pagina": 27
-    },
-    "opcoes": [
-      {
-        "texto": "A quinta linha do pentagrama na Clave de Sol e a primeira linha do pentagrama na Clave de Fá.",
-        "correta": false,
-        "feedback": "O Dó3 é uma linha suplementar para as Claves de Sol e Fá (4ª linha)."
-      },
-      {
-        "texto": "A terceira linha da Clave de Dó, a primeira linha suplementar inferior da Clave de Sol e a primeira linha suplementar superior da Clave de Fá.",
-        "correta": true,
-        "feedback": "O Dó3 é o ponto central que se alinha na 3ª linha da Clave de Dó e nas primeiras linhas suplementares das Claves de Sol e Fá."
-      },
-      {
-        "texto": "A quarta linha da Clave de Fá e o quarto espaço da Clave de Sol.",
-        "correta": false,
-        "feedback": "O Dó3 é a primeira linha suplementar inferior da Clave de Sol."
-      },
-      {
-        "texto": "A linha de referência da Clave de Dó (3ª linha) e a primeira linha suplementar superior da Clave de Sol.",
-        "correta": false,
-        "feedback": "O Dó3 na Clave de Sol é a primeira linha suplementar inferior."
-      }
-    ]
-  },
-  {
-    "id": "f3_q023",
-    "ativo": true,
-    "dificuldade": "medio",
-    "pontos": 15,
-    "tipo": "texto",
-    "pergunta": "Qual a principal diferença entre a Leitura Métrica e a Leitura Rítmica?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.2 Leitura rítmica, leitura métrica e solfejo",
-      "pagina": 27
-    },
-    "opcoes": [
-      {
-        "texto": "A Leitura Métrica foca na altura e intensidade, enquanto a Rítmica foca na duração e timbre.",
-        "correta": false,
-        "feedback": "Ambas focam na duração e ritmo, mas a distinção se dá na pronúncia das notas."
-      },
-      {
-        "texto": "A Leitura Rítmica utiliza a sílaba \"TÁ\" para o ritmo, enquanto a Métrica utiliza o nome das notas (sem cantar) mantendo o ritmo.",
-        "correta": true,
-        "feedback": "A Rítmica utiliza 'TÁ' e a Métrica utiliza o nome das notas, ambas respeitando o ritmo e a duração."
-      },
-      {
-        "texto": "A Leitura Métrica é feita em compassos simples, e a Rítmica em compassos compostos.",
-        "correta": false,
-        "feedback": "Ambas podem ser feitas em qualquer tipo de compasso."
-      },
-      {
-        "texto": "A Leitura Rítmica é feita com a mão direita, e a Métrica com a mão esquerda.",
-        "correta": false,
-        "feedback": "A mão de condução é definida pelo candidato (destro/canhoto), não pelo tipo de leitura."
-      }
-    ]
-  },
-  {
-    "id": "f3_q024",
-    "ativo": true,
-    "dificuldade": "medio",
-    "pontos": 15,
-    "tipo": "texto",
-    "pergunta": "O Solfejo, além de exigir a precisão rítmica, requer a aplicação de conceitos estudados em Fases anteriores. Quais são o Elemento da Música e a Propriedade do Som considerados cruciais para a correta entonação e execução melódica?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.2 Leitura rítmica, leitura métrica e solfejo",
-      "pagina": 27
-    },
-    "opcoes": [
-      {
-        "texto": "Timbre (Propriedade) e Ritmo (Elemento).",
-        "correta": false,
-        "feedback": "Timbre refere-se à 'cor do som', mas o Ritmo é um aspecto que já deve estar dominado pela Leitura Rítmica e Métrica. O Solfejo se concentra na entonação e Melodia."
-      },
-      {
-        "texto": "Duração (Propriedade) e Harmonia (Elemento).",
-        "correta": false,
-        "feedback": "A Duração é um pré-requisito fundamental para a precisão rítmica, mas o Solfejo é focado na Altura. A Harmonia trata de sons simultâneos, enquanto o Solfejo é melódico."
-      },
-      {
-        "texto": "Intensidade (Propriedade) e Harmonia (Elemento).",
-        "correta": false,
-        "feedback": "A Intensidade refere-se ao volume do som, e a Harmonia a sons simultâneos. Os conceitos cruciais para o Solfejo são Altura e Melodia."
-      },
-      {
-        "texto": "Altura (Propriedade) e Melodia (Elemento).",
-        "correta": true,
-        "feedback": "O Solfejo exige a compreensão da Melodia (produção ordenada de sons sucessivos) e a aplicação correta da Altura (propriedade que distingue sons agudos ou graves), conforme instruído para o Solfejo."
-      }
-    ]
-  },
-  {
-    "id": "f3_q025",
-    "ativo": true,
-    "dificuldade": "medio",
-    "pontos": 15,
-    "tipo": "texto",
-    "pergunta": "Qual a finalidade da \"Janela de Movimento\" no Movimento de Condução?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.3 Movimentos de condução para solfejo",
-      "pagina": 28
-    },
-    "opcoes": [
-      {
-        "texto": "Garantir que o movimento seja feito de forma suave, sem a sensação de batida.",
-        "correta": false,
-        "feedback": "A sensação de batida é associada à 'Mesa Invisível'."
-      },
-      {
-        "texto": "Permitir que o candidato inicie o movimento do pé em sincronia com a mão.",
-        "correta": false,
-        "feedback": "A janela de movimento se refere à delimitação espacial da mão."
-      },
-      {
-        "texto": "Delimitar o espaço utilizado para os movimentos de condução, evitando gestos muito pequenos ou muito expansivos (exagerados).",
-        "correta": true,
-        "feedback": "A Janela de Movimento define o limite espacial ideal para a realização dos movimentos de condução."
-      },
-      {
-        "texto": "Determinar a velocidade mínima e máxima do exercício de solfejo.",
-        "correta": false,
-        "feedback": "A velocidade é determinada pela marcação do metrônomo (BPM)."
-      }
-    ]
-  },
-  {
-    "id": "f3_q026",
-    "ativo": true,
-    "dificuldade": "medio",
-    "pontos": 15,
-    "tipo": "texto",
-    "pergunta": "Na representação do Movimento de Solfejo em 4 para destros, qual a trajetória do terceiro movimento (3º tempo)?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.4 Movimento de solfejo em 4",
-      "pagina": 30
-    },
-    "opcoes": [
-      {
-        "texto": "Do ponto 1 (embaixo) para o ponto 2 (à esquerda).",
-        "correta": false,
-        "feedback": "Esta é a trajetória do primeiro movimento."
-      },
-      {
-        "texto": "Do ponto 2 (à esquerda) para o ponto 3 (à direita).",
-        "correta": false,
-        "feedback": "Esta é a trajetória do segundo movimento."
-      },
-      {
-        "texto": "Do ponto 3 (à direita) para o ponto 4 (em cima).",
-        "correta": true,
-        "feedback": "O terceiro movimento segue da direita para cima."
-      },
-      {
-        "texto": "Do ponto 4 (em cima) para o ponto 1 (embaixo).",
-        "correta": false,
-        "feedback": "Esta é a trajetória do quarto movimento."
-      }
-    ]
-  },
-  {
-    "id": "f3_q027",
-    "ativo": true,
-    "dificuldade": "medio",
-    "pontos": 15,
-    "tipo": "texto",
-    "pergunta": "Ao executar o Movimento de Solfejo em 4, qual a orientação essencial em relação à articulação do braço e do pulso?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.4 Movimento de solfejo em 4",
-      "pagina": 30
-    },
-    "opcoes": [
-      {
-        "texto": "Mover apenas o pulso para garantir a precisão da batida no ponto 1 (embaixo).",
-        "correta": false,
-        "feedback": "O pulso deve permanecer imóvel para garantir a firmeza do movimento."
-      },
-      {
-        "texto": "Manter o cotovelo imóvel e movimentar apenas o antebraço e a mão de forma firme, sem mexer o pulso.",
-        "correta": true,
-        "feedback": "É fundamental movimentar o antebraço e a mão, mantendo o pulso imóvel, de forma natural e leve."
-      },
-      {
-        "texto": "Enrijecer a mão e o braço para que a batida seja mais forte e evidente.",
+        "texto": "Manter a mão enrijecida e o braço esticado durante toda a execução.",
         "correta": false,
         "feedback": "Os movimentos devem ser feitos de maneira natural, leves e sem muito esforço."
-      },
-      {
-        "texto": "Realizar movimentos circulares amplos, especialmente no ponto 4 (em cima).",
-        "correta": false,
-        "feedback": "Os movimentos devem ser em linha reta, precisos e constantes, sem curvas."
       }
     ]
   },
   {
-    "id": "f3_q028",
+    "id": "f03_q016",
     "ativo": true,
-    "dificuldade": "medio",
+    "dificuldade": "facil",
     "pontos": 15,
     "tipo": "texto",
-    "pergunta": "O MSA recomenda a utilização do metrônomo em quais etapas do aprendizado musical?",
+    "pergunta": "No Movimento de Solfejo em 4 (para destros), qual o ponto onde o segundo movimento termina?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
       "livro": "MSA",
       "periodo": 1,
       "fase": 3,
-      "item": "3.5 Metrônomo",
-      "pagina": 31
+      "item": "3.4 Movimento de solfejo em 4",
+      "pagina": 30
     },
     "opcoes": [
       {
-        "texto": "Apenas durante os estudos de Teoria Musical, para memorizar a pulsação.",
+        "texto": "Ponto 1 (embaixo).",
         "correta": false,
-        "feedback": "O uso do metrônomo é recomendado para a prática completa do estudante."
+        "feedback": "O Ponto 1 (embaixo) é onde o primeiro e o quarto movimento começam/terminam."
       },
       {
-        "texto": "Durante os estudos do MSA, nos métodos do instrumento e nos hinos.",
+        "texto": "Ponto 2 (à esquerda).",
+        "correta": false,
+        "feedback": "O Ponto 2 (à esquerda) é onde o primeiro movimento termina e o segundo começa."
+      },
+      {
+        "texto": "Ponto 3 (à direita).",
         "correta": true,
-        "feedback": "O metrônomo deve ser usado em todas as esferas do estudo (MSA, métodos do instrumento e hinos) para desenvolver a percepção rítmica."
+        "feedback": "O segundo movimento começa no Ponto 2 (esquerda) e termina no Ponto 3 (direita)."
       },
       {
-        "texto": "Somente na Leitura Rítmica, já que a Métrica e o Solfejo dependem da altura da nota.",
+        "texto": "Ponto 4 (em cima).",
         "correta": false,
-        "feedback": "O metrônomo é fundamental em todas as formas de leitura (rítmica, métrica e solfejo)."
-      },
-      {
-        "texto": "Apenas nos estudos do instrumento com afinação em Dó.",
-        "correta": false,
-        "feedback": "A utilização do metrônomo é uma recomendação geral, independente da afinação do instrumento."
+        "feedback": "O Ponto 4 (em cima) é onde o terceiro movimento termina e o quarto começa."
       }
     ]
   },
   {
-    "id": "f3_q029",
+    "id": "f03_q017",
     "ativo": true,
-    "dificuldade": "medio",
+    "dificuldade": "facil",
     "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Como o candidato deve se orientar em relação à velocidade de execução de um hino, dado que o hinário indica velocidades mínima e máxima (ex.: 60-80 bpm)?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.5 Metrônomo",
-      "pagina": 31
-    },
-    "opcoes": [
-      {
-        "texto": "Deve-se escolher o limite máximo (80 bpm) para garantir uma execução ligeira e alegre.",
-        "correta": false,
-        "feedback": "Recomenda-se tocar na média, não necessariamente no limite máximo."
-      },
-      {
-        "texto": "Deve-se tocar sempre na velocidade mínima (60 bpm) para garantir uma execução mais suave e solene.",
-        "correta": false,
-        "feedback": "Recomenda-se tocar na média das velocidades, dentro dos limites."
-      },
-      {
-        "texto": "É recomendável que o andamento fique na média entre as velocidades mínima e máxima indicadas.",
-        "correta": true,
-        "feedback": "A instrução do hinário sugere que o andamento ideal seja a média dos limites de velocidade definidos."
-      },
-      {
-        "texto": "O músico deve escolher a velocidade de sua preferência, independentemente do limite mínimo e máximo.",
-        "correta": false,
-        "feedback": "O músico deve ater-se aos limites estabelecidos para manter a uniformidade na orquestra."
-      }
-    ]
-  },
-  {
-    "id": "f3_q030",
-    "ativo": true,
-    "dificuldade": "medio",
-    "pontos": 15,
-    "tipo": "texto",
-    "pergunta": "O Endecagrama permite que o Dó Central (Dó3) seja escrito em três claves diferentes. O que acontece com o som dessa nota, independentemente da clave utilizada?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.1 Endecagrama",
-      "pagina": 27
-    },
-    "opcoes": [
-      {
-        "texto": "A nota soará em diferentes alturas, dependendo da região da clave (aguda, média ou grave).",
-        "correta": false,
-        "feedback": "Embora as claves representem regiões, a nota Dó3, quando alinhada no endecagrama, soa igual."
-      },
-      {
-        "texto": "A nota soará exatamente igual, mesmo sendo escrita em claves diferentes.",
-        "correta": true,
-        "feedback": "A visualização no endecagrama demonstra que a mesma altura sonora (Dó3) é representada de forma diferente nas claves de Sol, Dó e Fá."
-      },
-      {
-        "texto": "A sonoridade varia apenas na intensidade, mas a altura permanece a mesma.",
-        "correta": false,
-        "feedback": "A intensidade é uma propriedade distinta da altura."
-      },
-      {
-        "texto": "O som varia em um semitom ascendente ou descendente, dependendo da clave.",
-        "correta": false,
-        "feedback": "A alteração de semitom é feita por acidentes, não pela mudança de clave."
-      }
-    ]
-  },
-  {
-    "id": "f3_q031",
-    "ativo": true,
-    "dificuldade": "medio",
-    "pontos": 15,
-    "tipo": "texto",
-    "pergunta": "Em relação à Leitura Métrica, quando o candidato tem a opção de realizar o Solfejo?",
+    "pergunta": "Qual a principal diferença entre Leitura Métrica e Solfejo?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -1189,34 +645,73 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "O solfejo é obrigatório sempre que houver figuras de notas e de pausas no mesmo compasso.",
+        "texto": "Na Leitura Métrica falamos a sílaba 'TÁ', enquanto no Solfejo falamos o nome da nota.",
         "correta": false,
-        "feedback": "O Solfejo é opcional nos exercícios de Leitura Métrica."
+        "feedback": "Falar a sílaba 'TÁ' é Leitura Rítmica. Leitura Métrica e Solfejo envolvem o nome da nota."
       },
       {
-        "texto": "O solfejo deve ser evitado, pois pode confundir a Leitura Métrica com a Rítmica.",
+        "texto": "Na Leitura Métrica se utiliza a Clave de Sol (𝄞) e no Solfejo se utiliza a Clave de Fá (𝄢).",
         "correta": false,
-        "feedback": "O Solfejo é um recurso adicional para a Leitura Métrica."
+        "feedback": "Ambos utilizam as claves definidas na partitura. O que muda é a ação executada."
       },
       {
-        "texto": "Quando houver exercícios de leitura métrica, o candidato pode escolher executá-los realizando o solfejo (cantando as notas na altura).",
+        "texto": "Na Leitura Métrica falamos o nome da nota sem cantar, enquanto no Solfejo cantamos a nota na altura correta.",
         "correta": true,
-        "feedback": "O Solfejo é um recurso opcional para os exercícios de Leitura Métrica, permitindo cantar as notas na altura enquanto diz o nome delas."
+        "feedback": "A Leitura Métrica envolve apenas falar o nome das notas (sem cantar), enquanto o Solfejo exige cantar as notas respeitando a altura (afinação)."
       },
       {
-        "texto": "Somente após a conclusão da Fase 3 o solfejo é permitido, antes disso apenas a Leitura Rítmica e Métrica.",
+        "texto": "A Leitura Métrica exige pulsação constante, enquanto o Solfejo não.",
         "correta": false,
-        "feedback": "O Solfejo é introduzido e permitido na Fase 3, tópico 3.2."
+        "feedback": "Ambos, Leitura Métrica e Solfejo, exigem precisão rítmica e pulsação constante."
       }
     ]
   },
   {
-    "id": "f3_q032",
+    "id": "f03_q018",
     "ativo": true,
-    "dificuldade": "medio",
+    "dificuldade": "facil",
     "pontos": 15,
     "tipo": "texto",
-    "pergunta": "O que a instrução de 'Janela de Movimento' visa evitar no Movimento de Condução?",
+    "pergunta": "Qual o nome do sistema de 11 linhas que alinha as Claves de Sol (𝄞), Dó (𝄡) e Fá (𝄢) pela mesma altura do Dó Central (Dó3)?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.1 Endecagrama",
+      "pagina": 27
+    },
+    "opcoes": [
+      {
+        "texto": "Pentagrama.",
+        "correta": false,
+        "feedback": "Pentagrama é o conjunto de 5 linhas e 4 espaços."
+      },
+      {
+        "texto": "Endecagrama.",
+        "correta": true,
+        "feedback": "Endecagrama (Endeca=onze; grama=linha) é a disposição das claves utilizando um sistema de 11 linhas alinhadas pela altura do Dó Central."
+      },
+      {
+        "texto": "Tetragrama.",
+        "correta": false,
+        "feedback": "Tetragrama é o sistema musical de 4 linhas, anterior ao Pentagrama."
+      },
+      {
+        "texto": "Quaternário Composto.",
+        "correta": false,
+        "feedback": "Quaternário Composto se refere a um tipo de Fórmula de Compasso (12/8)."
+      }
+    ]
+  },
+  {
+    "id": "f03_q019",
+    "ativo": true,
+    "dificuldade": "facil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Na indicação de Movimentos de Condução, como deve ser feito o movimento com a mão para iniciar o pulso?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -1228,112 +723,34 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "Que o músico se desvie dos pontos cardeais do compasso (Norte, Sul, Leste, Oeste).",
-        "correta": false,
-        "feedback": "A instrução se refere aos limites espaciais, não a pontos cardeais."
-      },
-      {
-        "texto": "Que os movimentos fiquem muito pequenos ou se tornem muito expansivos (exagerados).",
+        "texto": "Deve começar sempre com a batida na parte de baixo, em um movimento reto, constante e preciso.",
         "correta": true,
-        "feedback": "A Janela de Movimento delimita o espaço para que os movimentos sejam adequados, evitando extremos."
+        "feedback": "A pulsação deve começar sempre com a batida na parte de baixo e o movimento deve ser reto, preciso e constante (Movimento de Condução)."
       },
       {
-        "texto": "Que o canhoto utilize a mão esquerda no lugar da direita.",
+        "texto": "Deve começar sempre no topo, com a mão acima da linha dos olhos.",
         "correta": false,
-        "feedback": "O canhoto tem a opção de escolha, desde que a mantenha."
+        "feedback": "O movimento não deve começar no topo; a pulsação começa embaixo. A mão não deve passar da linha dos olhos ao subir."
       },
       {
-        "texto": "Que o músico precise olhar para o movimento da mão enquanto executa.",
+        "texto": "Pode ter curvas no percurso, desde que mantenha a velocidade constante.",
         "correta": false,
-        "feedback": "O objetivo é a delimitação espacial do gesto."
+        "feedback": "O movimento deve ser realizado em linha reta, sem curvas."
+      },
+      {
+        "texto": "Deve ser realizado apenas no pulso, mantendo o antebraço imóvel.",
+        "correta": false,
+        "feedback": "Deve-se movimentar o braço (e não apenas o pulso) durante a batida."
       }
     ]
   },
   {
-    "id": "f3_q033",
+    "id": "f03_q020",
     "ativo": true,
-    "dificuldade": "medio",
+    "dificuldade": "facil",
     "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Na representação do Movimento de Solfejo em 4 para destros, qual movimento é direcionado 'para fora do corpo'?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.4 Movimento de solfejo em 4",
-      "pagina": 30
-    },
-    "opcoes": [
-      {
-        "texto": "O primeiro movimento (do ponto 1 para o 2).",
-        "correta": false,
-        "feedback": "O primeiro movimento vai para dentro do corpo (esquerda)."
-      },
-      {
-        "texto": "O segundo movimento (do ponto 2 para o 3).",
-        "correta": true,
-        "feedback": "O segundo movimento vai do ponto 2 (esquerda) para o ponto 3 (direita), ou seja, para fora do corpo."
-      },
-      {
-        "texto": "O terceiro movimento (do ponto 3 para o 4).",
-        "correta": false,
-        "feedback": "O terceiro movimento é de subida (para cima)."
-      },
-      {
-        "texto": "O quarto movimento (do ponto 4 para o 1).",
-        "correta": false,
-        "feedback": "O quarto movimento é de descida (para baixo/centro)."
-      }
-    ]
-  },
-  {
-    "id": "f3_q034",
-    "ativo": true,
-    "dificuldade": "medio",
-    "pontos": 15,
-    "tipo": "texto",
-    "pergunta": "Qual a sequência correta das direções dos quatro movimentos do Movimento de Solfejo em 4 para destros?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.4 Movimento de solfejo em 4",
-      "pagina": 30
-    },
-    "opcoes": [
-      {
-        "texto": "Cima, para fora (direita), para dentro (esquerda), para baixo.",
-        "correta": false,
-        "feedback": "A sequência correta é: 1º para dentro/esquerda, 2º para fora/direita, 3º para cima, 4º para baixo/centro."
-      },
-      {
-        "texto": "Baixo (centro) → Esquerda, Esquerda → Direita, Direita → Cima, Cima → Baixo (centro).",
-        "correta": true,
-        "feedback": "Essa sequência descreve corretamente os movimentos de 1 a 4: 1º (1-2), 2º (2-3), 3º (3-4), 4º (4-1)."
-      },
-      {
-        "texto": "Direita, para baixo (centro), para cima, para a esquerda.",
-        "correta": false,
-        "feedback": "O movimento sempre começa embaixo, indo para a esquerda no primeiro tempo."
-      },
-      {
-        "texto": "Esquerda, Direita, Cima, Baixo (centro).",
-        "correta": false,
-        "feedback": "O movimento começa no ponto central embaixo, indo para a esquerda (ponto 2) e depois para a direita (ponto 3)."
-      }
-    ]
-  },
-  {
-    "id": "f3_q035",
-    "ativo": true,
-    "dificuldade": "medio",
-    "pontos": 15,
-    "tipo": "texto",
-    "pergunta": "De acordo com o MSA, qual a faixa de velocidade (em BPM) de um metrônomo mecânico, devido às suas características de construção?",
+    "pergunta": "Quais são os três tipos de metrônomos mais comuns citados no MSA?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -1345,73 +762,34 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "Mínima de 30 bpm e máxima de 220 bpm.",
+        "texto": "Analógicos, Manuais e de Baqueta.",
         "correta": false,
-        "feedback": "30 bpm é a mínima geralmente encontrada em metrônomos digitais."
+        "feedback": "Os tipos de metrônomos são Mecânicos, Digitais e de Aplicativos."
       },
       {
-        "texto": "Mínima de 40 bpm e máxima de 208 bpm.",
+        "texto": "Mecânicos, Digitais e de Aplicativos (celular).",
         "correta": true,
-        "feedback": "O metrônomo mecânico (Maelzel) tem uma velocidade mínima de 40 bpm e máxima de 208 bpm."
+        "feedback": "Existem os modelos Mecânicos (como o M.M. de Maelzel), os Digitais e os disponíveis como aplicativos para celulares."
       },
       {
-        "texto": "Mínima de 60 bpm e máxima de 120 bpm.",
+        "texto": "Sinfônicos, Filarmônicos e de Bolso.",
         "correta": false,
-        "feedback": "Esta faixa é muito restrita para o metrônomo mecânico."
+        "feedback": "Estes termos não são usados para classificar os tipos de metrônomos."
       },
       {
-        "texto": "Mínima de 40 bpm e não possui limite máximo definido.",
+        "texto": "Composto, Simples e Alternado.",
         "correta": false,
-        "feedback": "O limite máximo do mecânico é 208 bpm."
+        "feedback": "Estes termos são usados para classificar os tipos de Compasso."
       }
     ]
   },
   {
-    "id": "f3_q036",
+    "id": "f03_q021",
     "ativo": true,
-    "dificuldade": "medio",
+    "dificuldade": "media",
     "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Qual característica particular do metrônomo mecânico é citada no MSA em comparação ao digital?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.5 Metrônomo",
-      "pagina": 31
-    },
-    "opcoes": [
-      {
-        "texto": "O metrônomo mecânico não possui a função de afinador, diferentemente do digital.",
-        "correta": false,
-        "feedback": "Ambos podem ter essa função opcional; a diferença é sobre a marcação de velocidade."
-      },
-      {
-        "texto": "O metrônomo mecânico não possui todos os números de velocidade, saltando, por exemplo, de 69 para 72 bpm.",
-        "correta": true,
-        "feedback": "O metrônomo mecânico possui uma escala limitada de marcações de velocidade."
-      },
-      {
-        "texto": "O metrônomo mecânico exige a utilização de aplicativos de celular para sincronizar a pulsação.",
-        "correta": false,
-        "feedback": "Os aplicativos são uma alternativa aos modelos mecânicos e digitais."
-      },
-      {
-        "texto": "O metrônomo mecânico só pode ser usado em compassos simples (2/4, 3/4, 4/4).",
-        "correta": false,
-        "feedback": "A aplicação é universal para qualquer fórmula de compasso."
-      }
-    ]
-  },
-  {
-    "id": "f3_q037",
-    "ativo": true,
-    "dificuldade": "medio",
-    "pontos": 15,
-    "tipo": "texto",
-    "pergunta": "Qual clave, utilizada no hinário, tem sua linha de referência (que dá nome à nota) alinhada exatamente na terceira linha do sistema de 11 linhas do Endecagrama?",
+    "pergunta": "No sistema Endecagrama, qual a posição do Dó Central (Dó3) em relação à Clave de Fá (𝄢)?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -1423,424 +801,34 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "Clave de Fá na 4ª linha.",
+        "texto": "A segunda linha do pentagrama.",
         "correta": false,
-        "feedback": "A Clave de Fá (4ª linha) tem sua linha de referência abaixo do Dó Central no Endecagrama, mas não é a linha 3 do sistema de 11 linhas."
+        "feedback": "A segunda linha do pentagrama na Clave de Fá (𝄢) é a nota Lá."
       },
       {
-        "texto": "Clave de Sol na 2ª linha.",
-        "correta": false,
-        "feedback": "A Clave de Sol está acima do Dó Central no Endecagrama."
-      },
-      {
-        "texto": "Clave de Dó na 3ª linha.",
+        "texto": "A primeira linha suplementar superior da Clave de Fá (𝄢).",
         "correta": true,
-        "feedback": "A Clave de Dó na 3ª linha é a linha central que representa o Dó3, alinhando-se na parte central do Endecagrama."
+        "feedback": "O Dó Central (Dó3) é a primeira linha suplementar superior da Clave de Fá (𝄢), sendo o ponto que conecta a região média (𝄡) com as outras claves."
       },
       {
-        "texto": "Clave de Sol (oitava acima).",
+        "texto": "A primeira linha suplementar inferior da Clave de Sol (𝄞).",
         "correta": false,
-        "feedback": "Oitava acima é uma alteração, não uma clave base do Endecagrama."
+        "feedback": "Esta é a posição do Dó Central em relação à Clave de Sol (𝄞)."
+      },
+      {
+        "texto": "A quarta linha, determinando a nota Fá.",
+        "correta": false,
+        "feedback": "A quarta linha determina a nota Fá, linha de referência da Clave de Fá (𝄢)."
       }
     ]
   },
   {
-    "id": "f3_q038",
+    "id": "f03_q022",
     "ativo": true,
-    "dificuldade": "medio",
+    "dificuldade": "media",
     "pontos": 15,
     "tipo": "texto",
-    "pergunta": "De acordo com o MSA, qual é a finalidade principal de se praticar a Leitura Rítmica, Métrica e o Solfejo?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.2 Leitura rítmica, leitura métrica e solfejo",
-      "pagina": 27
-    },
-    "opcoes": [
-      {
-        "texto": "Garantir a execução da velocidade mais rápida possível para manter o andamento do culto.",
-        "correta": false,
-        "feedback": "O objetivo é a execução perfeita, não a velocidade máxima."
-      },
-      {
-        "texto": "Aprimorar a coordenação motora para a regência em público.",
-        "correta": false,
-        "feedback": "O foco é a execução musical segura dos hinos."
-      },
-      {
-        "texto": "Obter um bom entendimento da partitura para a execução segura e com perfeição dos hinos sacros.",
-        "correta": true,
-        "feedback": "As três formas de leitura são etapas para obter um bom entendimento da partitura e alcançar a execução segura dos hinos sacros."
-      },
-      {
-        "texto": "Identificar os acidentes ocorrentes e de precaução antes da Fase 8.",
-        "correta": false,
-        "feedback": "Embora sejam estudados no método, esse não é o objetivo principal do trio de leitura."
-      }
-    ]
-  },
-  {
-    "id": "f3_q039",
-    "ativo": true,
-    "dificuldade": "medio",
-    "pontos": 15,
-    "tipo": "texto",
-    "pergunta": "Em relação aos Movimentos de Condução, qual a regra se aplica aos candidatos canhotos?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.3 Movimentos de condução para solfejo",
-      "pagina": 28
-    },
-    "opcoes": [
-      {
-        "texto": "Devem realizar os movimentos obrigatoriamente com a mão direita, como os destros.",
-        "correta": false,
-        "feedback": "A obrigatoriedade é apenas para os destros; o canhoto tem a opção de escolha."
-      },
-      {
-        "texto": "Podem escolher entre utilizar a mão direita ou a mão esquerda, mantendo a mão escolhida durante todo o aprendizado.",
-        "correta": true,
-        "feedback": "O canhoto pode escolher a mão, mas deve manter a decisão ao longo do método."
-      },
-      {
-        "texto": "Devem usar a mão esquerda, mas de forma espelhada, com movimentos menos amplos.",
-        "correta": false,
-        "feedback": "Os movimentos devem ser feitos de forma espelhada, mas a amplidão é definida pela Janela de Movimento."
-      },
-      {
-        "texto": "Devem sempre utilizar ambas as mãos, uma para a pulsação e a outra para o ritmo.",
-        "correta": false,
-        "feedback": "O movimento é realizado com apenas uma mão."
-      }
-    ]
-  },
-  {
-    "id": "f3_q040",
-    "ativo": true,
-    "dificuldade": "medio",
-    "pontos": 15,
-    "tipo": "texto",
-    "pergunta": "No Metrônomo Mecânico (M.M.), como é produzido o clique sonoro que marca a pulsação?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.5 Metrônomo",
-      "pagina": 31
-    },
-    "opcoes": [
-      {
-        "texto": "Por meio de um sensor digital que detecta o ponto de retorno da haste.",
-        "correta": false,
-        "feedback": "Esta descrição é mais adequada a um sistema digital ou de aplicativo."
-      },
-      {
-        "texto": "Pela fricção de uma roda dentada na base do pêndulo.",
-        "correta": false,
-        "feedback": "O MSA descreve a mecânica de forma mais simples, pela oscilação."
-      },
-      {
-        "texto": "Pelo movimento do pêndulo que faz um clique sonoro quando a haste oscila, atingindo um lado e depois o outro.",
-        "correta": true,
-        "feedback": "O clique sonoro é gerado mecanicamente pela oscilação do pêndulo de um lado para o outro."
-      },
-      {
-        "texto": "É um som constante, não clicado, que simula a pulsação cardíaca.",
-        "correta": false,
-        "feedback": "O metrônomo produz cliques sonoros repetidos."
-      }
-    ]
-  },
-  {
-    "id": "f3_q041",
-    "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
-    "tipo": "texto",
-    "pergunta": "Ao realizar a leitura rítmica, qual a instrução de execução da voz deve ser observada, especialmente em notas longas, para manter a precisão do exercício?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.2 Leitura rítmica, leitura métrica e solfejo",
-      "pagina": 32
-    },
-    "opcoes": [
-      {
-        "texto": "Falar \"TÁÁÁÁ...\" com ênfase na primeira sílaba e reduzir o volume nas vogais estendidas.",
-        "correta": false,
-        "feedback": "A instrução proíbe variações e sílabas fracas, devendo-se manter a voz constante."
-      },
-      {
-        "texto": "Falar \"TAAAA...\" mantendo a voz constante durante toda a extensão da nota, sem interromper o som no meio da duração.",
-        "correta": true,
-        "feedback": "A instrução é clara: não se deve falar \"TÁÁÁÁ...\" ou \"TÁááááá...\", mas sim 'TAAAA...', mantendo a voz constante e sem interrupções durante toda a figura."
-      },
-      {
-        "texto": "Pronunciar apenas a sílaba 'TÁ' para cada batida, ficando em silêncio nas notas longas que excedam um tempo.",
-        "correta": false,
-        "feedback": "O som deve ser mantido pela duração da figura, e não cortado para cada pulso."
-      },
-      {
-        "texto": "Falar o número correspondente à batida ('1', '2', '3', '4') nas figuras de som e a sílaba 'TÁ' nas pausas.",
-        "correta": false,
-        "feedback": "O uso de números é sugerido para as pausas, mas a sílaba base da leitura rítmica é o 'TÁ'."
-      }
-    ]
-  },
-  {
-    "id": "f3_q042",
-    "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
-    "tipo": "texto",
-    "pergunta": "Qual a observação essencial para o músico identificar onde termina um movimento e onde começa o outro no Movimento de Solfejo em 4?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.4 Movimento de solfejo em 4",
-      "pagina": 30
-    },
-    "opcoes": [
-      {
-        "texto": "O movimento sempre termina quando a mão atinge a linha dos olhos.",
-        "correta": false,
-        "feedback": "A linha dos olhos é o limite superior da 'Janela de Movimento', mas não define a separação entre os tempos."
-      },
-      {
-        "texto": "O movimento sempre inicia com a batida da mão em um ponto, e só termina quando a mão chega ao ponto seguinte.",
-        "correta": true,
-        "feedback": "A observação do início da batida em um ponto e o término ao alcançar o ponto seguinte é crucial para marcar corretamente a transição entre os movimentos."
-      },
-      {
-        "texto": "Os movimentos devem ser contínuos e arredondados, sem batidas nos pontos (Mesa Invisível).",
-        "correta": false,
-        "feedback": "A 'Mesa Invisível' implica a sensação de batida em cada ponto."
-      },
-      {
-        "texto": "O movimento sempre termina no pulso, indicando o final do tempo.",
-        "correta": false,
-        "feedback": "O pulso deve permanecer imóvel durante a condução."
-      }
-    ]
-  },
-  {
-    "id": "f3_q043",
-    "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
-    "tipo": "texto",
-    "pergunta": "Qual a função primária da Clave (seja Sol, Dó ou Fá), de acordo com os conceitos de Escrita Musical e Endecagrama?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "1.6 Claves",
-      "pagina": 13
-    },
-    "opcoes": [
-      {
-        "texto": "Determinar o nome da nota escrita na sua linha de referência e, consequentemente, a altura do som (aguda, média ou grave).",
-        "correta": true,
-        "feedback": "A clave define o nome da nota na sua linha e, por sua posição no endecagrama, a região de altura (aguda, média, grave) do som."
-      },
-      {
-        "texto": "Definir se a música será tocada em compasso simples ou composto.",
-        "correta": false,
-        "feedback": "Essa é a função da fórmula de compasso."
-      },
-      {
-        "texto": "Indicar se as notas devem ser tocadas com Ligadura de Valor ou Ligadura de Portamento.",
-        "correta": false,
-        "feedback": "Ligaduras são sinais de articulação e prolongamento, não definidos pela clave."
-      },
-      {
-        "texto": "Apenas identificar se a partitura é para instrumento transpositor ou não transpositor.",
-        "correta": false,
-        "feedback": "A transposição depende do instrumento, não da clave em si."
-      }
-    ]
-  },
-  {
-    "id": "f3_q044",
-    "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
-    "tipo": "texto",
-    "pergunta": "Sobre o andamento na execução da Meia Hora, qual a instrução que garante a compreensão e a reflexão da irmandade, conforme o MOO?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.5 Metrônomo",
-      "pagina": 31
-    },
-    "opcoes": [
-      {
-        "texto": "Deve ser o mais lento possível (mínimo de 40 bpm) para induzir à meditação.",
-        "correta": false,
-        "feedback": "O andamento muito lento pode provocar incompreensão. Deve ser 'próximo à velocidade mínima'."
-      },
-      {
-        "texto": "O andamento deverá ser próximo à velocidade mínima indicada ao hino, sendo pensado como *cantabile* (cantável, cômodo), para ser percebido e compreendido.",
-        "correta": true,
-        "feedback": "O andamento deve ser próximo à mínima e 'cantabile', para não ser muito lento (incompreensível) nem rápido (inquietante)."
-      },
-      {
-        "texto": "O andamento deve ser sempre rápido para que o hino do silêncio não ultrapasse 4 minutos de duração.",
-        "correta": false,
-        "feedback": "Um andamento rápido pode provocar falta de concentração."
-      },
-      {
-        "texto": "A velocidade deve ser exatamente a média entre os limites, exceto se houver um poco rallentando.",
-        "correta": false,
-        "feedback": "Deve ser 'próximo à mínima', não necessariamente a média, e 'cantabile'."
-      }
-    ]
-  },
-  {
-    "id": "f3_q045",
-    "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
-    "tipo": "texto",
-    "pergunta": "Ao realizar os movimentos de condução, qual princípio de execução do braço e da mão deve ser observado?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.4 Movimento de solfejo em 4",
-      "pagina": 30
-    },
-    "opcoes": [
-      {
-        "texto": "Os movimentos devem ser feitos de maneira forçada, enrijecendo a mão e o braço para garantir a precisão no ponto de batida.",
-        "correta": false,
-        "feedback": "O MSA orienta que os movimentos sejam feitos de maneira natural, leves e sem muito esforço, não devendo enrijecer a mão nem o braço."
-      },
-      {
-        "texto": "O braço deve ser mantido imóvel, e o movimento deve partir apenas do pulso, mantendo a linha reta.",
-        "correta": false,
-        "feedback": "O pulso deve permanecer imóvel, e o movimento deve ser feito com o antebraço e a mão."
-      },
-      {
-        "texto": "Os movimentos devem ser feitos de maneira natural, leves e sem muito esforço, não devendo enrijecer a mão nem o braço.",
-        "correta": true,
-        "feedback": "A leveza e naturalidade são essenciais para a correta realização do movimento de condução."
-      },
-      {
-        "texto": "É necessário usar pesos no pulso para manter a constância da pulsação.",
-        "correta": false,
-        "feedback": "Não há menção a pesos nos estudos, apenas à firmeza e precisão do gesto."
-      }
-    ]
-  },
-  {
-    "id": "f3_q046",
-    "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
-    "tipo": "texto",
-    "pergunta": "Qual a diferença conceitual entre Ritmo e Rítmica no contexto do MSA?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 2,
-      "item": "2.5 Ritmo e pulsação",
-      "pagina": 22
-    },
-    "opcoes": [
-      {
-        "texto": "Ritmo é a distribuição dos sons no tempo; Rítmica é o aprimoramento do ritmo por meio da coordenação motora e movimentos corporais.",
-        "correta": true,
-        "feedback": "Ritmo é o elemento musical (distribuição de sons/silêncios) e Rítmica é a disciplina/treinamento físico (coordenação motora) para executá-lo."
-      },
-      {
-        "texto": "Ritmo é uma propriedade do som (duração); Rítmica é um elemento da música.",
-        "correta": false,
-        "feedback": "Ritmo é um elemento da música (junto a melodia e harmonia), e duração é uma propriedade do som."
-      },
-      {
-        "texto": "Ritmo é sinônimo de Pulsação; Rítmica é a contagem dos tempos fortes e fracos.",
-        "correta": false,
-        "feedback": "O MSA adverte que Ritmo e Pulsação não são a mesma coisa."
-      },
-      {
-        "texto": "Ritmo é a arte de graduar a intensidade sonora; Rítmica é a velocidade do andamento (BPM).",
-        "correta": false,
-        "feedback": "Graduar a intensidade é Dinâmica, e a velocidade é Andamento."
-      }
-    ]
-  },
-  {
-    "id": "f3_q047",
-    "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
-    "tipo": "texto",
-    "pergunta": "Considerando o seu propósito completo, qual o papel essencial da utilização do metrônomo nos estudos musicais?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.5 Metrônomo",
-      "pagina": 31
-    },
-    "opcoes": [
-      {
-        "texto": "Garantir que a afinação do instrumento esteja no padrão Lá 440Hz antes de iniciar a execução.",
-        "correta": false,
-        "feedback": "Embora alguns modelos tenham afinador, o foco é rítmico."
-      },
-      {
-        "texto": "Desenvolvimento da regularidade da pulsação e do ritmo da música.",
-        "correta": true,
-        "feedback": "O metrônomo é crucial para o desenvolvimento da regularidade da pulsação e do ritmo da música."
-      },
-      {
-        "texto": "Indicar o andamento por meio de expressões italianas (Allegro, Adagio), facilitando a leitura da peça.",
-        "correta": false,
-        "feedback": "O metrônomo marca a velocidade em BPM; as expressões italianas são indicações de andamento."
-      },
-      {
-        "texto": "Assegurar que a velocidade seja mantida no limite máximo (208 bpm) nos estudos mais avançados.",
-        "correta": false,
-        "feedback": "O limite máximo não é o foco; a regularidade é o ponto chave."
-      }
-    ]
-  },
-  {
-    "id": "f3_q048",
-    "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
-    "tipo": "texto",
-    "pergunta": "O Endecagrama é uma ferramenta visual didática que utiliza linhas suplementares para demonstrar a extensão e alinhamento das claves. Qual o fator determinante, mesmo que o uso de linhas suplementares seja ilimitado em teoria, para que a prática no hinário utilize comumente um máximo de 5 linhas?",
+    "pergunta": "No Endecagrama, ao se alinhar o Dó Central (Dó3) nas Claves de Sol (𝄞), Dó (𝄡) e Fá (𝄢), o que se percebe sobre essas notas?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -1852,151 +840,151 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "A necessidade de manter a nota Dó Central (Dó3) sempre alinhada como ponto de referência entre as claves de Sol, Dó e Fá.",
+        "texto": "As notas soam em alturas diferentes, dependendo da clave.",
         "correta": false,
-        "feedback": "A Dó Central define o ponto de partida e alinhamento do Endecagrama, mas o limite das linhas suplementares se dá pela clareza visual."
+        "feedback": "O Dó3 soa exatamente igual nas três claves quando alinhadas, embora a escrita seja diferente."
       },
       {
-        "texto": "A limitação do campo visual do intérprete, pois a leitura se tornaria prejudicada se as notas ficassem muito distantes do pentagrama.",
+        "texto": "As notas soam exatamente igual, mesmo sendo escritas em claves diferentes.",
         "correta": true,
-        "feedback": "O limite de 5 linhas suplementares é imposto para facilitar o campo visual e evitar a confusão na leitura das notas, conforme a didática do MSA."
+        "feedback": "O Dó Central (Dó3) é o ponto de equivalência que soa na mesma altura nas três claves (𝄞, 𝄡, 𝄢)."
       },
       {
-        "texto": "A impossibilidade técnica da maioria dos instrumentos da orquestra de alcançar notas além da quinta linha suplementar.",
+        "texto": "A Clave de Fá (𝄢) é mais aguda do que a Clave de Sol (𝄞).",
         "correta": false,
-        "feedback": "Embora existam limites instrumentais, a restrição das 5 linhas suplementares é primariamente por razões de clareza visual e facilidade de leitura."
+        "feedback": "A Clave de Sol (𝄞) é mais aguda do que a Clave de Fá (𝄢)."
       },
       {
-        "texto": "A conversão para o endecagrama (11 linhas) ser obrigatória quando mais de 5 linhas suplementares fossem necessárias.",
+        "texto": "A Clave determina apenas a duração, e não a altura.",
         "correta": false,
-        "feedback": "O Endecagrama é um sistema didático de visualização e não uma pauta de escrita; o limite de 5 linhas é adotado por questões de clareza na escrita musical."
+        "feedback": "A Clave determina a altura do som (aguda, média ou grave)."
       }
     ]
   },
   {
-    "id": "f3_q049",
+    "id": "f03_q023",
     "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
+    "dificuldade": "media",
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Considerando o aprendizado do Movimento de Solfejo em 4 (Fase 3), qual a informação essencial fornecida pelo número superior na fórmula de compasso 4/4 que dita a estrutura e a quantidade de gestos a serem executados?",
+    "pergunta": "Qual a principal finalidade de se realizar a Leitura Rítmica, Métrica e Solfejo, conforme o MSA?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
       "livro": "MSA",
       "periodo": 1,
       "fase": 3,
-      "item": "3.4 Movimento de solfejo em 4",
-      "pagina": 30
+      "item": "3.2 Leitura rítmica, leitura métrica e solfejo",
+      "pagina": 27
     },
     "opcoes": [
       {
-        "texto": "Indica que a figura da semínima representa cada pulso ou movimento (Unidade de Tempo).",
+        "texto": "Aprimorar a Dinâmica (Forte ou Piano) e o Timbre do instrumento.",
         "correta": false,
-        "feedback": "Essa informação é fornecida pelo número inferior da fórmula de compasso (o 4 de baixo)."
+        "feedback": "Embora importantes, o foco principal das leituras é o bom entendimento da partitura para a execução segura e precisa dos hinos."
       },
       {
-        "texto": "Define a quantidade exata de tempos, pulsos ou movimentos que devem ser realizados no Movimento de Solfejo.",
+        "texto": "Ter um bom entendimento da partitura, por meio da análise da escrita musical, para a execução segura dos hinos sacros.",
         "correta": true,
-        "feedback": "O número superior da fórmula de compasso (4) indica a quantidade de tempos (quatro) que estruturam o movimento de condução."
+        "feedback": "As leituras (rítmica, métrica e solfejo) permitem ao candidato analisar a partitura e obter o entendimento necessário (ritmo, notas, claves) para a execução perfeita dos hinos sacros."
       },
       {
-        "texto": "Determina que a figura que recebe o acento métrico mais forte é a mínima pontuada.",
+        "texto": "Memorizar o nome das notas na clave do instrumento e suas respectivas posições.",
         "correta": false,
-        "feedback": "A fórmula 4/4 tem subdivisão binária (compasso simples) e a figura de tempo é a semínima. A determinação do tipo de acento métrico é uma consequência da fórmula, mas a função primária do número superior é a quantidade de tempos."
+        "feedback": "A memorização é uma etapa anterior. As leituras focam na aplicação do ritmo e da altura em conjunto."
       },
       {
-        "texto": "Representa a figura de maior valor (semibreve) que pode ser contida no compasso.",
+        "texto": "Verificar a afinação das notas em relação ao Endecagrama e à Tônica (Fase 8).",
         "correta": false,
-        "feedback": "O número 4 não representa a semibreve (cujo número de equivalência é 1)."
+        "feedback": "A afinação é uma preocupação do solfejo, mas a finalidade maior é a execução segura dos hinos, que engloba todos os elementos."
       }
     ]
   },
   {
-    "id": "f3_q050",
+    "id": "f03_q024",
     "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
+    "dificuldade": "media",
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Na prática do Movimento de Solfejo em 4 (Fase 3), qual é a função essencial do número inferior (o número 4) na fórmula de compasso 4/4, conforme a base rítmica aprendida?",
+    "pergunta": "Além da Pulsação e do Ritmo, quais elementos são cruciais para compreender antes de realizar a Leitura Rítmica?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
       "livro": "MSA",
       "periodo": 1,
       "fase": 3,
-      "item": "3.4 Movimento de solfejo em 4",
-      "pagina": 30
+      "item": "3.2 Leitura rítmica, leitura métrica e solfejo",
+      "pagina": 27
     },
     "opcoes": [
       {
-        "texto": "Indica que a figura da semínima (cujo número de equivalência é 4) representa a Unidade de Tempo (U.T.) e, portanto, define o pulso para cada um dos quatro movimentos de solfejo.",
+        "texto": "Duração, Figuras Musicais, Compasso, Barras de Compasso e Fórmula de Compasso.",
         "correta": true,
-        "feedback": "O número inferior 4 se refere à semínima, definindo-a como a Unidade de Tempo (U.T.), que corresponde a um pulso no movimento de condução."
+        "feedback": "É necessário revisar os tópicos 1.3 (Duração) e 2.1 a 2.4 (Figuras, Compasso, Barras, Fórmula) antes de iniciar a Leitura Rítmica, que consiste em falar o 'TÁ' com precisão temporal."
       },
       {
-        "texto": "Define a quantidade de tempos, pulsos ou movimentos que devem ser realizados no Movimento de Solfejo.",
+        "texto": "Timbre e Altura, pois influenciam diretamente o ritmo.",
         "correta": false,
-        "feedback": "Essa informação é fornecida pelo número superior da fórmula de compasso (o 4 de cima)."
+        "feedback": "Timbre e Altura são necessários para o Solfejo e Leitura Métrica, mas não são cruciais para a Leitura Rítmica (que só se preocupa com o 'TÁ' e o tempo)."
       },
       {
-        "texto": "Determina que o compasso é quaternário, o que obriga a execução de movimentos laterais (esquerda e direita).",
+        "texto": "Endecagrama e Claves.",
         "correta": false,
-        "feedback": "O fato de ser quaternário é determinado pelo número superior (quantidade de tempos). O número inferior define a figura que vale um tempo."
+        "feedback": "Estes são elementos da escrita musical relacionados à altura, necessários para a Leitura Métrica, não a Rítmica."
       },
       {
-        "texto": "Significa que o metrônomo deve ser ajustado para 40 bpm (batidas por minuto) para uma execução lenta.",
+        "texto": "Movimento de Solfejo, pois a leitura rítmica depende da condução.",
         "correta": false,
-        "feedback": "O número inferior define a Unidade de Tempo (U.T.), não a velocidade em BPM, que é determinada por uma marcação separada."
+        "feedback": "A leitura rítmica se baseia na duração das figuras, que foram estudadas na Fase 2."
       }
     ]
   },
   {
-    "id": "f3_q051",
+    "id": "f03_q025",
     "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
+    "dificuldade": "media",
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "No Movimento de Solfejo em 4 para destros, o 1º movimento é direcionado 'para dentro do corpo' e o 2º movimento é direcionado 'para fora do corpo'. Qual a sequência correta dos pontos para esses movimentos?",
+    "pergunta": "Para realizar o Solfejo (cantar as notas na altura) corretamente, quais elementos adicionais são necessários, além de tudo o que é exigido para Leitura Rítmica e Métrica?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
       "livro": "MSA",
       "periodo": 1,
       "fase": 3,
-      "item": "3.4 Movimento de solfejo em 4",
-      "pagina": 30
+      "item": "3.2 Leitura rítmica, leitura métrica e solfejo",
+      "pagina": 27
     },
     "opcoes": [
       {
-        "texto": "1º Movimento: Ponto 1 → Ponto 2 (Esquerda); 2º Movimento: Ponto 2 → Ponto 3 (Direita).",
+        "texto": "Compreender a Harmonia e a Intensidade.",
+        "correta": false,
+        "feedback": "Harmonia não é mencionada como elemento crucial para o Solfejo individual, mas sim a Melodia, Timbre e Altura."
+      },
+      {
+        "texto": "Entender o Movimento de Solfejo em 4/4 e o Metrônomo.",
+        "correta": false,
+        "feedback": "O Solfejo pode ser feito sem o movimento de solfejo em 4/4 e sem o metrônomo (embora o metrônomo seja recomendado)."
+      },
+      {
+        "texto": "Revisar a Melodia, Timbre e Altura.",
         "correta": true,
-        "feedback": "O 1º movimento (P1 para P2) é direcionado para a esquerda/dentro, e o 2º movimento (P2 para P3) é direcionado para a direita/fora."
+        "feedback": "O Solfejo consiste em cantar as notas na altura. Para isso, o candidato precisa revisar Melodia (Tópico 1.2), Timbre e Altura (Tópico 1.3), além dos requisitos rítmicos e métricos."
       },
       {
-        "texto": "1º Movimento: Ponto 1 → Ponto 3 (Direita); 2º Movimento: Ponto 3 → Ponto 4 (Cima).",
+        "texto": "Identificar se a nota é grave ou aguda usando apenas a Clave de Fá (𝄢).",
         "correta": false,
-        "feedback": "O 1º movimento vai para a esquerda, e o 3º é para cima."
-      },
-      {
-        "texto": "1º Movimento: Ponto 4 → Ponto 1 (Baixo); 2º Movimento: Ponto 1 → Ponto 2 (Esquerda).",
-        "correta": false,
-        "feedback": "O 1º movimento é P1 para P2. A sequência apresentada é 4º e 1º, e as direções não correspondem aos termos 'dentro' e 'fora'."
-      },
-      {
-        "texto": "1º Movimento: Ponto 2 → Ponto 3 (Direita); 2º Movimento: Ponto 3 → Ponto 4 (Cima).",
-        "correta": false,
-        "feedback": "O primeiro movimento é P1 para P2, e as direções não correspondem aos termos 'dentro' e 'fora'."
+        "feedback": "O Solfejo exige que o candidato cante, e não apenas identifique as notas na Clave de Fá (𝄢)."
       }
     ]
   },
   {
-    "id": "f3_q052",
+    "id": "f03_q026",
     "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
+    "dificuldade": "media",
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Em que momento do aprendizado é permitido que o candidato realize movimentos de pulsação com os pés, e com qual finalidade?",
+    "pergunta": "Qual é a implicação prática da orientação 'utilizando a maior parte da área interna' da Janela de Movimento para o Movimento de Condução?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -2008,229 +996,1009 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "É permitido somente na fase de execução do instrumento para manter a afinação.",
+        "texto": "O movimento deve ser feito muito pequeno para ser discreto.",
         "correta": false,
-        "feedback": "A principal utilidade é auxiliar a pulsação no início dos estudos."
+        "feedback": "A instrução pede para evitar movimentos muito pequenos. O movimento deve ser proporcional ao espaço (Janela) e visível."
       },
       {
-        "texto": "Até que o candidato consiga desenvolver a marcação mental da pulsação, para auxiliar no processo, evitando movimentos fortes ou ruidosos.",
+        "texto": "O movimento deve ser exagerado, ultrapassando a linha dos olhos.",
+        "correta": false,
+        "feedback": "O candidato não deve fazer movimentos exagerados ou ultrapassar a linha dos olhos."
+      },
+      {
+        "texto": "Garante que o movimento seja visível e proporcional, dentro do limite espacial estabelecido, mas sem ser exagerado.",
         "correta": true,
-        "feedback": "O movimento no pé é um recurso auxiliar até que a marcação mental seja desenvolvida, devendo ser leve (apenas com os dedos) e discreto."
+        "feedback": "A Janela de Movimento é a delimitação espacial que o candidato deve usar, nem muito pequena, nem exagerada, para uma condução correta e proporcional."
       },
       {
-        "texto": "Durante toda a jornada musical, desde que seja feito com a planta do pé ou o calcanhar.",
+        "texto": "Que o Movimento de Solfejo só deve ser feito em 4/4.",
         "correta": false,
-        "feedback": "Recomenda-se evitar o uso da planta do pé ou calcanhar."
-      },
-      {
-        "texto": "É proibido o uso dos pés, pois o MSA orienta a desenvolver apenas a pulsação mental.",
-        "correta": false,
-        "feedback": "O MSA permite e orienta o uso dos pés de forma leve."
+        "feedback": "O conceito de Janela de Movimento se aplica a todos os movimentos de condução (2, 3, 4, 6, 9, 12)."
       }
     ]
   },
   {
-    "id": "f3_q053",
+    "id": "f03_q027",
     "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
+    "dificuldade": "media",
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Qual a ordem correta das claves utilizadas no hinário, partindo da mais aguda para a mais grave?",
+    "pergunta": "Na Fase 3, qual a principal finalidade dos movimentos de pulsação realizados no pé?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
       "livro": "MSA",
       "periodo": 1,
-      "fase": 1,
-      "item": "1.6 Claves",
-      "pagina": 13
+      "fase": 3,
+      "item": "3.3 Movimentos de condução para solfejo",
+      "pagina": 29
     },
     "opcoes": [
       {
-        "texto": "Clave de Dó, Clave de Sol, Clave de Fá.",
+        "texto": "Auxiliar o candidato a manter a pulsação constante, até que possa realizar a marcação mentalmente.",
+        "correta": true,
+        "feedback": "Os movimentos no pé são um auxílio para manter a pulsação, até que o candidato desenvolva a marcação mental. Eles devem ser leves, com os dedos dos pés, e sem ruídos."
+      },
+      {
+        "texto": "Substituir o uso do metrônomo nos estudos práticos.",
         "correta": false,
-        "feedback": "A Clave de Sol é mais aguda que a de Dó."
+        "feedback": "O MSA recomenda que os movimentos no pé sejam executados na mesma batida do metrônomo."
+      },
+      {
+        "texto": "Marcar os tempos fracos do compasso para o Movimento de Solfejo.",
+        "correta": false,
+        "feedback": "O pé marca a pulsação geral, que é a batida constante, e não apenas os tempos fracos."
+      },
+      {
+        "texto": "Marcar o início e o fim da Mesa Invisível.",
+        "correta": false,
+        "feedback": "A Mesa Invisível é um conceito para a mão/braço, não para o pé."
+      }
+    ]
+  },
+  {
+    "id": "f03_q028",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "No Movimento de Solfejo em 4 (para destros), o terceiro movimento termina em qual ponto?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.4 Movimento de solfejo em 4",
+      "pagina": 30
+    },
+    "opcoes": [
+      {
+        "texto": "Ponto 1 (embaixo, centro).",
+        "correta": false,
+        "feedback": "O Ponto 1 é o início do primeiro movimento e o final do quarto movimento."
+      },
+      {
+        "texto": "Ponto 2 (à esquerda).",
+        "correta": false,
+        "feedback": "O Ponto 2 é o final do primeiro movimento."
+      },
+      {
+        "texto": "Ponto 3 (à direita).",
+        "correta": false,
+        "feedback": "O Ponto 3 é o final do segundo movimento."
+      },
+      {
+        "texto": "Ponto 4 (em cima).",
+        "correta": true,
+        "feedback": "O terceiro movimento começa no Ponto 3 e termina no Ponto 4 (em cima)."
+      }
+    ]
+  },
+  {
+    "id": "f03_q029",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual é a instrução correta para a execução do Movimento de Solfejo em 4 (4/4) de forma 'natural, leve e sem muito esforço'?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.4 Movimento de solfejo em 4",
+      "pagina": 30
+    },
+    "opcoes": [
+      {
+        "texto": "Enrijecer a mão e o braço para garantir a precisão no tempo.",
+        "correta": false,
+        "feedback": "Não se deve enrijecer nem a mão, nem o braço; os movimentos devem ser naturais e leves."
+      },
+      {
+        "texto": "Movimentar o pulso para dar flexibilidade à batida.",
+        "correta": false,
+        "feedback": "Deve-se movimentar o antebraço e a mão, mantendo o pulso firme."
+      },
+      {
+        "texto": "Manter o cotovelo imóvel, movimentando apenas o antebraço e a mão, de forma firme e constante.",
+        "correta": true,
+        "feedback": "Os movimentos devem ser feitos de maneira natural, leve e sem muito esforço, mantendo o cotovelo imóvel e movimentando apenas o antebraço e a mão."
+      },
+      {
+        "texto": "Fazer movimentos amplos que ultrapassem a Janela de Movimento.",
+        "correta": false,
+        "feedback": "O movimento deve ser contido dentro da Janela de Movimento."
+      }
+    ]
+  },
+  {
+    "id": "f03_q030",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual é a sequência correta de direção dos Movimentos de Solfejo em 4 (para destros), conforme a memorização sugerida?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.4 Movimento de solfejo em 4",
+      "pagina": 30
+    },
+    "opcoes": [
+      {
+        "texto": "Em cima, para fora, para dentro, embaixo.",
+        "correta": false,
+        "feedback": "O movimento começa embaixo e segue a sequência: embaixo, para dentro, para fora, para cima, e termina embaixo."
+      },
+      {
+        "texto": "Embaixo, para dentro (esquerda), para fora (direita), para cima.",
+        "correta": true,
+        "feedback": "O primeiro movimento (tempo 1) é embaixo; o segundo (tempo 2) é para dentro/esquerda; o terceiro (tempo 3) é para fora/direita; e o quarto (tempo 4) é para cima, terminando no ponto inicial embaixo."
+      },
+      {
+        "texto": "Para dentro, para fora, para cima, embaixo.",
+        "correta": false,
+        "feedback": "O movimento deve começar embaixo (Ponto 1)."
+      },
+      {
+        "texto": "Para fora, para dentro, embaixo, para cima.",
+        "correta": false,
+        "feedback": "Esta sequência está incorreta."
+      }
+    ]
+  },
+  {
+    "id": "f03_q031",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "O metrônomo auxilia no desenvolvimento da 'pulsação musical'. Como a Pulsação se distingue do Ritmo?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.5 Metrônomo",
+      "pagina": 31
+    },
+    "opcoes": [
+      {
+        "texto": "A Pulsação é a velocidade ajustável (bpm), e o Ritmo é a Dinâmica.",
+        "correta": false,
+        "feedback": "A Pulsação é a batida constante. O Ritmo é a organização de sons e silêncios no tempo."
+      },
+      {
+        "texto": "A Pulsação é o pulso regular e constante (a batida), enquanto o Ritmo é a disposição ordenada de sons curtos, longos e silêncios no tempo.",
+        "correta": true,
+        "feedback": "O metrônomo mantém a pulsação musical constante, que é a base rítmica sobre a qual o Ritmo (a disposição dos sons e silêncios) se organiza."
+      },
+      {
+        "texto": "O Ritmo é a marcação constante do tempo (pulso), e a Pulsação é a variação de sons agudos e graves.",
+        "correta": false,
+        "feedback": "Esta afirmação inverte os conceitos de Ritmo e Pulsação, e a variação de altura é a propriedade do som (Fase 1)."
+      },
+      {
+        "texto": "A Pulsação é feita apenas com o braço, e o Ritmo é feito apenas com a voz ('TÁ').",
+        "correta": false,
+        "feedback": "Ambos, Pulsação e Ritmo, envolvem movimento e vocalização (Leitura Rítmica)."
+      }
+    ]
+  },
+  {
+    "id": "f03_q032",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "De acordo com as Instruções de Utilização do Hinário, o que as marcações de velocidade (por exemplo, 𝅘𝅥𝅮=60-80) colocadas no início dos hinos determinam?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.5 Metrônomo",
+      "pagina": 31
+    },
+    "opcoes": [
+      {
+        "texto": "O andamento exato (bpm) que o hino deve ser entoado em todos os santos serviços.",
+        "correta": false,
+        "feedback": "As marcações dão os limites de velocidade mínima e máxima, e o andamento ideal é na média dessas velocidades."
+      },
+      {
+        "texto": "A velocidade mínima e máxima, estabelecendo os limites dentro dos quais os hinos devem ser entoados.",
+        "correta": true,
+        "feedback": "As marcações de velocidade (Andamento) determinam os limites de velocidade (mínima e máxima) para a execução do hino."
+      },
+      {
+        "texto": "O andamento Adagio ou Allegro do hino.",
+        "correta": false,
+        "feedback": "Expressões em italiano (Adagio, Allegro) são exemplos de andamento, mas a marcação numérica (𝅘𝅥𝅮=60-80) é a indicação específica no hinário."
+      },
+      {
+        "texto": "A proporção entre os valores das figuras musicais, que deve ser rígida.",
+        "correta": false,
+        "feedback": "A proporção deve ser respeitada em qualquer andamento, mas as marcações definem a velocidade."
+      }
+    ]
+  },
+  {
+    "id": "f03_q033",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual é a recomendação sobre a velocidade ideal para a execução dos hinos, dado o limite mínimo e máximo (por exemplo, 𝅘𝅥𝅮=60-80)?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.5 Metrônomo",
+      "pagina": 31
+    },
+    "opcoes": [
+      {
+        "texto": "Tocar sempre na velocidade máxima, para manter a orquestra alerta.",
+        "correta": false,
+        "feedback": "Recomenda-se que o andamento fique na média das velocidades, não na máxima."
+      },
+      {
+        "texto": "Tocar sempre na velocidade mínima, especialmente na Meia-Hora.",
+        "correta": false,
+        "feedback": "Na Meia-Hora é próximo à velocidade mínima, mas em geral, recomenda-se a média das velocidades."
+      },
+      {
+        "texto": "É recomendável que o andamento fique na média, ou seja, entre as velocidades mínima e máxima indicadas.",
+        "correta": true,
+        "feedback": "Para o andamento ser agradável e compreensível, o MSA e o Hinário recomendam que a velocidade fique na média entre o mínimo e o máximo indicados."
+      },
+      {
+        "texto": "A velocidade é irrelevante, desde que a pulsação seja constante.",
+        "correta": false,
+        "feedback": "A velocidade é importante e determinada pela marcação (Andamento)."
+      }
+    ]
+  },
+  {
+    "id": "f03_q034",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual modelo de metrônomo é caracterizado como um instrumento mecânico com um pêndulo, que possui uma velocidade mínima de 40 bpm e uma máxima de 208 bpm?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.5 Metrônomo",
+      "pagina": 31
+    },
+    "opcoes": [
+      {
+        "texto": "O metrônomo digital.",
+        "correta": false,
+        "feedback": "O metrônomo digital marca toda a numeração de velocidade e tem mínima de 30 bpm."
+      },
+      {
+        "texto": "O metrônomo de aplicativo.",
+        "correta": false,
+        "feedback": "O metrônomo de aplicativo é o mais utilizado atualmente e é um software."
+      },
+      {
+        "texto": "O metrônomo de Maelzel (M.M.).",
+        "correta": true,
+        "feedback": "Os primeiros metrônomos eram instrumentos mecânicos, como o Metrônomo de Maelzel (M.M.), que tem um pêndulo e a faixa de 40 bpm a 208 bpm."
+      },
+      {
+        "texto": "O metrônomo de pulsação no pé.",
+        "correta": false,
+        "feedback": "Este não é um tipo de metrônomo, mas um movimento auxiliar."
+      }
+    ]
+  },
+  {
+    "id": "f03_q035",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "A utilização do metrônomo é importante para o desenvolvimento da regularidade da pulsação e do ritmo. Em que fases do estudo musical o MSA recomenda o seu uso?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.5 Metrônomo",
+      "pagina": 31
+    },
+    "opcoes": [
+      {
+        "texto": "Apenas durante os exercícios de divisão musical com figuras de som e silêncio.",
+        "correta": false,
+        "feedback": "O uso é recomendado para diversas atividades, não apenas exercícios de divisão."
+      },
+      {
+        "texto": "Para todos os estudos: leitura rítmica, leitura métrica, solfejo, métodos dos instrumentos e hinário.",
+        "correta": true,
+        "feedback": "É muito importante a utilização do metrônomo para a realização de exercícios de leitura rítmica, leitura métrica, solfejo, métodos dos instrumentos e hinário, a fim de desenvolver a percepção rítmica."
+      },
+      {
+        "texto": "Apenas para o estudo da leitura métrica e do solfejo das notas Dó (Dó3), Ré, Mi e Fá.",
+        "correta": false,
+        "feedback": "O metrônomo deve ser usado em todos os estudos, para manter a pulsação e o ritmo, independentemente das notas."
+      },
+      {
+        "texto": "Somente para a verificação da afinação do instrumento.",
+        "correta": false,
+        "feedback": "Embora possa ter a função de afinador, sua principal utilização é para o ritmo e a pulsação."
+      }
+    ]
+  },
+  {
+    "id": "f03_q036",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual Clave (𝄞, 𝄡, 𝄢) utiliza a terceira linha do pentagrama como sua linha de referência, determinando o Dó Central (Dó3)?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.1 Endecagrama",
+      "pagina": 27
+    },
+    "opcoes": [
+      {
+        "texto": "Clave de Sol (𝄞).",
+        "correta": false,
+        "feedback": "A Clave de Sol (𝄞) utiliza a 2ª linha como referência (nota Sol)."
+      },
+      {
+        "texto": "Clave de Fá (𝄢).",
+        "correta": false,
+        "feedback": "A Clave de Fá (𝄢) utiliza a 4ª linha como referência (nota Fá)."
+      },
+      {
+        "texto": "Clave de Dó (𝄡).",
+        "correta": true,
+        "feedback": "A Clave de Dó (𝄡) utiliza a 3ª linha do pentagrama como referência para o Dó Central (Dó3)."
+      },
+      {
+        "texto": "O Dó Central (Dó3) não é determinado por nenhuma das claves do pentagrama, mas sim pelas linhas suplementares.",
+        "correta": false,
+        "feedback": "O Dó Central (Dó3) é a linha de referência da Clave de Dó (𝄡) na 3ª linha."
+      }
+    ]
+  },
+  {
+    "id": "f03_q037",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Um candidato está fazendo exercícios de Leitura Métrica, mas decide executá-los cantando as notas na altura correta. Que atividade ele está realizando, de acordo com o MSA?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.2 Leitura rítmica, leitura métrica e solfejo",
+      "pagina": 27
+    },
+    "opcoes": [
+      {
+        "texto": "Leitura Rítmica.",
+        "correta": false,
+        "feedback": "A Leitura Rítmica consiste em falar a sílaba 'TÁ', sem se preocupar com a altura da nota."
+      },
+      {
+        "texto": "Divisão Musical.",
+        "correta": false,
+        "feedback": "Divisão Musical se refere à proporção das figuras de som e silêncio."
+      },
+      {
+        "texto": "Leitura Silábica.",
+        "correta": false,
+        "feedback": "Este não é um termo oficial do MSA para essa atividade."
+      },
+      {
+        "texto": "Solfejo.",
+        "correta": true,
+        "feedback": "Quando há exercícios de leitura métrica, o candidato pode opcionalmente executá-los realizando o solfejo, que é cantar as notas na altura correta, mantendo o ritmo."
+      }
+    ]
+  },
+  {
+    "id": "f03_q038",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Na realização da pulsação com a mão ou objeto, por que é fundamental que o movimento seja realizado de forma reta e constante, sem curvas, iniciando e terminando no mesmo ponto embaixo?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.3 Movimentos de condução para solfejo",
+      "pagina": 28
+    },
+    "opcoes": [
+      {
+        "texto": "Para que o pulso seja mais suave e não incomode os outros candidatos.",
+        "correta": false,
+        "feedback": "O movimento suave evita o som forte, mas a linha reta garante a precisão e a constância da pulsação."
+      },
+      {
+        "texto": "Para simular o pêndulo de um metrônomo digital.",
+        "correta": false,
+        "feedback": "O metrônomo digital não tem pêndulo. O movimento reto serve para manter a regularidade do pulso."
+      },
+      {
+        "texto": "Para garantir que o pulso seja regular e constante, mantendo a precisão rítmica.",
+        "correta": true,
+        "feedback": "A pulsação deve ser feita em um movimento reto, preciso e constante para desenvolver a regularidade do pulso e do ritmo da música."
+      },
+      {
+        "texto": "Para evitar que o braço canse e o movimento se torne muito lento.",
+        "correta": false,
+        "feedback": "Embora a leveza ajude a evitar o esforço, o principal objetivo é a precisão e a constância rítmica."
+      }
+    ]
+  },
+  {
+    "id": "f03_q039",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "No Movimento de Solfejo em 4 (para destros), qual dos movimentos é caracterizado por ser direcionado 'para dentro do corpo' e onde ele termina?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.4 Movimento de solfejo em 4",
+      "pagina": 30
+    },
+    "opcoes": [
+      {
+        "texto": "O segundo movimento, terminando no Ponto 3 (à direita).",
+        "correta": false,
+        "feedback": "O segundo movimento (tempo 2) é direcionado 'para fora do corpo' (termina à direita)."
+      },
+      {
+        "texto": "O quarto movimento, terminando no Ponto 1 (embaixo).",
+        "correta": false,
+        "feedback": "O quarto movimento é o que vem de cima para baixo, terminando no centro."
+      },
+      {
+        "texto": "O primeiro movimento, terminando no Ponto 2 (à esquerda).",
+        "correta": true,
+        "feedback": "O primeiro movimento (tempo 1) começa no Ponto 1 (centro, embaixo) e termina no Ponto 2 (à esquerda), no sentido para dentro do corpo."
+      },
+      {
+        "texto": "O terceiro movimento, terminando no Ponto 4 (em cima).",
+        "correta": false,
+        "feedback": "O terceiro movimento é direcionado 'para fora do corpo' (para a direita) e sobe para o Ponto 4."
+      }
+    ]
+  },
+  {
+    "id": "f03_q040",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual é a condição fundamental que a partitura deve cumprir para que o candidato possa realizar a Leitura Métrica ou Solfejo?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.2 Leitura rítmica, leitura métrica e solfejo",
+      "pagina": 27
+    },
+    "opcoes": [
+      {
+        "texto": "Apenas as figuras musicais e a Fórmula de Compasso devem estar indicadas.",
+        "correta": false,
+        "feedback": "Para Leitura Métrica ou Solfejo, é necessário saber o nome da nota e sua altura (através do pentagrama e da clave)."
+      },
+      {
+        "texto": "O Pentagrama deve estar escrito com a clave e as notas musicais devem estar desenhadas.",
+        "correta": true,
+        "feedback": "A Leitura Métrica e o Solfejo exigem a identificação das notas e suas alturas, o que requer que as figuras estejam escritas no pentagrama, com a clave definida."
+      },
+      {
+        "texto": "Apenas as linhas rítmicas (horizontais e verticais) e a sílaba 'TÁ' devem ser utilizadas.",
+        "correta": false,
+        "feedback": "Isto se aplica apenas à Leitura Rítmica, não à Leitura Métrica ou Solfejo."
+      },
+      {
+        "texto": "A indicação de Dinâmica (P ou F) deve ser especificada.",
+        "correta": false,
+        "feedback": "A Dinâmica é um elemento de interpretação, mas não um requisito fundamental para iniciar a Leitura Métrica ou Solfejo."
+      }
+    ]
+  },
+  {
+    "id": "f03_q041",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "No Movimento de Solfejo em 4 (para destros), qual movimento é caracterizado por ser direcionado 'para fora do corpo' (para a direita)?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.4 Movimento de solfejo em 4",
+      "pagina": 30
+    },
+    "opcoes": [
+      {
+        "texto": "O primeiro movimento.",
+        "correta": false,
+        "feedback": "O primeiro movimento é 'para dentro do corpo' (esquerda)."
+      },
+      {
+        "texto": "O segundo movimento.",
+        "correta": true,
+        "feedback": "O segundo movimento (tempo 2) começa no Ponto 2 (esquerda) e termina no Ponto 3 (direita), no sentido para fora do corpo."
+      },
+      {
+        "texto": "O terceiro movimento.",
+        "correta": false,
+        "feedback": "O terceiro movimento vai do Ponto 3 para o Ponto 4 (em cima)."
+      },
+      {
+        "texto": "O quarto movimento.",
+        "correta": false,
+        "feedback": "O quarto movimento vai do Ponto 4 (em cima) para o Ponto 1 (embaixo, centro)."
+      }
+    ]
+  },
+  {
+    "id": "f03_q042",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Por que o Movimento de Solfejo em 4 é diferente da simples 'pulsação', exigindo que a mão se mova de um ponto (ex: Ponto 1) para outro (ex: Ponto 2)?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.4 Movimento de solfejo em 4",
+      "pagina": 30
+    },
+    "opcoes": [
+      {
+        "texto": "Para que o tempo entre um ponto e outro seja sempre o mesmo, mantendo a regularidade do pulso.",
+        "correta": true,
+        "feedback": "A observação é essencial para identificar onde termina um movimento e onde começa o outro. O tempo entre um ponto e outro deve ser sempre o mesmo, mantendo a pulsação constante."
+      },
+      {
+        "texto": "Para garantir que o pulso seja apenas visual, sem som (Mesa Invisível).",
+        "correta": false,
+        "feedback": "A Mesa Invisível ajuda a dar firmeza, mas o movimento ponto a ponto garante a precisão temporal de cada tempo do compasso."
+      },
+      {
+        "texto": "Para que o candidato consiga cantar a nota Dó3 (Dó Central) no Ponto 1.",
+        "correta": false,
+        "feedback": "O Movimento de Solfejo é usado para ritmos em qualquer altura."
+      },
+      {
+        "texto": "Para simular a regência da orquestra.",
+        "correta": false,
+        "feedback": "O objetivo é desenvolver o ritmo interno do candidato, não simular a regência (embora o movimento de regência use uma estrutura semelhante)."
+      }
+    ]
+  },
+  {
+    "id": "f03_q043",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual modelo de metrônomo possui números que indicam batidas por minuto (bpm) e, devido à sua característica de construção, pode ter omissão de números (ex: pula de 69 para 72)?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.5 Metrônomo",
+      "pagina": 31
+    },
+    "opcoes": [
+      {
+        "texto": "Metrônomo digital e de aplicativo.",
+        "correta": false,
+        "feedback": "Metrônomos digitais e de aplicativo marcam toda a numeração de velocidade, sem pular números."
+      },
+      {
+        "texto": "Metrônomo de Maelzel (M.M.), um instrumento mecânico.",
+        "correta": true,
+        "feedback": "O Metrônomo mecânico (M.M.) não possui todos os números de velocidade (exemplo: pula do 69 para o 72), diferente dos modelos digitais."
+      },
+      {
+        "texto": "Metrônomo de pulsação, usado para compassos compostos.",
+        "correta": false,
+        "feedback": "Não existe esta classificação de metrônomo."
+      },
+      {
+        "texto": "Metrônomo de afinador, usado para verificar a Altura.",
+        "correta": false,
+        "feedback": "O metrônomo de Maelzel é mecânico e tem a característica de pular números na marcação de velocidade."
+      }
+    ]
+  },
+  {
+    "id": "f03_q044",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual a figura de valor (Nota Musical) que, no Movimento de Solfejo em 4 (4/4), representa um pulso completo?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.4 Movimento de solfejo em 4",
+      "pagina": 30
+    },
+    "opcoes": [
+      {
+        "texto": "A Mínima (𝅗𝅥).",
+        "correta": false,
+        "feedback": "Na Fórmula de Compasso 4/4, a Mínima (𝅗𝅥) vale dois tempos (pulso duplo)."
+      },
+      {
+        "texto": "A Semínima (𝅘𝅥).",
+        "correta": true,
+        "feedback": "A Fórmula de Compasso 4/4 determina que a Semínima (𝅘𝅥) (figura de número 4) representa cada tempo, pulso ou movimento."
+      },
+      {
+        "texto": "A Colcheia (𝅘𝅥𝅮).",
+        "correta": false,
+        "feedback": "Na Fórmula de Compasso 4/4, a Colcheia (𝅘𝅥𝅮) vale meio tempo (meio pulso)."
+      },
+      {
+        "texto": "A Semibreve (𝅝).",
+        "correta": false,
+        "feedback": "Na Fórmula de Compasso 4/4, a Semibreve (𝅝) vale quatro tempos (quatro pulsos)."
+      }
+    ]
+  },
+  {
+    "id": "f03_q045",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Para a Leitura Métrica, além dos requisitos da Leitura Rítmica, quais elementos adicionais devem ser compreendidos pelo candidato?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.2 Leitura rítmica, leitura métrica e solfejo",
+      "pagina": 27
+    },
+    "opcoes": [
+      {
+        "texto": "Melodia e Harmonia.",
+        "correta": false,
+        "feedback": "A Melodia é crucial, mas a Harmonia e seus aspectos tonais são mais avançados e menos centrais para a Leitura Métrica."
+      },
+      {
+        "texto": "Altura, Notas Musicais, Pentagrama, Claves e Endecagrama.",
+        "correta": true,
+        "feedback": "A Leitura Métrica requer a leitura do nome da nota (Notas Musicais) em sua altura e posição (Pentagrama, Claves, Endecagrama), além da precisão rítmica."
+      },
+      {
+        "texto": "Tipos de Metrônomo e Movimento de Solfejo.",
+        "correta": false,
+        "feedback": "Estes são recursos de apoio, mas não os elementos conceituais necessários para a leitura da partitura."
+      },
+      {
+        "texto": "Timbre.",
+        "correta": false,
+        "feedback": "O conceito de Timbre não é necessário para compreensão da Leitura Métrica."
+      }
+    ]
+  },
+  {
+    "id": "f03_q046",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Na execução da pulsação no pé, qual tipo de movimento é enfaticamente proibido?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.3 Movimentos de condução para solfejo",
+      "pagina": 29
+    },
+    "opcoes": [
+      {
+        "texto": "O movimento dos dedos dos pés.",
+        "correta": false,
+        "feedback": "O movimento dos dedos é recomendado por ser leve e discreto."
+      },
+      {
+        "texto": "Movimentos leves na mesma batida do metrônomo.",
+        "correta": false,
+        "feedback": "Isto é recomendado para auxílio."
+      },
+      {
+        "texto": "O movimento com a planta do pé ou o calcanhar, por gerar ruídos fortes e expansivos.",
+        "correta": true,
+        "feedback": "Não deve-se fazer movimentos muito fortes ou ruídos perceptíveis, e nunca com a planta do pé ou com o calcanhar, mas sim levemente com os dedos dos pés."
+      },
+      {
+        "texto": "O Movimento de Solfejo em 4.",
+        "correta": false,
+        "feedback": "O Movimento de Solfejo em 4 é feito com a mão/braço."
+      }
+    ]
+  },
+  {
+    "id": "f03_q047",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "No Movimento de Solfejo em 4 (para destros), em qual ponto o quarto movimento começa?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.4 Movimento de solfejo em 4",
+      "pagina": 30
+    },
+    "opcoes": [
+      {
+        "texto": "Ponto 1 (embaixo, centro).",
+        "correta": false,
+        "feedback": "O Ponto 1 é onde o quarto movimento termina."
+      },
+      {
+        "texto": "Ponto 2 (à esquerda).",
+        "correta": false,
+        "feedback": "O Ponto 2 é onde o segundo movimento começa."
+      },
+      {
+        "texto": "Ponto 3 (à direita).",
+        "correta": false,
+        "feedback": "O Ponto 3 é onde o terceiro movimento começa."
+      },
+      {
+        "texto": "Ponto 4 (em cima).",
+        "correta": true,
+        "feedback": "O quarto movimento começa no Ponto 4 (em cima) e termina no Ponto 1 (embaixo, centro)."
+      }
+    ]
+  },
+  {
+    "id": "f03_q048",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual instrução deve ser observada rigorosamente para que a pulsação seja mantida com a mesma duração entre os movimentos, em Movimentos de Condução como o Movimento em 4?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.4 Movimento de solfejo em 4",
+      "pagina": 30
+    },
+    "opcoes": [
+      {
+        "texto": "O tempo entre um ponto e outro deve ser sempre o mesmo, de forma precisa e constante.",
+        "correta": true,
+        "feedback": "É essencial que o tempo entre um ponto e outro seja sempre o mesmo, como nos exercícios de pulsação, para manter a regularidade."
+      },
+      {
+        "texto": "A mão deve tocar a Mesa Invisível no Ponto 4.",
+        "correta": false,
+        "feedback": "A Mesa Invisível é um recurso de firmeza. A duração é assegurada pela constância do tempo entre os pontos."
+      },
+      {
+        "texto": "O movimento deve ser espelhado para canhotos.",
+        "correta": false,
+        "feedback": "Isto é uma regra de lateralidade, não de duração."
+      },
+      {
+        "texto": "O Movimento de Solfejo deve ser substituído pelo metrônomo se o andamento for rápido.",
+        "correta": false,
+        "feedback": "O metrônomo deve ser usado junto com o movimento de solfejo."
+      }
+    ]
+  },
+  {
+    "id": "f03_q049",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Como a utilização do metrônomo auxilia o candidato, de forma mais abrangente, no desenvolvimento de sua percepção musical?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.5 Metrônomo",
+      "pagina": 31
+    },
+    "opcoes": [
+      {
+        "texto": "Ajuda a memorizar a localização do Dó Central (Dó3) nas claves.",
+        "correta": false,
+        "feedback": "O Endecagrama ajuda nisso. O metrônomo foca no ritmo."
+      },
+      {
+        "texto": "Contribui para o desenvolvimento da percepção rítmica musical, mantendo a pulsação constante.",
+        "correta": true,
+        "feedback": "A utilização do metrônomo, ao longo dos estudos, ajuda a manter a pulsação enquanto solfejamos ou tocamos, contribuindo para o desenvolvimento da percepção rítmica musical."
+      },
+      {
+        "texto": "Assegura que a intensidade do som seja Forte (F) durante todo o exercício.",
+        "correta": false,
+        "feedback": "O metrônomo não dita a intensidade sonora."
+      },
+      {
+        "texto": "Ajuda a determinar se a nota é uma Semibreve (𝅝) ou uma Mínima (𝅗𝅥).",
+        "correta": false,
+        "feedback": "Isto é determinado pelas Figuras Musicais (Fase 2)."
+      }
+    ]
+  },
+  {
+    "id": "f03_q050",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual é o principal foco da Leitura Rítmica, distinguindo-a da Leitura Métrica e do Solfejo?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.2 Leitura rítmica, leitura métrica e solfejo",
+      "pagina": 27
+    },
+    "opcoes": [
+      {
+        "texto": "Identificar se a nota soa na região aguda, média ou grave.",
+        "correta": false,
+        "feedback": "Isto é o foco da altura, o qual se torna relevante na Leitura Métrica e no Solfejo."
+      },
+      {
+        "texto": "Identificar a duração da figura (figura de som ou Pausa) e o tempo que ela tem que soar ou silenciar.",
+        "correta": true,
+        "feedback": "Por meio da Leitura Rítmica ('TÁ'), identificamos a duração da figura, ou seja, o tempo que a figura deve soar (figura de som) ou o tempo que deve silenciar (Pausa), dentro de determinado exercício rítmico."
+      },
+      {
+        "texto": "Falar o nome das notas (Dó, Ré, Mi...) sem cantá-las.",
+        "correta": false,
+        "feedback": "Esta é a definição de Leitura Métrica."
+      },
+      {
+        "texto": "Coordenar os movimentos da mão (Movimento de Condução) com a respiração.",
+        "correta": false,
+        "feedback": "A coordenação motora é um auxílio, mas o foco da Leitura Rítmica é a precisão do ritmo pela fala da sílaba 'TÁ'."
+      }
+    ]
+  },
+  {
+    "id": "f03_q051",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual a ordem correta das claves (Sol, Dó, Fá) da mais aguda para a mais grave, conforme o alinhamento de altura visualizado no Endecagrama?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.1 Endecagrama",
+      "pagina": 27
+    },
+    "opcoes": [
+      {
+        "texto": "Clave de Fá, Clave de Dó, Clave de Sol.",
+        "correta": false,
+        "feedback": "Esta ordem está do grave para o agudo. A Clave de Sol é a mais aguda e a Clave de Fá é a mais grave."
       },
       {
         "texto": "Clave de Sol, Clave de Fá, Clave de Dó.",
         "correta": false,
-        "feedback": "A Clave de Fá é a mais grave das três."
-      },
-      {
-        "texto": "Clave de Fá, Clave de Dó, Clave de Sol.",
-        "correta": false,
-        "feedback": "A ordem correta é Sol (aguda), Dó (média), Fá (grave)."
+        "feedback": "A Clave de Dó (sons médios) é mais aguda que a Clave de Fá (sons graves)."
       },
       {
         "texto": "Clave de Sol, Clave de Dó, Clave de Fá.",
         "correta": true,
-        "feedback": "A ordem de regiões de som é Sol (aguda), Dó (média) e Fá (grave)."
+        "feedback": "A Clave de Sol é mais aguda que a Clave de Dó, que por sua vez é mais aguda que a Clave de Fá, na região grave da escala geral dos sons."
+      },
+      {
+        "texto": "Clave de Dó, Clave de Sol, Clave de Fá.",
+        "correta": false,
+        "feedback": "A Clave de Sol (sons agudos) é mais aguda que a Clave de Dó (sons médios)."
       }
     ]
   },
   {
-    "id": "f3_q054",
+    "id": "f03_q052",
     "ativo": true,
     "dificuldade": "dificil",
-    "pontos": 20,
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Durante a realização dos exercícios de leitura rítmica, qual é a orientação para a pronúncia das pausas?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.2 Leitura rítmica, leitura métrica e solfejo",
-      "pagina": 32
-    },
-    "opcoes": [
-      {
-        "texto": "As pausas devem ser pronunciadas, falando-se a sílaba 'TÁ' em voz fraca.",
-        "correta": false,
-        "feedback": "'TÁ' é reservado para as figuras de som."
-      },
-      {
-        "texto": "As pausas devem ser pronunciadas (falando 'um' ou o número do tempo), ou não pronunciadas (permanecendo em silêncio).",
-        "correta": true,
-        "feedback": "O candidato pode escolher entre falar 'um' (ou o número do tempo) para as pausas ou fazer silêncio."
-      },
-      {
-        "texto": "Deve-se sempre falar o número do tempo para cada pausa, mantendo a voz constante.",
-        "correta": false,
-        "feedback": "É uma opção, não uma regra obrigatória."
-      },
-      {
-        "texto": "O silêncio é a única opção, e deve-se respirar em todas as pausas.",
-        "correta": false,
-        "feedback": "O candidato pode pronunciar o tempo. A respiração não é obrigatória em toda pausa, apenas onde necessário."
-      }
-    ]
-  },
-  {
-    "id": "f3_q055",
-    "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
-    "tipo": "texto",
-    "pergunta": "Qual a importância do andamento realizado pela organista na introdução do hino para a orquestra?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.5 Metrônomo",
-      "pagina": 31
-    },
-    "opcoes": [
-      {
-        "texto": "O andamento da introdução é a velocidade máxima que a orquestra deve atingir na execução.",
-        "correta": false,
-        "feedback": "A introdução define a base do andamento, mas a orquestra pode operar dentro dos limites da velocidade mínima e máxima do hino."
-      },
-      {
-        "texto": "O andamento da introdução é a base da velocidade a ser desenvolvida pela orquestra, devendo ser reproduzido com atenção aos limites de velocidade mínima e máxima.",
-        "correta": true,
-        "feedback": "O andamento da introdução serve como referência para a unidade de velocidade de toda a orquestra, dentro dos limites do hino."
-      },
-      {
-        "texto": "O andamento da introdução deve ser desconsiderado, cabendo a cada músico escolher sua velocidade.",
-        "correta": false,
-        "feedback": "O intérprete deve buscar a unidade do conjunto musical para auxiliar o canto da irmandade."
-      },
-      {
-        "texto": "O andamento da introdução só é relevante nos hinos com fórmula de compasso em 4/4.",
-        "correta": false,
-        "feedback": "A instrução aplica-se a todos os hinos."
-      }
-    ]
-  },
-  {
-    "id": "f3_q056",
-    "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
-    "tipo": "texto",
-    "pergunta": "Qual a vantagem do metrônomo digital sobre o mecânico em relação à marcação de velocidade?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.5 Metrônomo",
-      "pagina": 31
-    },
-    "opcoes": [
-      {
-        "texto": "O digital é mais durável e dispensa a necessidade de pilhas ou carregamento.",
-        "correta": false,
-        "feedback": "O metrônomo mecânico é durável e não usa energia, mas a comparação aqui se refere à escala de velocidade."
-      },
-      {
-        "texto": "O digital marca toda a numeração de velocidade (ex: 30, 31, 32...), enquanto o mecânico salta números (ex: 69 para 72).",
-        "correta": true,
-        "feedback": "Os metrônomos digitais marcam toda a numeração de velocidade, o que não ocorre nos modelos mecânicos."
-      },
-      {
-        "texto": "O digital tem uma velocidade mínima maior (60 bpm) que facilita o aprendizado rítmico inicial.",
-        "correta": false,
-        "feedback": "A velocidade mínima geralmente citada para o digital é 30 bpm, e 40 bpm para o mecânico."
-      },
-      {
-        "texto": "O digital usa um pêndulo oscilante que produz o som de forma mais precisa que o mecânico.",
-        "correta": false,
-        "feedback": "O pêndulo é característico do metrônomo mecânico."
-      }
-    ]
-  },
-  {
-    "id": "f3_q057",
-    "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
-    "tipo": "texto",
-    "pergunta": "A utilização do metrônomo contribui para o desenvolvimento da percepção rítmica musical, pois ele mantém o quê?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.5 Metrônomo",
-      "pagina": 31
-    },
-    "opcoes": [
-      {
-        "texto": "A frequência regular das batidas (pulsação musical).",
-        "correta": true,
-        "feedback": "O metrônomo mantém a frequência regular das batidas, essencial para o desenvolvimento da pulsação e do ritmo da música."
-      },
-      {
-        "texto": "O volume do som constante, evitando flutuações de intensidade.",
-        "correta": false,
-        "feedback": "O metrônomo não controla o volume do instrumento."
-      },
-      {
-        "texto": "O compasso composto dividido em três pulsos iguais.",
-        "correta": false,
-        "feedback": "O metrônomo marca a pulsação de base, independente do tipo de compasso."
-      },
-      {
-        "texto": "O alinhamento das notas no pentagrama, conforme o Endecagrama.",
-        "correta": false,
-        "feedback": "O metrônomo lida com o tempo, não com a altura ou notação gráfica."
-      }
-    ]
-  },
-  {
-    "id": "f3_q058",
-    "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
-    "tipo": "texto",
-    "pergunta": "Qual a principal informação determinada pela clave, que é visualmente demonstrada pelo Endecagrama, ao ser alinhada com as outras claves?",
+    "pergunta": "Ao se visualizar as três claves alinhadas no sistema Endecagrama, o que se compreende sobre a relação entre a Clave de Sol e a Clave de Fá?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -2242,34 +2010,151 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "Se a nota pertence a um intervalo melódico ou harmônico.",
+        "texto": "A Clave de Sol lida com a região grave da escala geral, enquanto a Clave de Fá lida com a região superaguda.",
         "correta": false,
-        "feedback": "Os intervalos dependem da disposição das notas, não da clave."
+        "feedback": "A Clave de Sol é utilizada para sons agudos e a Clave de Fá para sons graves."
       },
       {
-        "texto": "Se a nota soa na região aguda, média ou grave.",
+        "texto": "A nota Dó Central (Dó3) atua como a primeira linha suplementar inferior da Clave de Sol e a primeira linha suplementar superior da Clave de Fá, unindo suas regiões de altura.",
         "correta": true,
-        "feedback": "A clave determina o nome da nota em sua linha de referência e, consequentemente, a região de altura do som (aguda, média ou grave)."
+        "feedback": "O Dó Central (Dó3) é a primeira linha suplementar inferior da Clave de Sol e a primeira linha suplementar superior da Clave de Fá, alinhando as três claves pela mesma altura."
       },
       {
-        "texto": "A figura musical que representa a Unidade de Tempo (U.T.).",
+        "texto": "O Endecagrama permite que as notas soem em alturas diferentes em cada clave para evitar confusão na leitura.",
         "correta": false,
-        "feedback": "Essa é a função do número inferior da fórmula de compasso."
+        "feedback": "As notas soam exatamente igual, mesmo escritas em claves diferentes no Endecagrama."
       },
       {
-        "texto": "A diferença de timbre entre os instrumentos da orquestra.",
+        "texto": "O sistema Endecagrama é usado para simplificar a leitura de compassos compostos, que não dependem da altura da nota.",
         "correta": false,
-        "feedback": "Timbre é uma propriedade do som, independente da clave."
+        "feedback": "O Endecagrama é um recurso para visualização da altura das notas e não está relacionado a fórmulas de compasso."
       }
     ]
   },
   {
-    "id": "f3_q059",
+    "id": "f03_q053",
     "ativo": true,
     "dificuldade": "dificil",
-    "pontos": 20,
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Qual a principal orientação sobre como utilizar o espaço da 'Janela de Movimento' ao conduzir o solfejo?",
+    "pergunta": "Para realizar a Leitura Métrica (falar o nome da nota, sem cantar, com precisão rítmica), quais tópicos de estudo o candidato deve, obrigatoriamente, ter compreendido além dos requisitos da Leitura Rítmica (Ritmo, Pulsação, Figuras, Compasso)?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.2 Leitura rítmica, leitura métrica e solfejo",
+      "pagina": 27
+    },
+    "opcoes": [
+      {
+        "texto": "Timbre, Intervalo e Dinâmica.",
+        "correta": false,
+        "feedback": "Embora o Intervalo seja um conceito de altura (Fase 4), a Dinâmica e o Timbre não são requisitos diretos para a Leitura Métrica, que foca no nome da nota e ritmo."
+      },
+      {
+        "texto": "Altura, Notas Musicais, Pentagrama, Claves e Endecagrama.",
+        "correta": true,
+        "feedback": "Para a Leitura Métrica, é necessário saber a altura e o nome da nota, o que exige o domínio dos conceitos de Altura (1.3), Notas Musicais (1.4), Pentagrama (1.5), Claves (1.6) e Endecagrama (3.1)."
+      },
+      {
+        "texto": "Ponto de Aumento, Ligadura de Valor e Fermata.",
+        "correta": false,
+        "feedback": "Estes são elementos rítmicos mais avançados (Fase 4/5) e não são requisitos básicos para iniciar a Leitura Métrica."
+      },
+      {
+        "texto": "Acento Métrico e Síncopa.",
+        "correta": false,
+        "feedback": "Estes são tópicos de interpretação e ritmo complexo (Fases 11/12)."
+      }
+    ]
+  },
+  {
+    "id": "f03_q054",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual a principal diferença entre os conceitos necessários para a Leitura Métrica e para o Solfejo?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.2 Leitura rítmica, leitura métrica e solfejo",
+      "pagina": 27
+    },
+    "opcoes": [
+      {
+        "texto": "O Solfejo exige a articulação do som do instrumento, enquanto a Leitura Métrica é estritamente vocal.",
+        "correta": false,
+        "feedback": "O Solfejo é primariamente vocal (cantar as notas). A articulação é uma técnica instrumental."
+      },
+      {
+        "texto": "O Solfejo requer a revisão adicional da Melodia, Timbre e Altura, que são cruciais para cantar as notas na altura correta.",
+        "correta": true,
+        "feedback": "O Solfejo exige cantar as notas na altura, sendo necessário rever Melodia, Timbre e Altura."
+      },
+      {
+        "texto": "A Leitura Métrica requer apenas a identificação da nota, mas o Solfejo requer o Movimento de Condução em 4.",
+        "correta": false,
+        "feedback": "O Movimento de Condução auxilia ambas as atividades."
+      },
+      {
+        "texto": "O Solfejo pode ser realizado sem a Fórmula de Compasso, mas a Leitura Métrica não.",
+        "correta": false,
+        "feedback": "Ambos exigem precisão rítmica e dependem da Fórmula de Compasso."
+      }
+    ]
+  },
+  {
+    "id": "f03_q055",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual regra é essencial para manter a pulsação constante e precisa durante o Movimento de Solfejo, independentemente do compasso (2, 3 ou 4)?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.4 Movimento de solfejo em 4",
+      "pagina": 30
+    },
+    "opcoes": [
+      {
+        "texto": "O movimento deve ser feito dentro da Janela de Movimento, priorizando a visibilidade sobre a precisão rítmica.",
+        "correta": false,
+        "feedback": "A precisão rítmica é prioritária. O movimento deve ser feito com firmeza e constância."
+      },
+      {
+        "texto": "O tempo entre um ponto de batida (ex: Ponto 1) e o ponto seguinte (ex: Ponto 2) deve ser sempre o mesmo, como nos exercícios de pulsação.",
+        "correta": true,
+        "feedback": "O mais importante é que o tempo entre um ponto e outro seja sempre o mesmo, mantendo a pulsação constante."
+      },
+      {
+        "texto": "Deve-se mover apenas o pulso e o cotovelo, mantendo o antebraço imóvel, para maior flexibilidade.",
+        "correta": false,
+        "feedback": "Deve-se movimentar o antebraço e a mão, mantendo o pulso e o cotovelo imóveis."
+      },
+      {
+        "texto": "O movimento deve ser espelhado apenas para os candidatos que utilizam instrumentos transpositor.",
+        "correta": false,
+        "feedback": "O espelhamento aplica-se a canhotos, independentemente do instrumento."
+      }
+    ]
+  },
+  {
+    "id": "f03_q056",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual das instruções a seguir sobre a técnica corporal para marcar a pulsação (batendo a mão ou objeto em uma superfície) está INCORRETA?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -2281,34 +2166,268 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "O movimento deve ser restrito à área central, sem tocar nas bordas da Janela.",
+        "texto": "A preparação para o movimento deve ser feita com a mão na altura do peito e a mão não deve passar da linha dos olhos ao subir.",
         "correta": false,
-        "feedback": "A instrução é utilizar a maior parte da área interna."
+        "feedback": "Esta é uma instrução correta para a pulsação."
       },
       {
-        "texto": "Utilizar a maior parte da área interna dessa janela, para que os movimentos não fiquem muito pequenos, nem muito expansivos.",
+        "texto": "O movimento deve ser feito em linha reta, iniciando e terminando no mesmo ponto embaixo, de forma precisa e constante.",
+        "correta": false,
+        "feedback": "Esta é uma instrução correta para a pulsação."
+      },
+      {
+        "texto": "O candidato deve movimentar apenas o pulso para dar a batida, mantendo o antebraço imóvel para garantir a precisão.",
         "correta": true,
-        "feedback": "A Janela de Movimento deve ser usada em sua maior parte para garantir a proporção adequada dos gestos."
+        "feedback": "O candidato deve movimentar o braço (e não o pulso) durante a batida."
       },
       {
-        "texto": "É necessário usar as linhas da Janela como referência para o movimento 'reto' e 'preciso', sem realizar movimentos curvos.",
+        "texto": "A pulsação deve começar sempre com a batida na parte de baixo.",
         "correta": false,
-        "feedback": "O movimento reto e preciso é uma instrução para a batida (pulsação), não a definição da Janela."
-      },
-      {
-        "texto": "Manter a mão sempre acima da linha dos ombros, simulando o ponto 4 (em cima).",
-        "correta": false,
-        "feedback": "O ponto 1 (embaixo) é o ponto mais baixo, e a preparação inicia na altura do peito."
+        "feedback": "Esta é uma instrução correta para a pulsação."
       }
     ]
   },
   {
-    "id": "f3_q060",
+    "id": "f03_q057",
     "ativo": true,
     "dificuldade": "dificil",
-    "pontos": 20,
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Durante a leitura de figuras de som longas (como uma semibreve) na Leitura Rítmica, como o candidato deve manter a emissão da voz, segundo o MSA?",
+    "pergunta": "Qual é a orientação do MSA para o candidato que utiliza movimentos de pulsação no pé como auxílio, em relação ao uso do metrônomo?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.3 Movimentos de condução para solfejo",
+      "pagina": 29
+    },
+    "opcoes": [
+      {
+        "texto": "O movimento no pé substitui o metrônomo, pois ambos têm a função de marcar o tempo.",
+        "correta": false,
+        "feedback": "Recomenda-se que os movimentos no pé sejam executados *com* a ajuda do metrônomo e na mesma batida."
+      },
+      {
+        "texto": "O metrônomo deve ser utilizado apenas para a afinação, e a pulsação no pé deve ser utilizada para o ritmo.",
+        "correta": false,
+        "feedback": "O metrônomo é usado para ritmo e pulsação."
+      },
+      {
+        "texto": "O movimento no pé deve ser realizado na mesma batida do metrônomo, para auxiliar na manutenção da pulsação.",
+        "correta": true,
+        "feedback": "Recomenda-se que os movimentos no pé sejam executados na mesma batida do metrônomo (juntos)."
+      },
+      {
+        "texto": "O movimento no pé deve ser feito com a planta do pé ou o calcanhar, em oposição à batida do metrônomo.",
+        "correta": false,
+        "feedback": "O movimento deve ser leve, com os dedos dos pés, e nunca com a planta ou calcanhar."
+      }
+    ]
+  },
+  {
+    "id": "f03_q058",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "No Movimento de Solfejo em 4 (para destros), qual é a sequência correta que descreve a passagem do Ponto 2 para o Ponto 3 (segundo movimento) e do Ponto 3 para o Ponto 4 (terceiro movimento)?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.4 Movimento de solfejo em 4",
+      "pagina": 30
+    },
+    "opcoes": [
+      {
+        "texto": "Segundo movimento: para fora (direita); Terceiro movimento: para cima (Ponto 4).",
+        "correta": true,
+        "feedback": "O segundo movimento começa no Ponto 2 e termina no Ponto 3 (à direita, sentido para fora do corpo). O terceiro movimento começa no Ponto 3 e termina no Ponto 4 (em cima)."
+      },
+      {
+        "texto": "Segundo movimento: para dentro (esquerda); Terceiro movimento: para fora (direita).",
+        "correta": false,
+        "feedback": "O segundo movimento é 'para fora do corpo' (direita). O primeiro movimento é 'para dentro do corpo' (esquerda)."
+      },
+      {
+        "texto": "Segundo movimento: para cima (Ponto 4); Terceiro movimento: para baixo (Ponto 1).",
+        "correta": false,
+        "feedback": "O Ponto 4 é o fim do terceiro movimento. O Ponto 1 é o fim do quarto movimento."
+      },
+      {
+        "texto": "Segundo movimento: para baixo (Ponto 1); Terceiro movimento: para fora (direita).",
+        "correta": false,
+        "feedback": "O segundo movimento se move do Ponto 2 (esquerda) para o Ponto 3 (direita)."
+      }
+    ]
+  },
+  {
+    "id": "f03_q059",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual ação o candidato deve realizar para iniciar o Movimento de Solfejo em 4, antes de executar o primeiro tempo?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.4 Movimento de solfejo em 4",
+      "pagina": 30
+    },
+    "opcoes": [
+      {
+        "texto": "Iniciar diretamente o movimento do Ponto 4 (cima) para o Ponto 1 (embaixo).",
+        "correta": false,
+        "feedback": "O primeiro movimento começa no Ponto 1 (embaixo)."
+      },
+      {
+        "texto": "Posicionar a mão na altura do peito, direcionando-a para o Ponto 1, e realizar a batida.",
+        "correta": true,
+        "feedback": "Para o início do primeiro movimento, posicionamos a mão na altura do peito e direcionamos a mão para o Ponto 1 (batida)."
+      },
+      {
+        "texto": "Utilizar a 'Mesa Invisível' como referência e começar com um movimento suave de pulso.",
+        "correta": false,
+        "feedback": "Deve-se movimentar o antebraço, não apenas o pulso."
+      },
+      {
+        "texto": "Fazer um movimento de preparação opcional, batendo o pé forte no chão para sinalizar o início.",
+        "correta": false,
+        "feedback": "O movimento no pé deve ser leve e sem ruídos."
+      }
+    ]
+  },
+  {
+    "id": "f03_q060",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Considerando os estudos da Fase 3, qual a finalidade mais abrangente dos movimentos de pulsação e dos movimentos de solfejo (condução)?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.3 Movimentos de condução para solfejo",
+      "pagina": 28
+    },
+    "opcoes": [
+      {
+        "texto": "Ajudar a memorizar a sequência das Notas Musicais (Dó, Ré, Mi...).",
+        "correta": false,
+        "feedback": "O movimento ajuda a memorizar o tempo, não o nome das notas."
+      },
+      {
+        "texto": "Ser a representação visual, precisa e constante, da pulsação determinada pela Fórmula de Compasso.",
+        "correta": true,
+        "feedback": "O movimento de condução é a representação visual da pulsação determinada pela fórmula de compasso."
+      },
+      {
+        "texto": "Determinar a altura do som (agudo, médio ou grave) durante o Solfejo.",
+        "correta": false,
+        "feedback": "A altura é determinada pela clave e notas."
+      },
+      {
+        "texto": "Substituir a necessidade de utilizar o metrônomo na prática dos exercícios rítmicos.",
+        "correta": false,
+        "feedback": "O metrônomo é recomendado para todos os estudos, incluindo os movimentos de condução."
+      }
+    ]
+  },
+  {
+    "id": "f03_q061",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual característica específica diferencia o Metrônomo de Maelzel (M.M.) dos modelos digitais ou de aplicativos?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.5 Metrônomo",
+      "pagina": 31
+    },
+    "opcoes": [
+      {
+        "texto": "O M.M. utiliza a energia elétrica para produzir o clique, enquanto os digitais são mecânicos.",
+        "correta": false,
+        "feedback": "O M.M. é um instrumento mecânico, com pêndulo."
+      },
+      {
+        "texto": "O M.M. não possui todos os números de velocidade (bpm) em sua marcação, tendo omissões como o salto do 69 para o 72.",
+        "correta": true,
+        "feedback": "O metrônomo mecânico não possui todos os números de velocidade (exemplo: pula de 69 para 72), diferente dos modelos digitais."
+      },
+      {
+        "texto": "O M.M. tem uma faixa de velocidade mínima de 30 bpm e máxima de 250 bpm, sendo mais ampla que os digitais.",
+        "correta": false,
+        "feedback": "A faixa de velocidade do M.M. é geralmente de 40 bpm a 208 bpm."
+      },
+      {
+        "texto": "O M.M. é recomendado para iniciantes, pois não possui a função de afinador, o que distrai o aluno.",
+        "correta": false,
+        "feedback": "Recomenda-se um metrônomo que também tenha a função de afinador."
+      }
+    ]
+  },
+  {
+    "id": "f03_q062",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "De acordo com o MSA e as Instruções de Utilização do Hinário, ao executar um hino em qualquer andamento dentro dos limites de velocidade (ex: 60-80), o que deve ser mantido com precisão?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.5 Metrônomo",
+      "pagina": 31
+    },
+    "opcoes": [
+      {
+        "texto": "A intensidade do som (dinâmica) para que seja Forte (F) durante todo o hino.",
+        "correta": false,
+        "feedback": "A intensidade varia conforme a expressão musical."
+      },
+      {
+        "texto": "A velocidade máxima, pois isso evita que o hino soe muito lento (ritenuto).",
+        "correta": false,
+        "feedback": "A velocidade ideal é a média, e o músico deve buscar a unidade do conjunto."
+      },
+      {
+        "texto": "A proporção entre os valores de todas as figuras, para que não haja corte ou estiramento indevido nas notas longas.",
+        "correta": true,
+        "feedback": "Em qualquer andamento, a proporção entre os valores de todas as figuras deve ser respeitada."
+      },
+      {
+        "texto": "A afinação da nota Dó Central (Dó3) em relação à Clave de Sol (𝄞) e Clave de Fá (𝄢).",
+        "correta": false,
+        "feedback": "A afinação é uma propriedade do som, mas o foco da questão é a manutenção do valor rítmico no andamento."
+      }
+    ]
+  },
+  {
+    "id": "f03_q063",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual a condição que deve ser satisfeita para que um candidato possa realizar o Solfejo (cantar as notas na altura), e que não é necessária para a Leitura Rítmica?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -2316,30 +2435,304 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
       "periodo": 1,
       "fase": 3,
       "item": "3.2 Leitura rítmica, leitura métrica e solfejo",
-      "pagina": 32
+      "pagina": 27
     },
     "opcoes": [
       {
-        "texto": "Não interromper o som da nota no meio da sua duração; manter o som 'TAAAA...' constante durante toda a sua extensão.",
+        "texto": "As figuras devem estar escritas no Pentagrama com a Clave, permitindo a leitura da altura.",
         "correta": true,
-        "feedback": "A voz deve ser constante ('TAAAA...') e o som não deve ser cortado até o final da duração da nota."
+        "feedback": "O Solfejo e a Leitura Métrica exigem que as figuras estejam escritas no pentagrama com a clave, para que a altura (nome da nota) possa ser identificada e cantada."
       },
       {
-        "texto": "Falar 'TÁÁÁÁ...', com a acentuação na primeira sílaba, e respirar brevemente em cada pulso que compõe a nota longa.",
+        "texto": "O exercício deve conter apenas a sílaba 'TÁ' e a pulsação para garantir a precisão temporal.",
         "correta": false,
-        "feedback": "A instrução proíbe a variação (como 'TÁÁÁÁ...') e a respiração na nota corta o som indevidamente."
+        "feedback": "Isto é a definição da Leitura Rítmica."
       },
       {
-        "texto": "Fazer apenas o movimento de condução em silêncio, pois as figuras longas não devem ser pronunciadas.",
+        "texto": "Apenas a Fórmula de Compasso em 4/4 é aceita para Solfejo.",
         "correta": false,
-        "feedback": "A leitura rítmica exige a pronúncia do 'TÁ'."
+        "feedback": "O Solfejo pode ser feito em qualquer fórmula de compasso."
       },
       {
-        "texto": "Interromper o som para respirar quando a nota cruzar a barra de compasso.",
+        "texto": "O candidato deve estar realizando o Movimento de Condução com o cotovelo imóvel.",
         "correta": false,
-        "feedback": "A respiração durante a execução da nota corta o som e deve ser evitada."
+        "feedback": "O movimento de condução é um auxílio aplicável a todas as formas de leitura."
+      }
+    ]
+  },
+  {
+    "id": "f03_q064",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual a correta interpretação da 'Mesa Invisível' e da 'Janela de Movimento' no Movimento de Condução?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.3 Movimentos de condução para solfejo",
+      "pagina": 28
+    },
+    "opcoes": [
+      {
+        "texto": "A Mesa Invisível define o limite espacial (vertical e horizontal) e a Janela de Movimento garante a firmeza do toque.",
+        "correta": false,
+        "feedback": "Os conceitos estão invertidos. Janela de Movimento é a delimitação espacial, e Mesa Invisível garante a firmeza/toque."
+      },
+      {
+        "texto": "A Janela de Movimento é o limite espacial (evitando exageros), e a Mesa Invisível é a superfície rígida simulada para garantir a firmeza da batida em cada ponto.",
+        "correta": true,
+        "feedback": "Janela de Movimento é a delimitação espacial do movimento; Mesa Invisível faz com que a mão toque uma superfície rígida invisível, garantindo a firmeza da batida."
+      },
+      {
+        "texto": "Ambos os conceitos são aplicáveis apenas para o movimento no pé, auxiliando a pulsação.",
+        "correta": false,
+        "feedback": "Estes conceitos aplicam-se ao movimento de condução da mão/braço."
+      },
+      {
+        "texto": "A Mesa Invisível demarca o Dó Central (Dó3) e a Janela de Movimento define a altura dos sons agudos.",
+        "correta": false,
+        "feedback": "Estes conceitos se aplicam à condução rítmica e não à altura das notas musicais."
+      }
+    ]
+  },
+  {
+    "id": "f03_q065",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "O Dó Central (Dó3) é crucial para o sistema Endecagrama. Qual Clave, em sua posição padrão no hinário, tem o Dó Central (Dó3) como sua linha de referência?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.1 Endecagrama",
+      "pagina": 27
+    },
+    "opcoes": [
+      {
+        "texto": "Clave de Sol (𝄞), na segunda linha.",
+        "correta": false,
+        "feedback": "A Clave de Sol na 2ª linha determina a nota Sol."
+      },
+      {
+        "texto": "Clave de Fá (𝄢), na quarta linha.",
+        "correta": false,
+        "feedback": "A Clave de Fá na 4ª linha determina a nota Fá."
+      },
+      {
+        "texto": "Clave de Dó (𝄡), na terceira linha.",
+        "correta": true,
+        "feedback": "O Dó Central (Dó3) é a linha de referência da Clave de Dó na 3ª linha."
+      },
+      {
+        "texto": "Clave de Sol (𝄞), na primeira linha suplementar inferior.",
+        "correta": false,
+        "feedback": "Apesar do Dó3 aparecer nesta posição na Clave de Sol, ele não é a linha de referência da clave em si."
+      }
+    ]
+  },
+  {
+    "id": "f03_q066",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual a instrução mais detalhada sobre a execução física do Movimento de Solfejo em 4, visando a 'naturalidade, leveza e ausência de esforço'?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.4 Movimento de solfejo em 4",
+      "pagina": 30
+    },
+    "opcoes": [
+      {
+        "texto": "Deve-se enrijecer a mão e o braço para garantir movimentos curtos e internos.",
+        "correta": false,
+        "feedback": "Não se deve enrijecer a mão nem o braço; os movimentos devem ser naturais, leves e sem muito esforço."
+      },
+      {
+        "texto": "Movimentar apenas o antebraço e a mão, mantendo o cotovelo imóvel e o pulso firme, dentro da Janela de Movimento.",
+        "correta": true,
+        "feedback": "Os movimentos devem ser feitos de maneira natural, leves e sem muito esforço, movimentando apenas o antebraço e a mão, de forma firme, sem mexer o pulso."
+      },
+      {
+        "texto": "Realizar movimentos amplos, mas lentos, para garantir que o tempo entre os pontos seja o mesmo.",
+        "correta": false,
+        "feedback": "O movimento deve estar dentro da Janela de Movimento (não exagerado)."
+      },
+      {
+        "texto": "O foco é movimentar o cotovelo para o lado direito e esquerdo (Ponto 2 e 3), mantendo a mão na altura do peito.",
+        "correta": false,
+        "feedback": "O cotovelo deve ser mantido imóvel."
+      }
+    ]
+  },
+  {
+    "id": "f03_q067",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Na realização de exercícios de Leitura Rítmica, as pausas (silêncios) podem ser tratadas de duas formas pelo candidato. Quais são elas?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.5 Metrônomo",
+      "pagina": 31
+    },
+    "opcoes": [
+      {
+        "texto": "Pronunciadas, falando a sílaba 'TÁ' no ritmo, ou não pronunciadas, com uma respiração curta.",
+        "correta": false,
+        "feedback": "A sílaba 'TÁ' é usada para o som, não para a pausa. O silêncio é uma das formas de tratar a pausa."
+      },
+      {
+        "texto": "Pronunciadas, falando a palavra 'um' em todas as pausas, ou não pronunciadas, permanecendo em silêncio.",
+        "correta": true,
+        "feedback": "As pausas podem ser pronunciadas (falando-se apenas 'um' ou o número do tempo) ou não pronunciadas (permanecendo em silêncio)."
+      },
+      {
+        "texto": "Pronunciadas com o nome da nota (Dó, Ré, Mi...) ou substituídas por uma batida no pé.",
+        "correta": false,
+        "feedback": "Falar o nome da nota é Leitura Métrica."
+      },
+      {
+        "texto": "Sempre com silêncio, exceto em compassos compostos, onde devem ser pronunciadas como 'um, dois, três'.",
+        "correta": false,
+        "feedback": "A escolha entre pronunciar 'um' ou silenciar é opcional para as pausas em qualquer compasso."
+      }
+    ]
+  },
+  {
+    "id": "f03_q068",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual das opções melhor descreve a utilidade do Metrônomo no desenvolvimento do candidato, conforme a definição do MSA?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.5 Metrônomo",
+      "pagina": 31
+    },
+    "opcoes": [
+      {
+        "texto": "Medir a Altura das notas (aguda ou grave) e o Timbre do instrumento.",
+        "correta": false,
+        "feedback": "O metrônomo lida com pulsação e ritmo, não com altura ou timbre."
+      },
+      {
+        "texto": "Assegurar o desenvolvimento da regularidade da pulsação e do ritmo da música.",
+        "correta": true,
+        "feedback": "A utilização do metrônomo é extremamente importante para o desenvolvimento da regularidade da pulsação e do ritmo da música."
+      },
+      {
+        "texto": "Garantir que a velocidade máxima indicada no hinário não seja ultrapassada, evitando exageros.",
+        "correta": false,
+        "feedback": "Embora ajude a controlar a velocidade, a função principal é o desenvolvimento rítmico e a pulsação constante."
+      },
+      {
+        "texto": "Ajudar a memorizar o Movimento de Solfejo em 4 (4/4) e o conceito de Endecagrama.",
+        "correta": false,
+        "feedback": "O metrônomo apoia o movimento de solfejo, mas não está relacionado ao Endecagrama."
+      }
+    ]
+  },
+  {
+    "id": "f03_q069",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "No Movimento de Solfejo em 4 (para destros), qual é a ordem correta dos movimentos em termos de direção (embaixo, para dentro, para fora, para cima)?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.4 Movimento de solfejo em 4",
+      "pagina": 30
+    },
+    "opcoes": [
+      {
+        "texto": "1º: Para dentro; 2º: Para fora; 3º: Para cima; 4º: Embaixo.",
+        "correta": false,
+        "feedback": "O primeiro movimento deve começar embaixo."
+      },
+      {
+        "texto": "1º: Embaixo; 2º: Para dentro (esquerda); 3º: Para fora (direita); 4º: Para cima.",
+        "correta": true,
+        "feedback": "A sequência do movimento em 4 é: 1º movimento (embaixo), 2º movimento (para dentro/esquerda), 3º movimento (para fora/direita), 4º movimento (para cima, terminando embaixo)."
+      },
+      {
+        "texto": "1º: Em cima; 2º: Embaixo; 3º: Para dentro; 4º: Para fora.",
+        "correta": false,
+        "feedback": "O movimento deve começar embaixo."
+      },
+      {
+        "texto": "1º: Para fora; 2º: Para dentro; 3º: Embaixo; 4º: Para cima.",
+        "correta": false,
+        "feedback": "Esta sequência não corresponde ao padrão em 4."
+      }
+    ]
+  },
+  {
+    "id": "f03_q070",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Um candidato a músico já escolheu seu instrumento (ex: Violoncelo), que utiliza a Clave de Fá (𝄢) como principal no hinário. Se ele ainda não possui o instrumento, qual a recomendação para iniciar os estudos de Leitura Métrica e Solfejo?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 3,
+      "item": "3.2 Leitura rítmica, leitura métrica e solfejo",
+      "pagina": 27
+    },
+    "opcoes": [
+      {
+        "texto": "Deve utilizar a Clave de Sol (𝄞) até adquirir o instrumento e o método.",
+        "correta": false,
+        "feedback": "Se o instrumento já foi escolhido, deve-se usar a clave do método escolhido."
+      },
+      {
+        "texto": "Deve utilizar a Clave de Fá (𝄢), mesmo sem o instrumento, focando na clave do método escolhido.",
+        "correta": true,
+        "feedback": "É essencial que o candidato inicie na clave que está utilizando no método do seu instrumento. Se ele já decidiu pelo instrumento, mas ainda não o adquiriu, o candidato poderá utilizar desde já a clave do método do instrumento escolhido."
+      },
+      {
+        "texto": "Deve adiar o estudo de Solfejo até ter certeza da aquisição do instrumento e dominar a Clave de Sol (𝄞).",
+        "correta": false,
+        "feedback": "O estudo pode ser iniciado imediatamente na clave correta."
+      },
+      {
+        "texto": "Deve usar o sistema Endecagrama para visualizar as notas em todas as claves, sem focar em nenhuma específica.",
+        "correta": false,
+        "feedback": "Deve-se focar na clave principal do instrumento para adquirir domínio e fluência na leitura."
       }
     ]
   }
 ]
+
 );

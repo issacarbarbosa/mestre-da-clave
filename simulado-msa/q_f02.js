@@ -1,14 +1,15 @@
 if (!window.bancoQuestoes) window.bancoQuestoes = [];
 
-window.bancoQuestoes = window.bancoQuestoes.concat([
+window.bancoQuestoes = window.bancoQuestoes.concat(
 
+[
   {
-    "id": "f2_q001",
+    "id": "f02_q001",
     "ativo": true,
     "dificuldade": "facil",
-    "pontos": 10,
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Na escrita musical, qual é o termo que define a figura utilizada para representar o silêncio?",
+    "pergunta": "Qual figura musical (nota) representa o som de maior duração na escrita musical, de acordo com o MSA?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -20,34 +21,34 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "Nota Musical",
+        "texto": "A Mínima (𝅗𝅥).",
         "correta": false,
-        "feedback": "Nota musical é a figura que representa o som."
+        "feedback": "A Mínima (𝅗𝅥) tem Número de Equivalência 2, o que significa que cabem duas Mínimas em uma Semibreve, não sendo a figura de maior duração."
       },
       {
-        "texto": "Pauta Musical",
+        "texto": "A Semínima (𝅘𝅥).",
         "correta": false,
-        "feedback": "Pauta musical é o conjunto de linhas e espaços onde se escrevem as notas."
+        "feedback": "A Semínima (𝅘𝅥) tem Número de Equivalência 4, o que significa que cabem quatro Semínimas em uma Semibreve, não sendo a figura de maior duração."
       },
       {
-        "texto": "Clave",
-        "correta": false,
-        "feedback": "Clave é o sinal que determina o nome da nota na linha de referência."
-      },
-      {
-        "texto": "Pausa Musical",
+        "texto": "A Semibreve (𝅝).",
         "correta": true,
-        "feedback": "Pausa musical é a figura que representa o silêncio."
+        "feedback": "A Semibreve (𝅝) é a figura de maior duração e é a figura de referência para definir o Número de Equivalência das demais figuras."
+      },
+      {
+        "texto": "A Colcheia (𝅘𝅥𝅮).",
+        "correta": false,
+        "feedback": "A Colcheia (𝅘𝅥𝅮) tem Número de Equivalência 8, o que significa que cabem oito Colcheias em uma Semibreve, não sendo a figura de maior duração."
       }
     ]
   },
   {
-    "id": "f2_q002",
+    "id": "f02_q002",
     "ativo": true,
     "dificuldade": "facil",
-    "pontos": 10,
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Qual figura musical, na tabela de equivalência, possui o número 8?",
+    "pergunta": "Qual é o nome da figura que representa o silêncio e tem um Número de Equivalência igual a 4?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -59,34 +60,151 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "Semibreve",
+        "texto": "Pausa de Mínima (𝄼).",
         "correta": false,
-        "feedback": "A semibreve possui o número de equivalência 1."
+        "feedback": "A Pausa de Mínima (𝄼) tem Número de Equivalência 2."
       },
       {
-        "texto": "Semínima",
+        "texto": "Pausa de Colcheia (𝄾).",
         "correta": false,
-        "feedback": "A semínima possui o número de equivalência 4."
+        "feedback": "A Pausa de Colcheia (𝄾) tem Número de Equivalência 8."
       },
       {
-        "texto": "Colcheia",
+        "texto": "Pausa de Semínima (𝄽).",
         "correta": true,
-        "feedback": "A colcheia possui o número de equivalência 8."
+        "feedback": "A Pausa de Semínima (𝄽) tem Número de Equivalência 4, indicando que cabem quatro dela na Pausa de Semibreve."
       },
       {
-        "texto": "Semicolcheia",
+        "texto": "Pausa de Semibreve (𝄻).",
         "correta": false,
-        "feedback": "A semicolcheia possui o número de equivalência 16."
+        "feedback": "A Pausa de Semibreve (𝄻) tem Número de Equivalência 1."
       }
     ]
   },
   {
-    "id": "f2_q003",
+    "id": "f02_q003",
     "ativo": true,
     "dificuldade": "facil",
-    "pontos": 10,
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "O que define o Compasso, na Teoria Musical?",
+    "pergunta": "Quantas Colcheias (𝅘𝅥𝅮) cabem dentro de uma Semibreve (𝅝), conforme a relação de equivalência entre as figuras musicais?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.1 Figuras musicais",
+      "pagina": 17
+    },
+    "opcoes": [
+      {
+        "texto": "2 Colcheias (𝅘𝅥𝅮).",
+        "correta": false,
+        "feedback": "Cabem duas Mínimas (𝅗𝅥) em uma Semibreve (𝅝), não Colcheias (𝅘𝅥𝅮)."
+      },
+      {
+        "texto": "4 Colcheias (𝅘𝅥𝅮).",
+        "correta": false,
+        "feedback": "Cabem quatro Semínimas (𝅘𝅥) em uma Semibreve (𝅝), não Colcheias (𝅘𝅥𝅮)."
+      },
+      {
+        "texto": "8 Colcheias (𝅘𝅥𝅮).",
+        "correta": true,
+        "feedback": "A Semibreve (𝅝) tem Número de Equivalência 1 e a Colcheia (𝅘𝅥𝅮) tem Número de Equivalência 8. Portanto, cabem 8 Colcheias em uma Semibreve."
+      },
+      {
+        "texto": "16 Colcheias (𝅘𝅥𝅮).",
+        "correta": false,
+        "feedback": "Cabem 16 Semicolcheias (𝅘𝅥𝅯) em uma Semibreve (𝅝), não 16 Colcheias (𝅘𝅥𝅮)."
+      }
+    ]
+  },
+  {
+    "id": "f02_q004",
+    "ativo": true,
+    "dificuldade": "facil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual é o nome da parte da figura de som (nota musical) que tem uma forma elíptica?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.1 Figuras musicais",
+      "pagina": 19
+    },
+    "opcoes": [
+      {
+        "texto": "Haste.",
+        "correta": false,
+        "feedback": "A haste é o traço vertical da nota."
+      },
+      {
+        "texto": "Cabeça.",
+        "correta": true,
+        "feedback": "A cabeça da figura tem uma forma elíptica e pode ser vazia ou preenchida, dependendo da figura."
+      },
+      {
+        "texto": "Colchete.",
+        "correta": false,
+        "feedback": "O colchete, também chamado de bandeirola, é a parte adicionada à haste a partir da Colcheia (𝅘𝅥𝅮)."
+      },
+      {
+        "texto": "Bandeirola.",
+        "correta": false,
+        "feedback": "A bandeirola, também chamada de colchete, deve estar sempre colocada à direita da haste."
+      }
+    ]
+  },
+  {
+    "id": "f02_q005",
+    "ativo": true,
+    "dificuldade": "facil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "De acordo com as informações do MSA, quais figuras de som não são utilizadas no hinário?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.1 Figuras musicais",
+      "pagina": 17
+    },
+    "opcoes": [
+      {
+        "texto": "Semibreve (𝅝) e Mínima (𝅗𝅥).",
+        "correta": false,
+        "feedback": "A Semibreve (𝅝) e a Mínima (𝅗𝅥) são utilizadas no hinário."
+      },
+      {
+        "texto": "Colcheia (𝅘𝅥𝅮) e Semicolcheia (𝅘𝅥𝅯).",
+        "correta": false,
+        "feedback": "A Colcheia (𝅘𝅥𝅮) e a Semicolcheia (𝅘𝅥𝅯) são utilizadas no hinário."
+      },
+      {
+        "texto": "Fusa (𝅘𝅥𝅰) e Semifusa (𝅘𝅥𝅱).",
+        "correta": true,
+        "feedback": "As figuras denominadas Fusa (𝅘𝅥𝅰) e Semifusa (𝅘𝅥𝅱) não foram utilizadas no hinário."
+      },
+      {
+        "texto": "Mínima (𝅗𝅥) e Semínima (𝅘𝅥).",
+        "correta": false,
+        "feedback": "A Mínima (𝅗𝅥) e a Semínima (𝅘𝅥) são utilizadas no hinário."
+      }
+    ]
+  },
+  {
+    "id": "f02_q006",
+    "ativo": true,
+    "dificuldade": "facil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Como o MSA define Compasso?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -98,34 +216,34 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "É a divisão de um trecho musical em começo, meio e fim.",
+        "texto": "A linha vertical que separa o pentagrama em trechos.",
         "correta": false,
-        "feedback": "Essa definição é imprecisa e não representa o conceito técnico de compasso."
+        "feedback": "A linha vertical que separa o pentagrama é a barra de compasso, não o compasso em si."
       },
       {
-        "texto": "É a disposição ordenada de sons no tempo, combinando sons curtos, longos e silêncios.",
-        "correta": false,
-        "feedback": "Essa é a definição de Ritmo."
-      },
-      {
-        "texto": "É a divisão de um trecho musical em séries regulares de tempos.",
+        "texto": "A divisão de um trecho musical em séries regulares de tempos.",
         "correta": true,
-        "feedback": "Compasso é a divisão de um trecho musical em pequenas seções ou séries regulares de tempos."
+        "feedback": "Compasso é a divisão de um trecho musical em séries regulares de tempos, estabelecida pelo compositor para auxiliar o músico."
       },
       {
-        "texto": "É o movimento que ocorre em períodos regulares, marcado por batidas constantes.",
+        "texto": "O conjunto de 5 linhas e 4 espaços onde as notas são escritas.",
         "correta": false,
-        "feedback": "Essa é a definição de Pulsação."
+        "feedback": "Essa é a definição de Pentagrama (ou pauta musical), um tópico da Fase 1."
+      },
+      {
+        "texto": "O pulso que marca o início e o fim do espaço de tempo.",
+        "correta": false,
+        "feedback": "Essa é a definição de Pulsação, mas não de Compasso."
       }
     ]
   },
   {
-    "id": "f2_q004",
+    "id": "f02_q007",
     "ativo": true,
     "dificuldade": "facil",
-    "pontos": 10,
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Qual tipo de barra de compasso é uma linha vertical individual que indica o final de um compasso e o início do próximo?",
+    "pergunta": "Qual tipo de barra de compasso é uma linha vertical individual que indica o final de um compasso e o início do compasso seguinte?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -137,34 +255,34 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "Barra Final",
+        "texto": "Barra Dupla.",
         "correta": false,
-        "feedback": "A Barra Final indica a conclusão do hino."
+        "feedback": "A Barra Dupla é composta por duas linhas paralelas e é usada para indicar o final de uma seção da música."
       },
       {
-        "texto": "Barra Dupla",
+        "texto": "Barra de Repetição (Ritornello).",
         "correta": false,
-        "feedback": "A Barra Dupla indica o final de uma seção ou trecho musical."
+        "feedback": "A Barra de Repetição será apresentada mais adiante e contém dois pontos ao lado das linhas."
       },
       {
-        "texto": "Barra de Repetição",
+        "texto": "Barra Final.",
         "correta": false,
-        "feedback": "A Barra de Repetição é composta por duas linhas verticais paralelas com dois pontos laterais."
+        "feedback": "A Barra Final é composta por duas linhas paralelas, sendo a segunda mais grossa, e indica o final da peça musical."
       },
       {
-        "texto": "Barra Simples",
+        "texto": "Barra Simples.",
         "correta": true,
-        "feedback": "A Barra Simples é a linha vertical individual usada para demarcar compassos sucessivos."
+        "feedback": "A Barra Simples é uma linha vertical individual que separa um compasso do seguinte."
       }
     ]
   },
   {
-    "id": "f2_q005",
+    "id": "f02_q008",
     "ativo": true,
     "dificuldade": "facil",
-    "pontos": 10,
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Qual é a função da Barra Final?",
+    "pergunta": "A Barra Final é um tipo de barra de compasso que indica o final da peça musical e é composta por duas linhas verticais paralelas, sendo a segunda delas:",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -176,34 +294,73 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "Indicar o início de uma repetição.",
+        "texto": "Tracejada.",
         "correta": false,
-        "feedback": "A Barra de Início de Repetição, ou Ritornello, tem essa função."
+        "feedback": "As barras de compasso não são tracejadas."
       },
       {
-        "texto": "Dividir as seções de Estrofe e Coro.",
-        "correta": false,
-        "feedback": "Essa é a função típica da Barra Dupla no hinário."
-      },
-      {
-        "texto": "Assinalar a conclusão do hino ou peça musical.",
+        "texto": "Mais grossa que a primeira.",
         "correta": true,
-        "feedback": "A Barra Final sinaliza a conclusão da música."
+        "feedback": "A Barra Final é composta por duas linhas verticais paralelas, sendo a segunda mais grossa que a primeira."
       },
       {
-        "texto": "Separar compassos de diferentes fórmulas de compasso.",
+        "texto": "Mais fina que a primeira.",
         "correta": false,
-        "feedback": "Essa função é inerente à escrita de Compassos Alternados, geralmente feita com barras simples ou duplas contextuais."
+        "feedback": "A segunda linha da Barra Final é mais grossa, não mais fina."
+      },
+      {
+        "texto": "A mais longa.",
+        "correta": false,
+        "feedback": "A característica principal da segunda linha da Barra Final é ser mais grossa que a primeira."
       }
     ]
   },
   {
-    "id": "f2_q006",
+    "id": "f02_q009",
     "ativo": true,
     "dificuldade": "facil",
-    "pontos": 10,
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Na fórmula de compasso 4/4, qual figura musical representa a Unidade de Tempo (U.T.)?",
+    "pergunta": "No hinário, para que a Barra Dupla (duas linhas verticais paralelas) é mais utilizada?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.3 Barras de compasso simples, dupla e final",
+      "pagina": 21
+    },
+    "opcoes": [
+      {
+        "texto": "Para dividir o pentagrama em seções menores que o compasso.",
+        "correta": false,
+        "feedback": "A Barra Dupla divide seções maiores, como o final de uma estrofe."
+      },
+      {
+        "texto": "Para indicar o final de uma seção da música, como a divisão entre a estrofe e o 'Coro' ou 'Final'.",
+        "correta": true,
+        "feedback": "A Barra Dupla é utilizada para indicar o final de uma seção da música, como a divisão entre a estrofe e o Coro ou Final."
+      },
+      {
+        "texto": "Para sinalizar que o músico deve tocar uma oitava acima ou abaixo.",
+        "correta": false,
+        "feedback": "As barras de compasso não indicam transposição de oitavas."
+      },
+      {
+        "texto": "Para substituir a Barra Final quando a peça musical é curta.",
+        "correta": false,
+        "feedback": "A Barra Final é um sinal distinto que indica o encerramento total da peça musical."
+      }
+    ]
+  },
+  {
+    "id": "f02_q010",
+    "ativo": true,
+    "dificuldade": "facil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "O que a Fórmula de Compasso define?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -215,34 +372,34 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "Mínima",
+        "texto": "Apenas a altura do som (se é agudo ou grave).",
         "correta": false,
-        "feedback": "A mínima é a figura de número 2."
+        "feedback": "A Fórmula de Compasso define a organização do tempo, e não a altura do som (que é determinada pela clave)."
       },
       {
-        "texto": "Semibreve",
-        "correta": false,
-        "feedback": "A semibreve (1) representa o compasso completo (4 tempos), mas não a U.T. (1 tempo)."
-      },
-      {
-        "texto": "Semínima",
+        "texto": "A quantidade de tempos dentro de um compasso e a figura musical que representa cada tempo.",
         "correta": true,
-        "feedback": "O número 4 no denominador indica a semínima como a figura que vale um tempo."
+        "feedback": "A Fórmula de Compasso define a quantidade de tempos (número superior) e a figura musical que representa a unidade de tempo ou pulso (número inferior)."
       },
       {
-        "texto": "Colcheia",
+        "texto": "A duração exata das notas longas, como a Semibreve (𝅝).",
         "correta": false,
-        "feedback": "A colcheia é a figura de número 8."
+        "feedback": "A duração das notas depende do andamento (velocidade), mas a fórmula de compasso estabelece a unidade de tempo."
+      },
+      {
+        "texto": "Apenas o andamento (velocidade) da música.",
+        "correta": false,
+        "feedback": "O andamento da música é determinado pela marcação de velocidade (por exemplo, M.M.=100), e não pela Fórmula de Compasso."
       }
     ]
   },
   {
-    "id": "f2_q007",
+    "id": "f02_q011",
     "ativo": true,
     "dificuldade": "facil",
-    "pontos": 10,
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Na fórmula de compasso 4/4, o número superior (4) indica:",
+    "pergunta": "Em uma Fórmula de Compasso, qual informação é representada pelo número superior?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -254,34 +411,73 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "A figura musical que equivale a um tempo.",
+        "texto": "A figura musical que equivale a um tempo (Unidade de Tempo).",
         "correta": false,
-        "feedback": "Essa informação é dada pelo número inferior (denominador)."
+        "feedback": "A figura musical que equivale a um tempo é representada pelo número inferior da Fórmula de Compasso."
       },
       {
-        "texto": "O número de compassos na peça musical.",
+        "texto": "O Número de Equivalência da Semibreve (𝅝).",
         "correta": false,
-        "feedback": "O número de compassos é ilimitado."
+        "feedback": "O Número de Equivalência da Semibreve (𝅝) é 1."
       },
       {
-        "texto": "A quantidade de tempos, pulsos ou movimentos em cada compasso.",
+        "texto": "A quantidade de tempos ou pulsos dentro de um compasso.",
         "correta": true,
-        "feedback": "O número superior indica a quantidade de tempos que cabem dentro de um compasso."
+        "feedback": "O número superior na Fórmula de Compasso representa a quantidade de tempos, pulsos ou movimentos dentro do compasso."
       },
       {
-        "texto": "O valor da semibreve.",
+        "texto": "A duração total da Semibreve (𝅝).",
         "correta": false,
-        "feedback": "O número 4 não se relaciona diretamente ao valor da semibreve."
+        "feedback": "O número superior não representa a duração total da Semibreve (𝅝)."
       }
     ]
   },
   {
-    "id": "f2_q008",
+    "id": "f02_q012",
     "ativo": true,
     "dificuldade": "facil",
-    "pontos": 10,
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Qual a definição correta de Pulsação?",
+    "pergunta": "Na Fórmula de Compasso 4/4, qual figura musical é representada pelo número inferior (4) como a figura que equivale a um tempo ou pulso?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.4 Fórmula de compasso em 4",
+      "pagina": 21
+    },
+    "opcoes": [
+      {
+        "texto": "Colcheia (𝅘𝅥𝅮).",
+        "correta": false,
+        "feedback": "A Colcheia (𝅘𝅥𝅮) é representada pelo número 8."
+      },
+      {
+        "texto": "Mínima (𝅗𝅥).",
+        "correta": false,
+        "feedback": "A Mínima (𝅗𝅥) é representada pelo número 2."
+      },
+      {
+        "texto": "Semibreve (𝅝).",
+        "correta": false,
+        "feedback": "A Semibreve (𝅝) é representada pelo número 1."
+      },
+      {
+        "texto": "Semínima (𝅘𝅥).",
+        "correta": true,
+        "feedback": "O número 4 da Fórmula de Compasso 4/4 representa a Semínima (𝅘𝅥), pois seu Número de Equivalência é 4."
+      }
+    ]
+  },
+  {
+    "id": "f02_q013",
+    "ativo": true,
+    "dificuldade": "facil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Como o MSA define Ritmo?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -293,34 +489,34 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "É a duração do som num determinado espaço de tempo.",
+        "texto": "A distinção de sons produzidos por diferentes fontes sonoras.",
         "correta": false,
-        "feedback": "Essa é a definição de Duração, uma das propriedades do som."
+        "feedback": "Essa é a definição de Timbre, uma propriedade do som estudada na Fase 1."
       },
       {
-        "texto": "É a batida constante, que marca o início e o fim do tempo, interrompendo o silêncio.",
+        "texto": "A batida constante que marca o início e o fim do tempo.",
+        "correta": false,
+        "feedback": "Essa é a definição de Pulsação, que está contida dentro do ritmo."
+      },
+      {
+        "texto": "A disposição ordenada de sons no tempo, combinando sons longos, curtos e silêncios.",
         "correta": true,
-        "feedback": "A pulsação é uma batida constante e regular que delimita o tempo."
+        "feedback": "Ritmo é a distribuição dos sons, num determinado espaço de tempo, envolvendo sons longos, sons curtos e silêncios."
       },
       {
-        "texto": "É a disposição ordenada de sons e silêncios.",
+        "texto": "A produção ordenada de vários sons diferentes emitidos de modo simultâneo.",
         "correta": false,
-        "feedback": "Essa é a definição de Ritmo."
-      },
-      {
-        "texto": "É a sequência ascendente ou descendente de notas consecutivas.",
-        "correta": false,
-        "feedback": "Essa é a definição de Escala."
+        "feedback": "Essa é a definição de Harmonia, um elemento da música estudado na Fase 1."
       }
     ]
   },
   {
-    "id": "f2_q009",
+    "id": "f02_q014",
     "ativo": true,
     "dificuldade": "facil",
-    "pontos": 10,
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Qual dos elementos musicais é definido como a 'disposição ordenada de sons no tempo, combinando sons curtos, longos e silêncios'?",
+    "pergunta": "Dentro do Ritmo, o que é a batida (pulso) que marca o início e o fim do espaço de tempo?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -332,34 +528,34 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "Melodia",
+        "texto": "O Andamento.",
         "correta": false,
-        "feedback": "Melodia é a produção ordenada de sons sucessivos (altura)."
+        "feedback": "O andamento é a velocidade geral da música."
       },
       {
-        "texto": "Pulsação",
+        "texto": "O Compasso.",
         "correta": false,
-        "feedback": "Pulsação é a batida constante que marca o tempo."
+        "feedback": "O compasso é a divisão regular de um trecho musical."
       },
       {
-        "texto": "Ritmo",
+        "texto": "O Ritmo.",
+        "correta": false,
+        "feedback": "O ritmo é o termo mais abrangente que engloba a pulsação e a distribuição dos sons."
+      },
+      {
+        "texto": "A Pulsação.",
         "correta": true,
-        "feedback": "Ritmo determina a duração dos sons e silêncios no tempo."
-      },
-      {
-        "texto": "Harmonia",
-        "correta": false,
-        "feedback": "Harmonia é a produção ordenada de sons diferentes emitidos simultaneamente."
+        "feedback": "A Pulsação é a batida (pulso) constante que marca o início e o fim do tempo, interrompendo o silêncio."
       }
     ]
   },
   {
-    "id": "f2_q010",
+    "id": "f02_q015",
     "ativo": true,
     "dificuldade": "facil",
-    "pontos": 10,
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Para a correta realização dos exercícios rítmicos, como o pulso deve ser mantido?",
+    "pergunta": "O que é um pulso regular, com batidas constantes e com a mesma duração?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -371,268 +567,34 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "De forma ascendente, seguindo o ritmo das figuras.",
+        "texto": "O Andamento da música.",
         "correta": false,
-        "feedback": "A forma da batida é importante, mas o pulso em si deve ser regular."
+        "feedback": "Andamento refere-se à velocidade, mas a Pulsação é o pulso regular e constante que se desenvolve nos exercícios rítmicos."
       },
       {
-        "texto": "Em movimentos lentos e circulares, priorizando a precisão.",
+        "texto": "O Acento métrico.",
         "correta": false,
-        "feedback": "O movimento deve ser reto e preciso, não necessariamente lento."
+        "feedback": "O acento métrico será estudado mais adiante (Fase 11) e refere-se à acentuação forte ou fraca dos tempos do compasso."
       },
       {
-        "texto": "Regular, com batidas constantes e a mesma duração, sem variação de velocidade.",
+        "texto": "A Pulsação.",
         "correta": true,
-        "feedback": "O pulso deve ser sempre regular e constante para desenvolver a rítmica."
+        "feedback": "Pulsação é um pulso regular que contém batidas constantes, com a mesma duração, e é o objetivo dos exercícios rítmicos."
       },
       {
-        "texto": "Flexível, ajustando-se à intensidade do som forte ou fraco.",
+        "texto": "O Ritmo irregular.",
         "correta": false,
-        "feedback": "A pulsação deve ser constante, independentemente da intensidade do som."
+        "feedback": "O ritmo irregular tem durações diferentes, enquanto a pulsação é regular."
       }
     ]
   },
   {
-    "id": "f2_q011",
+    "id": "f02_q016",
     "ativo": true,
     "dificuldade": "facil",
-    "pontos": 10,
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "De acordo com o número de equivalência (1), quantas semínimas (4) são necessárias para preencher o valor de uma semibreve?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 2,
-      "item": "2.1 Figuras musicais",
-      "pagina": 17
-    },
-    "opcoes": [
-      {
-        "texto": "Duas",
-        "correta": false,
-        "feedback": "A semibreve comporta duas mínimas, não duas semínimas."
-      },
-      {
-        "texto": "Três",
-        "correta": false,
-        "feedback": "A proporção é binária (divisão em metades)."
-      },
-      {
-        "texto": "Quatro",
-        "correta": true,
-        "feedback": "O número de equivalência da semínima é 4, indicando que quatro delas cabem na semibreve (1)."
-      },
-      {
-        "texto": "Oito",
-        "correta": false,
-        "feedback": "Oito colcheias cabem na semibreve."
-      }
-    ]
-  },
-  {
-    "id": "f2_q012",
-    "ativo": true,
-    "dificuldade": "facil",
-    "pontos": 10,
-    "tipo": "texto",
-    "pergunta": "Qual o número de equivalência correspondente à Pausa de Mínima?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 2,
-      "item": "2.1 Figuras musicais",
-      "pagina": 17
-    },
-    "opcoes": [
-      {
-        "texto": "1",
-        "correta": false,
-        "feedback": "O número 1 corresponde à semibreve e à pausa de semibreve."
-      },
-      {
-        "texto": "2",
-        "correta": true,
-        "feedback": "A pausa de mínima, assim como a figura de mínima, possui o número de equivalência 2."
-      },
-      {
-        "texto": "4",
-        "correta": false,
-        "feedback": "O número 4 corresponde à semínima e à pausa de semínima."
-      },
-      {
-        "texto": "8",
-        "correta": false,
-        "feedback": "O número 8 corresponde à colcheia e à pausa de colcheia."
-      }
-    ]
-  },
-  {
-    "id": "f2_q013",
-    "ativo": true,
-    "dificuldade": "facil",
-    "pontos": 10,
-    "tipo": "texto",
-    "pergunta": "No hinário, a Barra Dupla é utilizada para qual finalidade principal?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 2,
-      "item": "2.3 Barras de compasso simples, dupla e final",
-      "pagina": 21
-    },
-    "opcoes": [
-      {
-        "texto": "Indicar uma pausa longa na orquestração.",
-        "correta": false,
-        "feedback": "Barras de compasso não indicam pausas longas."
-      },
-      {
-        "texto": "Sinalizar que a música deve ser repetida.",
-        "correta": false,
-        "feedback": "Essa é a função das Barras de Repetição (Ritornello)."
-      },
-      {
-        "texto": "Assinalar a divisão entre a seção da estrofe e a seção 'Coro' ou 'Final'.",
-        "correta": true,
-        "feedback": "A Barra Dupla indica o final de uma seção da música, como a transição para o Coro ou Final."
-      },
-      {
-        "texto": "Marcar o início da partitura musical.",
-        "correta": false,
-        "feedback": "A Barra Dupla é usada para dividir seções internas ou finalizar seções, não o início absoluto da peça."
-      }
-    ]
-  },
-  {
-    "id": "f2_q014",
-    "ativo": true,
-    "dificuldade": "facil",
-    "pontos": 10,
-    "tipo": "texto",
-    "pergunta": "Qual o nome do traço vertical que se coloca na figura de som?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 2,
-      "item": "2.1 Figuras musicais",
-      "pagina": 19
-    },
-    "opcoes": [
-      {
-        "texto": "Bandeirola",
-        "correta": false,
-        "feedback": "Bandeirola (ou colchete) é a parte ligada à haste nas figuras menores."
-      },
-      {
-        "texto": "Elipse",
-        "correta": false,
-        "feedback": "Elipse é o formato da cabeça da nota."
-      },
-      {
-        "texto": "Colchete",
-        "correta": false,
-        "feedback": "Colchete (ou bandeirola) é a parte ligada à haste nas figuras menores."
-      },
-      {
-        "texto": "Haste",
-        "correta": true,
-        "feedback": "Haste é o traço vertical colocado na figura de som."
-      }
-    ]
-  },
-  {
-    "id": "f2_q015",
-    "ativo": true,
-    "dificuldade": "facil",
-    "pontos": 10,
-    "tipo": "texto",
-    "pergunta": "Quais figuras musicais de menor valor não são utilizadas no hinário e, por essa razão, não são abordadas no Método Simplificado de Aprendizagem Musical (MSA)?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 2,
-      "item": "2.1 Figuras musicais",
-      "pagina": 17
-    },
-    "opcoes": [
-      {
-        "texto": "Mínima e Semínima",
-        "correta": false,
-        "feedback": "A mínima e a semínima são figuras frequentemente usadas."
-      },
-      {
-        "texto": "Colcheia e Semicolcheia",
-        "correta": false,
-        "feedback": "Essas figuras são amplamente utilizadas no hinário."
-      },
-      {
-        "texto": "Fusa e Semifusa",
-        "correta": true,
-        "feedback": "O hinário não utiliza as figuras de Fusa e Semifusa."
-      },
-      {
-        "texto": "Semibreve e Mínima",
-        "correta": false,
-        "feedback": "Essas figuras são essenciais no hinário."
-      }
-    ]
-  },
-  {
-    "id": "f2_q016",
-    "ativo": true,
-    "dificuldade": "facil",
-    "pontos": 10,
-    "tipo": "texto",
-    "pergunta": "Na fórmula de compasso 4/4, qual figura musical é a referência para um pulso completo (Unidade de Tempo)?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 2,
-      "item": "2.4 Fórmula de compasso em 4",
-      "pagina": 21
-    },
-    "opcoes": [
-      {
-        "texto": "Colcheia",
-        "correta": false,
-        "feedback": "A colcheia representa meio tempo neste compasso."
-      },
-      {
-        "texto": "Semibreve",
-        "correta": false,
-        "feedback": "A semibreve representa 4 tempos neste compasso."
-      },
-      {
-        "texto": "Semínima",
-        "correta": true,
-        "feedback": "O número 4 no denominador indica que a semínima representa cada tempo ou pulso."
-      },
-      {
-        "texto": "Mínima",
-        "correta": false,
-        "feedback": "A mínima representa 2 tempos neste compasso."
-      }
-    ]
-  },
-  {
-    "id": "f2_q017",
-    "ativo": true,
-    "dificuldade": "facil",
-    "pontos": 10,
-    "tipo": "texto",
-    "pergunta": "Ao marcar o tempo batendo a mão sobre uma superfície, qual parte do braço é instruída a permanecer imóvel?",
+    "pergunta": "Ao marcar o tempo nos exercícios rítmicos com a mão, como deve ser a preparação do movimento inicial?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -644,190 +606,73 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "O cotovelo, mantendo o braço relaxado.",
+        "texto": "Com a mão na altura do quadril.",
         "correta": false,
-        "feedback": "O braço e a mão devem estar alinhados, sendo que o movimento deve vir do antebraço."
+        "feedback": "A preparação deve ser feita com a mão na altura do peito."
       },
       {
-        "texto": "O antebraço, permitindo que o pulso guie a batida.",
-        "correta": false,
-        "feedback": "O pulso não deve ser movimentado durante a batida."
-      },
-      {
-        "texto": "O pulso, mantendo o antebraço e a mão alinhados.",
+        "texto": "Com a mão na altura do peito.",
         "correta": true,
-        "feedback": "Não se deve movimentar apenas o pulso; o antebraço e a mão devem permanecer alinhados e o pulso imóvel."
+        "feedback": "A preparação para o movimento deve ser feita com a mão na altura do peito, e a pulsação deve começar sempre com a batida na parte de baixo."
       },
       {
-        "texto": "O ombro, para delimitar o espaço de movimento.",
+        "texto": "Movimentando apenas o pulso.",
         "correta": false,
-        "feedback": "O movimento é feito abaixo do ombro, mas o pulso é o ponto crucial a ser mantido imóvel."
+        "feedback": "O candidato deve tomar o cuidado de movimentar o braço (e não o pulso) durante a batida."
+      },
+      {
+        "texto": "Com a mão acima da linha dos olhos.",
+        "correta": false,
+        "feedback": "A mão, ao subir, não deve passar da linha dos olhos."
       }
     ]
   },
   {
-    "id": "f2_q018",
+    "id": "f02_q017",
     "ativo": true,
     "dificuldade": "facil",
-    "pontos": 10,
-    "tipo": "texto",
-    "pergunta": "Qual das seguintes afirmações estabelece a relação correta entre Ritmo e Pulsação?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 2,
-      "item": "2.5 Ritmo e pulsação",
-      "pagina": 22
-    },
-    "opcoes": [
-      {
-        "texto": "Ritmo e Pulsação são a mesma coisa, referindo-se à velocidade da música.",
-        "correta": false,
-        "feedback": "Ritmo não é o mesmo que Pulsação."
-      },
-      {
-        "texto": "A Pulsação determina a duração do som, e o Ritmo determina a constância da batida.",
-        "correta": false,
-        "feedback": "Os papéis estão invertidos: o Ritmo lida com a duração e a Pulsação com a constância."
-      },
-      {
-        "texto": "Ritmo é a distribuição dos sons, e a Pulsação é a batida constante que marca o tempo.",
-        "correta": true,
-        "feedback": "O Ritmo é a distribuição de sons curtos ou longos, e a Pulsação é a batida regular que marca o início e o fim do tempo."
-      },
-      {
-        "texto": "A Pulsação é um elemento do som, e o Ritmo é uma propriedade do som.",
-        "correta": false,
-        "feedback": "Ritmo é um dos elementos da música (junto com Melodia e Harmonia)."
-      }
-    ]
-  },
-  {
-    "id": "f2_q019",
-    "ativo": true,
-    "dificuldade": "facil",
-    "pontos": 10,
-    "tipo": "texto",
-    "pergunta": "O Número de Equivalência, presente na tabela das figuras musicais, define a proporção de cada figura em relação a qual figura fundamental?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 2,
-      "item": "2.1 Figuras musicais",
-      "pagina": 17
-    },
-    "opcoes": [
-      {
-        "texto": "Mínima (2)",
-        "correta": false,
-        "feedback": "A mínima não é a figura de referência para a definição dos números de equivalência."
-      },
-      {
-        "texto": "Semibreve (1)",
-        "correta": true,
-        "feedback": "O Número de Equivalência demonstra quantas unidades de uma figura cabem dentro de uma Semibreve."
-      },
-      {
-        "texto": "Semínima (4)",
-        "correta": false,
-        "feedback": "A semínima não é a figura de referência, embora seja a Unidade de Tempo no compasso 4/4."
-      },
-      {
-        "texto": "Colcheia (8)",
-        "correta": false,
-        "feedback": "A colcheia não é a figura de referência."
-      }
-    ]
-  },
-  {
-    "id": "f2_q020",
-    "ativo": true,
-    "dificuldade": "facil",
-    "pontos": 10,
-    "tipo": "texto",
-    "pergunta": "Qual barra de compasso é composta por duas linhas verticais paralelas, sendo a segunda mais grossa que a primeira?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 2,
-      "item": "2.3 Barras de compasso simples, dupla e final",
-      "pagina": 21
-    },
-    "opcoes": [
-      {
-        "texto": "Barra Simples",
-        "correta": false,
-        "feedback": "A Barra Simples é uma linha vertical individual."
-      },
-      {
-        "texto": "Barra Dupla",
-        "correta": false,
-        "feedback": "A Barra Dupla é composta por duas linhas paralelas de mesma espessura (embora possa variar em certos contextos)."
-      },
-      {
-        "texto": "Barra de Ritornello",
-        "correta": false,
-        "feedback": "A Barra de Ritornello (repetição) tem pontos adicionais e pode ser tanto de início quanto de fim de repetição."
-      },
-      {
-        "texto": "Barra Final",
-        "correta": true,
-        "feedback": "A Barra Final é formada por duas linhas verticais paralelas, sendo a segunda mais grossa, assinalando o fim da música."
-      }
-    ]
-  },
-  {
-    "id": "f2_q021",
-    "ativo": true,
-    "dificuldade": "media",
     "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Se uma semibreve contém 16 semicolcheias, e a mínima representa a metade da semibreve, quantas colcheias cabem em uma mínima?",
+    "pergunta": "Ao realizar a pulsação com a mão ou objeto, o movimento deve ser feito de forma:",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
       "livro": "MSA",
       "periodo": 1,
       "fase": 2,
-      "item": "2.1 Figuras musicais",
-      "pagina": 17
+      "item": "2.6 Forma de realização dos exercícios rítmicos",
+      "pagina": 23
     },
     "opcoes": [
       {
-        "texto": "Duas",
+        "texto": "Em linha curva, para suavizar o som da batida.",
         "correta": false,
-        "feedback": "Duas colcheias cabem em uma semínima, não em uma mínima."
+        "feedback": "O movimento deve ser feito em um movimento reto, preciso e constante, sem curvas, como se seguisse uma linha reta invisível para cima e para baixo."
       },
       {
-        "texto": "Três",
+        "texto": "Em zigue-zague, para demarcar os tempos fortes e fracos.",
         "correta": false,
-        "feedback": "A proporção é binária, e não há essa equivalência direta."
+        "feedback": "Os movimentos devem ser retos para desenvolver a precisão rítmica."
       },
       {
-        "texto": "Quatro",
+        "texto": "Em movimento reto, preciso e constante, sem curvas.",
         "correta": true,
-        "feedback": "Uma mínima (2) é equivalente a quatro colcheias (8), seguindo a proporção de que cada figura vale metade da anterior."
+        "feedback": "A mão, o objeto ou o equipamento deve ser movimentado de baixo para cima, iniciando e terminando no mesmo ponto embaixo, em um movimento reto, preciso e constante, sem curvas."
       },
       {
-        "texto": "Oito",
+        "texto": "Somente para baixo, pois a batida forte só acontece no início do tempo.",
         "correta": false,
-        "feedback": "Oito colcheias preenchem uma semibreve."
+        "feedback": "O movimento deve ser completo, de baixo para cima e terminando embaixo."
       }
     ]
   },
   {
-    "id": "f2_q022",
+    "id": "f02_q018",
     "ativo": true,
-    "dificuldade": "media",
+    "dificuldade": "facil",
     "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Na representação fracionária em relação à semibreve (1), qual figura musical representa a fração 1/8 (um oitavo)?",
+    "pergunta": "Qual fração demonstra o valor de uma Semínima (𝅘𝅥) em relação à Semibreve (𝅝)?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -839,151 +684,34 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "Semínima",
+        "texto": "1/2 (um meio).",
         "correta": false,
-        "feedback": "A semínima representa a fração 1/4 (um quarto)."
+        "feedback": "1/2 (um meio) é a fração correspondente à Mínima (𝅗𝅥)."
       },
       {
-        "texto": "Colcheia",
+        "texto": "1/4 (um quarto).",
         "correta": true,
-        "feedback": "A colcheia (8) representa a oitava parte da semibreve (1)."
+        "feedback": "A Semínima (𝅘𝅥) tem Número de Equivalência 4, e sua fração correspondente em relação à Semibreve (𝅝) é 1/4 (um quarto)."
       },
       {
-        "texto": "Mínima",
+        "texto": "1/8 (um oitavo).",
         "correta": false,
-        "feedback": "A mínima representa a fração 1/2 (um meio)."
+        "feedback": "1/8 (um oitavo) é a fração correspondente à Colcheia (𝅘𝅥𝅮)."
       },
       {
-        "texto": "Semicolcheia",
+        "texto": "1/16 (um dezesseis avos).",
         "correta": false,
-        "feedback": "A semicolcheia representa a fração 1/16 (um dezesseis avos)."
+        "feedback": "1/16 (um dezesseis avos) é a fração correspondente à Semicolcheia (𝅘𝅥𝅯)."
       }
     ]
   },
   {
-    "id": "f2_q023",
+    "id": "f02_q019",
     "ativo": true,
-    "dificuldade": "media",
+    "dificuldade": "facil",
     "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Qual função a Barra Simples e a Barra Dupla possuem em comum na partitura?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 2,
-      "item": "2.3 Barras de compasso simples, dupla e final",
-      "pagina": 21
-    },
-    "opcoes": [
-      {
-        "texto": "Ambas indicam o final definitivo da música.",
-        "correta": false,
-        "feedback": "Apenas a Barra Final indica o final definitivo da música."
-      },
-      {
-        "texto": "Ambas podem indicar o final de um compasso e o início do próximo.",
-        "correta": true,
-        "feedback": "Embora a Barra Dupla tenha o propósito principal de dividir seções, ela também indica o final de um compasso e o início do próximo, tal como a Barra Simples."
-      },
-      {
-        "texto": "Ambas são usadas exclusivamente para separar a Estrofe do Coro.",
-        "correta": false,
-        "feedback": "A Barra Simples é usada entre todos os compassos sucessivos."
-      },
-      {
-        "texto": "Ambas só aparecem com a fórmula de compasso em 4/4.",
-        "correta": false,
-        "feedback": "O uso das barras é independente da fórmula de compasso específica."
-      }
-    ]
-  },
-  {
-    "id": "f2_q024",
-    "ativo": true,
-    "dificuldade": "media",
-    "pontos": 15,
-    "tipo": "texto",
-    "pergunta": "Em um compasso 4/4, onde a semínima representa um tempo, qual figura musical sozinha preenche todo o valor do compasso?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 2,
-      "item": "2.4 Fórmula de compasso em 4",
-      "pagina": 21
-    },
-    "opcoes": [
-      {
-        "texto": "Mínima",
-        "correta": false,
-        "feedback": "A mínima preenche 2 tempos (metade) do compasso 4/4."
-      },
-      {
-        "texto": "Semibreve",
-        "correta": true,
-        "feedback": "A semibreve (figura 1) vale 4 tempos e preenche o compasso 4/4 inteiro."
-      },
-      {
-        "texto": "Semínima",
-        "correta": false,
-        "feedback": "A semínima preenche 1 tempo do compasso 4/4."
-      },
-      {
-        "texto": "Mínima pontuada",
-        "correta": false,
-        "feedback": "A mínima pontuada preenche 3 tempos (seria comum em 3/4)."
-      }
-    ]
-  },
-  {
-    "id": "f2_q025",
-    "ativo": true,
-    "dificuldade": "media",
-    "pontos": 15,
-    "tipo": "texto",
-    "pergunta": "Em figuras como a colcheia e a semicolcheia, qual é o nome da parte colocada à direita da haste?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 2,
-      "item": "2.1 Figuras musicais",
-      "pagina": 19
-    },
-    "opcoes": [
-      {
-        "texto": "Cabeça",
-        "correta": false,
-        "feedback": "A cabeça é a parte elíptica da nota."
-      },
-      {
-        "texto": "Haste",
-        "correta": false,
-        "feedback": "A haste é o traço vertical."
-      },
-      {
-        "texto": "Elipse",
-        "correta": false,
-        "feedback": "Elipse é a forma da cabeça da nota."
-      },
-      {
-        "texto": "Bandeirola ou Colchete",
-        "correta": true,
-        "feedback": "A parte colocada à direita da haste é denominada bandeirola ou colchete."
-      }
-    ]
-  },
-  {
-    "id": "f2_q026",
-    "ativo": true,
-    "dificuldade": "media",
-    "pontos": 15,
-    "tipo": "texto",
-    "pergunta": "Se em um compasso 4/4, a semínima vale 1 tempo (U.T.), qual figura de som representa a metade desse tempo (meio tempo)?",
+    "pergunta": "Quantas Pausas de Mínima (𝄼) cabem na Pausa de Semibreve (𝄻), de acordo com a proporção das figuras?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -995,34 +723,34 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "Semibreve",
+        "texto": "1 Pausa de Mínima (𝄼).",
         "correta": false,
-        "feedback": "A semibreve vale 4 tempos."
+        "feedback": "Apenas 1 Pausa de Semibreve (𝄻) cabe nela mesma."
       },
       {
-        "texto": "Mínima",
-        "correta": false,
-        "feedback": "A mínima vale 2 tempos."
-      },
-      {
-        "texto": "Colcheia",
+        "texto": "2 Pausas de Mínima (𝄼).",
         "correta": true,
-        "feedback": "A colcheia é a metade da semínima (U.T. em 4/4)."
+        "feedback": "A Pausa de Semibreve (𝄻) tem Número de Equivalência 1, e a Pausa de Mínima (𝄼) tem Número de Equivalência 2. Logo, cabem 2 Pausas de Mínima na Pausa de Semibreve."
       },
       {
-        "texto": "Semicolcheia",
+        "texto": "4 Pausas de Mínima (𝄼).",
         "correta": false,
-        "feedback": "A semicolcheia vale um quarto de tempo."
+        "feedback": "Cabem 4 Pausas de Semínima (𝄽) na Pausa de Semibreve (𝄻)."
+      },
+      {
+        "texto": "8 Pausas de Mínima (𝄼).",
+        "correta": false,
+        "feedback": "Cabem 8 Pausas de Colcheia (𝄾) na Pausa de Semibreve (𝄻)."
       }
     ]
   },
   {
-    "id": "f2_q027",
+    "id": "f02_q020",
     "ativo": true,
-    "dificuldade": "media",
+    "dificuldade": "facil",
     "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Na leitura rítmica, ao pronunciar a sílaba 'TAAAA...' em uma nota longa que dura vários pulsos, qual a instrução a ser seguida?",
+    "pergunta": "Ao realizar a leitura rítmica, a sílaba \"TAAAA...\" deve ser pronunciada de que forma, especialmente quando a nota é longa?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -1030,116 +758,38 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
       "periodo": 1,
       "fase": 2,
       "item": "2.6 Forma de realização dos exercícios rítmicos",
-      "pagina": 32
+      "pagina": 24
     },
     "opcoes": [
       {
-        "texto": "Falar 'TA' em cada pulso, alongando 'ÁÁÁÁ' entre eles.",
+        "texto": "Articulando cada pulso (batida) como \"TÁ-Á-Á-Á...\".",
         "correta": false,
-        "feedback": "Não se deve cortar o som da nota, nem falar 'TÁ Á Á Á...'."
+        "feedback": "Deve-se evitar a pronúncia inadequada como 'TÁ Á Á Á...', mantendo a voz constante (TAAAA...)."
       },
       {
-        "texto": "Manter a voz constante e o som sem interrupção durante toda a duração da figura.",
+        "texto": "Interrompendo o som a cada pulso da mão, recomeçando a sílaba.",
+        "correta": false,
+        "feedback": "O som da nota não deve ser interrompido no meio de sua duração; ele deve ser mantido constante."
+      },
+      {
+        "texto": "Mantendo a voz constante (TAAAA...) independentemente dos movimentos da mão.",
         "correta": true,
-        "feedback": "Fale 'TAAAA...' mantendo a voz constante, sem cortar o som da nota, durante toda a sua extensão."
+        "feedback": "Deve-se falar 'TAAAA...' mantendo a voz constante, independentemente dos movimentos da mão, sem cortar o som da nota no meio da sua duração."
       },
       {
-        "texto": "Aumentar a intensidade da voz nos pulsos correspondentes à batida da mão.",
+        "texto": "Com intensidade exagerada para marcar o tempo.",
         "correta": false,
-        "feedback": "O candidato deve manter a voz constante, sem variar a intensidade (volume), e procurar se igualar ao grupo."
-      },
-      {
-        "texto": "Pronunciar a sílaba 'TA' apenas no primeiro pulso da nota.",
-        "correta": false,
-        "feedback": "O som deve ser mantido 'TAAAA...' por toda a duração da figura."
+        "feedback": "O instrutor orienta a ter cuidado com a intensidade da voz, procurando se igualar ao grupo, sem exagerar."
       }
     ]
   },
   {
-    "id": "f2_q028",
+    "id": "f02_q021",
     "ativo": true,
     "dificuldade": "media",
     "pontos": 15,
     "tipo": "texto",
-    "pergunta": "No hinário, a Barra Dupla é utilizada para indicar qual separação estrutural?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 2,
-      "item": "2.3 Barras de compasso simples, dupla e final",
-      "pagina": 21
-    },
-    "opcoes": [
-      {
-        "texto": "A pausa de respiração no final de uma frase.",
-        "correta": false,
-        "feedback": "Pausas de respiração são indicadas por vírgulas."
-      },
-      {
-        "texto": "O cruzamento de vozes entre os naipes.",
-        "correta": false,
-        "feedback": "As barras de compasso não indicam cruzamento de vozes."
-      },
-      {
-        "texto": "A divisão entre a estrofe e a seção 'Coro' ou 'Final' da música.",
-        "correta": true,
-        "feedback": "A Barra Dupla é utilizada para indicar o final de uma seção ou trecho musical, como a transição entre estrofe e Coro."
-      },
-      {
-        "texto": "O alongamento de uma nota para a próxima nota de mesma altura.",
-        "correta": false,
-        "feedback": "Essa é a função da Ligadura de Valor."
-      }
-    ]
-  },
-  {
-    "id": "f2_q029",
-    "ativo": true,
-    "dificuldade": "media",
-    "pontos": 15,
-    "tipo": "texto",
-    "pergunta": "Ao realizar a pulsação batendo a mão sobre uma superfície, qual é o movimento recomendado para a mão e o antebraço?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 2,
-      "item": "2.6 Forma de realização dos exercícios rítmicos",
-      "pagina": 23
-    },
-    "opcoes": [
-      {
-        "texto": "Movimento circular e constante, começando na altura da mesa.",
-        "correta": false,
-        "feedback": "O movimento deve ser reto, e não circular."
-      },
-      {
-        "texto": "Movimento que envolva principalmente o pulso, para garantir suavidade.",
-        "correta": false,
-        "feedback": "Não se deve movimentar o pulso."
-      },
-      {
-        "texto": "Movimento reto, de baixo para cima, iniciando e terminando no mesmo ponto embaixo.",
-        "correta": true,
-        "feedback": "O movimento deve ser reto e constante, seguindo o padrão de baixo para cima e retornando ao ponto inicial (embaixo)."
-      },
-      {
-        "texto": "Movimento que comece na linha dos olhos e desça até a altura do peito.",
-        "correta": false,
-        "feedback": "A preparação é na altura do peito, e a mão não deve subir além da linha dos olhos."
-      }
-    ]
-  },
-  {
-    "id": "f2_q030",
-    "ativo": true,
-    "dificuldade": "media",
-    "pontos": 15,
-    "tipo": "texto",
-    "pergunta": "Considerando os números de equivalência, quantas colcheias (8) são necessárias para preencher o valor de uma mínima (2)?",
+    "pergunta": "Conforme a proporção entre as figuras de som, quantas Semicolcheias (𝅘𝅥𝅯) são necessárias para equivaler a uma Semínima (𝅘𝅥)?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -1151,190 +801,73 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "2",
+        "texto": "16 Semicolcheias (𝅘𝅥𝅯).",
         "correta": false,
-        "feedback": "Duas colcheias preenchem uma semínima."
+        "feedback": "Cabem 16 Semicolcheias (𝅘𝅥𝅯) em uma Semibreve (𝅝), e não em uma Semínima (𝅘𝅥)."
       },
       {
-        "texto": "4",
+        "texto": "8 Semicolcheias (𝅘𝅥𝅯).",
+        "correta": false,
+        "feedback": "Cabem 8 Colcheias (𝅘𝅥𝅮) em uma Semibreve (𝅝), não 8 Semicolcheias (𝅘𝅥𝅯) em uma Semínima (𝅘𝅥)."
+      },
+      {
+        "texto": "4 Semicolcheias (𝅘𝅥𝅯).",
         "correta": true,
-        "feedback": "A mínima é composta por quatro colcheias (2 x 4 = 8)."
+        "feedback": "A Semínima (𝅘𝅥) tem Número de Equivalência 4 e a Semicolcheia (𝅘𝅥𝅯) tem Número de Equivalência 16. A proporção indica que 4 Semicolcheias cabem em 1 Semínima."
       },
       {
-        "texto": "6",
+        "texto": "2 Semicolcheias (𝅘𝅥𝅯).",
         "correta": false,
-        "feedback": "A proporção é binária (divisão em metades)."
-      },
-      {
-        "texto": "8",
-        "correta": false,
-        "feedback": "Oito colcheias preenchem a semibreve."
+        "feedback": "Cabem 2 Colcheias (𝅘𝅥𝅮) em uma Semínima (𝅘𝅥), e não 2 Semicolcheias (𝅘𝅥𝅯)."
       }
     ]
   },
   {
-    "id": "f2_q031",
+    "id": "f02_q022",
     "ativo": true,
     "dificuldade": "media",
     "pontos": 15,
     "tipo": "texto",
-    "pergunta": "O que a fórmula de compasso 4/4 determina sobre o compasso?",
+    "pergunta": "Qual fração demonstra o valor da Colcheia (𝅘𝅥𝅮) em relação à Semibreve (𝅝)?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
       "livro": "MSA",
       "periodo": 1,
       "fase": 2,
-      "item": "2.4 Fórmula de compasso em 4",
-      "pagina": 21
+      "item": "2.1 Figuras musicais",
+      "pagina": 18
     },
     "opcoes": [
       {
-        "texto": "Que o compasso terá 4 semibreves.",
+        "texto": "1/2 (um meio).",
         "correta": false,
-        "feedback": "O compasso 4/4 tem apenas o valor de uma semibreve."
+        "feedback": "1/2 (um meio) é a fração correspondente à Mínima (𝅗𝅥)."
       },
       {
-        "texto": "Que o compasso terá 4 tempos e a mínima (2) representa a unidade de tempo.",
+        "texto": "1/4 (um quarto).",
         "correta": false,
-        "feedback": "A mínima (2) é a U.T. no compasso 2/2 ou 3/2, não 4/4."
+        "feedback": "1/4 (um quarto) é a fração correspondente à Semínima (𝅘𝅥)."
       },
       {
-        "texto": "Que o compasso terá 4 tempos e a semínima (4) representa cada tempo.",
+        "texto": "1/8 (um oitavo).",
         "correta": true,
-        "feedback": "O número superior (4) indica 4 tempos, e o inferior (4) indica a semínima como a figura que representa cada tempo."
+        "feedback": "A Colcheia (𝅘𝅥𝅮) tem Número de Equivalência 8, e sua fração correspondente em relação à Semibreve (𝅝) é 1/8 (um oitavo)."
       },
       {
-        "texto": "Que o compasso será composto, com subdivisão ternária.",
+        "texto": "1/16 (um dezesseis avos).",
         "correta": false,
-        "feedback": "4/4 é um compasso simples, com subdivisão binária."
+        "feedback": "1/16 (um dezesseis avos) é a fração correspondente à Semicolcheia (𝅘𝅥𝅯)."
       }
     ]
   },
   {
-    "id": "f2_q032",
+    "id": "f02_q023",
     "ativo": true,
     "dificuldade": "media",
     "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Onde o candidato deve posicionar a mão para dar início ao primeiro movimento da pulsação nos exercícios rítmicos?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 2,
-      "item": "2.6 Forma de realização dos exercícios rítmicos",
-      "pagina": 23
-    },
-    "opcoes": [
-      {
-        "texto": "Na altura dos olhos, para visualizar o movimento da forma mais ampla possível.",
-        "correta": false,
-        "feedback": "A mão não deve subir além da linha dos olhos, mas a preparação não é feita nessa altura."
-      },
-      {
-        "texto": "Na altura do peito, antes de começar a batida para baixo.",
-        "correta": true,
-        "feedback": "A preparação para o movimento deve ser feita com a mão na altura do peito."
-      },
-      {
-        "texto": "No ponto mais baixo do movimento (ponto 1), antes de começar a subir.",
-        "correta": false,
-        "feedback": "Esse é o ponto de batida, não de preparação inicial."
-      },
-      {
-        "texto": "Na lateral do corpo, mantendo o braço esticado.",
-        "correta": false,
-        "feedback": "Os movimentos devem ser feitos dentro da 'janela de movimento' à frente do corpo."
-      }
-    ]
-  },
-  {
-    "id": "f2_q033",
-    "ativo": true,
-    "dificuldade": "media",
-    "pontos": 15,
-    "tipo": "texto",
-    "pergunta": "Qual dos exemplos abaixo representa a ideia de Pulsação Constante mencionada no MSA, fora do contexto musical?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 2,
-      "item": "2.5 Ritmo e pulsação",
-      "pagina": 22
-    },
-    "opcoes": [
-      {
-        "texto": "O ritmo das ondas do mar, que variam de intensidade.",
-        "correta": false,
-        "feedback": "A pulsação precisa ser regular e constante, o que não ocorre necessariamente com o movimento das ondas."
-      },
-      {
-        "texto": "O ritmo cardíaco (pulsação do coração) e o pisca-alerta do carro.",
-        "correta": true,
-        "feedback": "O ritmo cardíaco e o pisca-alerta são exemplos de pulsação constante, dada a sua regularidade."
-      },
-      {
-        "texto": "A variação de altura entre notas graves e agudas.",
-        "correta": false,
-        "feedback": "A variação de altura está relacionada à propriedade do som, não à pulsação."
-      },
-      {
-        "texto": "O tempo entre a leitura de um compasso e outro.",
-        "correta": false,
-        "feedback": "Embora a leitura deva ser rítmica, o conceito se refere à batida constante e regular em si."
-      }
-    ]
-  },
-  {
-    "id": "f2_q034",
-    "ativo": true,
-    "dificuldade": "media",
-    "pontos": 15,
-    "tipo": "texto",
-    "pergunta": "O que o número inferior (denominador) da Fórmula de Compasso indica?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 2,
-      "item": "2.4 Fórmula de compasso em 4",
-      "pagina": 21
-    },
-    "opcoes": [
-      {
-        "texto": "A figura musical que equivale a um tempo ou pulso.",
-        "correta": true,
-        "feedback": "O número inferior define qual figura musical é a Unidade de Tempo (U.T.)."
-      },
-      {
-        "texto": "A intensidade sonora (dinâmica) a ser aplicada.",
-        "correta": false,
-        "feedback": "A intensidade é definida pela Dinâmica."
-      },
-      {
-        "texto": "O total de tempos dentro da música.",
-        "correta": false,
-        "feedback": "O número de tempos é dado pelo numerador."
-      },
-      {
-        "texto": "A subdivisão ternária ou binária do compasso.",
-        "correta": false,
-        "feedback": "Ele indica a U.T., o que permite classificar a subdivisão, mas não a define diretamente."
-      }
-    ]
-  },
-  {
-    "id": "f2_q035",
-    "ativo": true,
-    "dificuldade": "media",
-    "pontos": 15,
-    "tipo": "texto",
-    "pergunta": "Em figuras de som como a colcheia e a semicolcheia, onde a bandeirola (ou colchete) deve ser colocada?",
+    "pergunta": "Onde a bandeirola (ou colchete) deve estar sempre colocada na figura de som?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -1348,461 +881,32 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
       {
         "texto": "À esquerda da haste.",
         "correta": false,
-        "feedback": "A haste pode estar à esquerda, mas a bandeirola deve estar à direita da haste."
+        "feedback": "A bandeirola (ou colchete) deve ser colocada à direita da haste."
       },
       {
-        "texto": "Acima da cabeça da nota.",
+        "texto": "No topo da haste, independentemente da direção.",
         "correta": false,
-        "feedback": "A haste e a bandeirola são acopladas horizontalmente/verticalmente, não sobre a cabeça."
+        "feedback": "O posicionamento (topo ou base) depende da direção da haste, mas o lado correto é o direito."
       },
       {
         "texto": "À direita da haste.",
         "correta": true,
-        "feedback": "A bandeirola ou colchete deve estar sempre colocada à direita da haste."
+        "feedback": "A bandeirola (ou colchete) deve estar sempre colocada à direita da haste."
       },
       {
-        "texto": "Abaixo da cabeça da nota.",
+        "texto": "Na cabeça da nota, logo após o ponto de aumento.",
         "correta": false,
-        "feedback": "Essa posição é reservada à cabeça da nota ou eventuais sinais de articulação."
+        "feedback": "A bandeirola é colocada na haste, e não na cabeça da nota."
       }
     ]
   },
   {
-    "id": "f2_q036",
+    "id": "f02_q024",
     "ativo": true,
     "dificuldade": "media",
     "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Qual figura de som equivale a 1/4 (um quarto) do valor de uma semibreve?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 2,
-      "item": "2.1 Figuras musicais",
-      "pagina": 18
-    },
-    "opcoes": [
-      {
-        "texto": "Mínima",
-        "correta": false,
-        "feedback": "A mínima vale 1/2 (um meio) da semibreve."
-      },
-      {
-        "texto": "Semínima",
-        "correta": true,
-        "feedback": "A semínima tem o número de equivalência 4, o que significa que é 1/4 da semibreve (1)."
-      },
-      {
-        "texto": "Colcheia",
-        "correta": false,
-        "feedback": "A colcheia vale 1/8 (um oitavo) da semibreve."
-      },
-      {
-        "texto": "Semicolcheia",
-        "correta": false,
-        "feedback": "A semicolcheia vale 1/16 (um dezesseis avos) da semibreve."
-      }
-    ]
-  },
-  {
-    "id": "f2_q037",
-    "ativo": true,
-    "dificuldade": "media",
-    "pontos": 15,
-    "tipo": "texto",
-    "pergunta": "Ao realizar movimentos de pulsação com o pé, o que é expressamente desaconselhado pelo MSA?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.3 Movimentos de condução para solfejo",
-      "pagina": 29
-    },
-    "opcoes": [
-      {
-        "texto": "Realizar movimentos leves com os dedos do pé.",
-        "correta": false,
-        "feedback": "Movimentos leves com os dedos são recomendados para auxiliar a pulsação."
-      },
-      {
-        "texto": "Utilizar o metrônomo simultaneamente ao movimento.",
-        "correta": false,
-        "feedback": "O uso do metrônomo é recomendado para manter a pulsação regular."
-      },
-      {
-        "texto": "Bater a planta do pé ou o calcanhar, causando ruídos perceptíveis.",
-        "correta": true,
-        "feedback": "Não se deve bater a planta do pé ou o calcanhar, nem fazer ruídos que possam ser percebidos pelos demais."
-      },
-      {
-        "texto": "Realizar a marcação mentalmente após adquirir o domínio rítmico.",
-        "correta": false,
-        "feedback": "A marcação mental é o objetivo final, dispensando o movimento físico explícito."
-      }
-    ]
-  },
-  {
-    "id": "f2_q038",
-    "ativo": true,
-    "dificuldade": "media",
-    "pontos": 15,
-    "tipo": "texto",
-    "pergunta": "Em termos de ritmo musical, qual elemento determina a duração do som e do silêncio na música?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 2,
-      "item": "2.5 Ritmo e pulsação",
-      "pagina": 22
-    },
-    "opcoes": [
-      {
-        "texto": "A Altura da nota.",
-        "correta": false,
-        "feedback": "A altura determina se o som é grave ou agudo."
-      },
-      {
-        "texto": "A Intensidade sonora.",
-        "correta": false,
-        "feedback": "A intensidade determina o volume do som."
-      },
-      {
-        "texto": "A disposição ordenada de sons curtos, longos e silêncios no tempo.",
-        "correta": true,
-        "feedback": "O Ritmo é a disposição ordenada de sons e silêncios no tempo, determinando sua duração."
-      },
-      {
-        "texto": "O Compasso, através da fórmula de compasso.",
-        "correta": false,
-        "feedback": "O compasso define a série de tempos, mas o Ritmo dita a duração específica das figuras dentro desses tempos."
-      }
-    ]
-  },
-  {
-    "id": "f2_q039",
-    "ativo": true,
-    "dificuldade": "media",
-    "pontos": 15,
-    "tipo": "texto",
-    "pergunta": "Qual tipo de barra de compasso é utilizado no hinário para a divisão entre a seção da estrofe e a seção 'Coro' (como no Hino 3)?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 2,
-      "item": "2.3 Barras de compasso simples, dupla e final",
-      "pagina": 21
-    },
-    "opcoes": [
-      {
-        "texto": "Barra Simples",
-        "correta": false,
-        "feedback": "A Barra Simples é usada entre a maioria dos compassos."
-      },
-      {
-        "texto": "Barra Final",
-        "correta": false,
-        "feedback": "A Barra Final marca o fim da música."
-      },
-      {
-        "texto": "Barra Dupla",
-        "correta": true,
-        "feedback": "A Barra Dupla é usada para indicar o final de uma seção ou trecho musical, como a transição para o Coro."
-      },
-      {
-        "texto": "Barra de Ritornello",
-        "correta": false,
-        "feedback": "Embora o Coro seja repetido, o marcador primário entre estrofe e coro é a Barra Dupla."
-      }
-    ]
-  },
-  {
-    "id": "f2_q040",
-    "ativo": true,
-    "dificuldade": "media",
-    "pontos": 15,
-    "tipo": "texto",
-    "pergunta": "Considerando a semínima como Unidade de Tempo (1 tempo), quantas colcheias são necessárias para preencher o valor de uma mínima?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 2,
-      "item": "2.1 Figuras musicais",
-      "pagina": 17
-    },
-    "opcoes": [
-      {
-        "texto": "Duas",
-        "correta": false,
-        "feedback": "Duas colcheias preenchem uma semínima (1 tempo)."
-      },
-      {
-        "texto": "Três",
-        "correta": false,
-        "feedback": "A proporção é binária."
-      },
-      {
-        "texto": "Quatro",
-        "correta": true,
-        "feedback": "Se a semínima vale 1 tempo, a mínima vale 2 tempos; logo, são necessárias 4 colcheias (cada uma valendo 1/2 tempo)."
-      },
-      {
-        "texto": "Oito",
-        "correta": false,
-        "feedback": "Oito colcheias preenchem uma semibreve (4 tempos)."
-      }
-    ]
-  },
-  {
-    "id": "f2_q041",
-    "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
-    "tipo": "texto",
-    "pergunta": "Em um compasso 4/4 (U.T. = Semínima), qual das combinações de figuras de som preenche exatamente 4 tempos?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 2,
-      "item": "2.1 Figuras musicais",
-      "pagina": 17
-    },
-    "opcoes": [
-      {
-        "texto": "Uma mínima, uma semínima e duas semicolcheias.",
-        "correta": false,
-        "feedback": "Essa combinação vale 2 tempos + 1 tempo + 1/2 tempo = 3,5 tempos."
-      },
-      {
-        "texto": "Uma mínima, uma semínima e duas colcheias.",
-        "correta": true,
-        "feedback": "Uma mínima (2 tempos) + uma semínima (1 tempo) + duas colcheias (1/2 + 1/2 = 1 tempo). Total: 4 tempos."
-      },
-      {
-        "texto": "Uma semibreve e uma pausa de semínima.",
-        "correta": false,
-        "feedback": "A semibreve preenche 4 tempos, não havendo espaço para a pausa de semínima."
-      },
-      {
-        "texto": "Quatro colcheias e duas semínimas.",
-        "correta": false,
-        "feedback": "Quatro colcheias (2 tempos) + duas semínimas (2 tempos) = 4 tempos. A semibreve também é uma figura possível. (Wait, let's check the request. The correct option here is the one that sums up 4T. The phrasing 'Quatro colcheias e duas semínimas' also sums 4T). Let's adjust the correct option to be the simplest one, or clarify the options. Option B is definitely 4T. Let's make Option D incorrect by changing the count."
-      }
-    ]
-  },
-  {
-    "id": "f2_q042",
-    "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
-    "tipo": "texto",
-    "pergunta": "Considerando os Tópicos 2.2 e 2.3, qual é o papel fundamental da Barra Simples no sistema de compassos?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 2,
-      "item": "2.3 Barras de compasso simples, dupla e final",
-      "pagina": 21
-    },
-    "opcoes": [
-      {
-        "texto": "Indicar que a seção deve ser repetida duas vezes.",
-        "correta": false,
-        "feedback": "Essa é a função das Barras de Repetição (Ritornello)."
-      },
-      {
-        "texto": "Separar a música em frases musicais completas de 4 compassos.",
-        "correta": false,
-        "feedback": "A barra simples separa compassos, e não necessariamente frases completas."
-      },
-      {
-        "texto": "Delimitar as séries regulares de tempos, encerrando um compasso para iniciar o próximo agrupamento.",
-        "correta": true,
-        "feedback": "O compasso é a divisão em séries regulares de tempos, e a barra simples realiza essa demarcação sequencial."
-      },
-      {
-        "texto": "Marcar os tempos fracos dentro do compasso quaternário.",
-        "correta": false,
-        "feedback": "Os tempos fracos e fortes são definidos pelo Acento Métrico, e não pela barra simples."
-      }
-    ]
-  },
-  {
-    "id": "f2_q043",
-    "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
-    "tipo": "texto",
-    "pergunta": "Se a Unidade de Tempo (U.T.) é a semínima (como em 4/4), que fração dessa Unidade de Tempo (1 tempo) representa a semicolcheia?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 2,
-      "item": "2.1 Figuras musicais",
-      "pagina": 18
-    },
-    "opcoes": [
-      {
-        "texto": "1/2 (um meio) do tempo",
-        "correta": false,
-        "feedback": "A colcheia representa 1/2 (um meio) do tempo quando a U.T. é a semínima."
-      },
-      {
-        "texto": "1/4 (um quarto) do tempo",
-        "correta": true,
-        "feedback": "A semicolcheia é a quarta parte da semínima (U.T.)."
-      },
-      {
-        "texto": "1/8 (um oitavo) do tempo",
-        "correta": false,
-        "feedback": "Essa equivalência não se aplica quando a U.T. é a semínima."
-      },
-      {
-        "texto": "1/16 (um dezesseis avos) do tempo",
-        "correta": false,
-        "feedback": "O valor 1/16 é a proporção da semicolcheia em relação à semibreve (figura 1)."
-      }
-    ]
-  },
-  {
-    "id": "f2_q044",
-    "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
-    "tipo": "texto",
-    "pergunta": "Em exercícios de leitura rítmica que incluam figuras de silêncio, quais são as duas formas aceitas para lidar com as pausas, conforme ensinado no MSA?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 3,
-      "item": "3.5 Metrônomo",
-      "pagina": 32
-    },
-    "opcoes": [
-      {
-        "texto": "Pronunciar a sílaba 'TA' ou bater palmas na duração do silêncio.",
-        "correta": false,
-        "feedback": "Pronunciar 'TA' ou bater palmas anulam o silêncio."
-      },
-      {
-        "texto": "Pronunciar a palavra 'silêncio' ou mover apenas o pulso.",
-        "correta": false,
-        "feedback": "Mover o pulso é desaconselhado, e a palavra 'silêncio' não é citada como instrução padrão."
-      },
-      {
-        "texto": "Pronunciar a palavra 'um' para todas as pausas, ou permanecer em silêncio.",
-        "correta": true,
-        "feedback": "As pausas podem ser pronunciadas (falando-se 'um' para todas) ou não pronunciadas (permanecendo em silêncio)."
-      },
-      {
-        "texto": "Falar o número do pulso que a pausa ocupa, ou acelerar o tempo.",
-        "correta": false,
-        "feedback": "A aceleração do tempo compromete a regularidade do pulso."
-      }
-    ]
-  },
-  {
-    "id": "f2_q045",
-    "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
-    "tipo": "texto",
-    "pergunta": "Em um compasso 4/4, quando todo o compasso deve representar silêncio, qual figura de silêncio deve ser utilizada?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 4,
-      "item": "4.1 Ligadura",
-      "pagina": 34
-    },
-    "opcoes": [
-      {
-        "texto": "Quatro pausas de semínima.",
-        "correta": false,
-        "feedback": "Embora somem 4 tempos, a pausa de semibreve é o padrão para preencher o compasso inteiro."
-      },
-      {
-        "texto": "Pausa de mínima e duas pausas de semínima.",
-        "correta": false,
-        "feedback": "Embora somem 4 tempos, a pausa de semibreve é o padrão para preencher o compasso inteiro."
-      },
-      {
-        "texto": "Pausa de semibreve.",
-        "correta": true,
-        "feedback": "A pausa de semibreve é usada para indicar silêncio em todo o compasso, independentemente do tipo de compasso (4/4, 3/4 etc.)."
-      },
-      {
-        "texto": "Duas pausas de mínima.",
-        "correta": false,
-        "feedback": "Duas pausas de mínima somam apenas 2 tempos."
-      }
-    ]
-  },
-  {
-    "id": "f2_q046",
-    "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
-    "tipo": "texto",
-    "pergunta": "Na marcação de pulsação para a leitura rítmica, o movimento com a mão (ou objeto) deve começar a batida em qual ponto?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 2,
-      "item": "2.6 Forma de realização dos exercícios rítmicos",
-      "pagina": 23
-    },
-    "opcoes": [
-      {
-        "texto": "Na altura do peito (ponto de preparação).",
-        "correta": false,
-        "feedback": "A altura do peito é o ponto de preparação, mas a batida começa no ponto de baixo."
-      },
-      {
-        "texto": "Na parte de cima (linha dos olhos), descendo em seguida.",
-        "correta": false,
-        "feedback": "A pulsação deve começar na parte de baixo da batida."
-      },
-      {
-        "texto": "Na parte de baixo, iniciando o movimento e subindo em seguida.",
-        "correta": true,
-        "feedback": "A pulsação deve começar sempre com a batida na parte de baixo e o movimento de baixo para cima (em linha reta)."
-      },
-      {
-        "texto": "Em movimentos laterais (esquerda e direita) para marcar os tempos.",
-        "correta": false,
-        "feedback": "O movimento é vertical (baixo para cima e baixo para baixo)."
-      }
-    ]
-  },
-  {
-    "id": "f2_q047",
-    "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
-    "tipo": "texto",
-    "pergunta": "Como as notas que possuem bandeirola devem ser ligadas quando escritas em conjunto, e qual a regra para o número de traços?",
+    "pergunta": "No caso de Semicolcheias (𝅘𝅥𝅯) serem agrupadas por um traço, quantos traços (ou barras) devem conectá-las?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -1814,34 +918,73 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "São ligadas por traços acima da cabeça da nota, independente do número de bandeirolas.",
+        "texto": "Um traço, pois é uma figura simples.",
         "correta": false,
-        "feedback": "A ligação ocorre por traços entre as hastes."
+        "feedback": "Figuras com uma bandeirola (Colcheia 𝅘𝅥𝅮) são ligadas por um traço. Semicolcheias (𝅘𝅥𝅯) possuem duas bandeirolas."
       },
       {
-        "texto": "São ligadas por traços que seguem o número de bandeirolas: um traço para colcheias, dois para semicolcheias.",
+        "texto": "Dois traços.",
         "correta": true,
-        "feedback": "Notas com bandeirola podem ser ligadas por traços, seguindo a regra: um traço para uma bandeirola, dois traços para duas bandeirolas."
+        "feedback": "As notas que possuem duas bandeirolas (Semicolcheias 𝅘𝅥𝅯) são ligadas por dois traços quando agrupadas."
       },
       {
-        "texto": "São ligadas por barras de compasso duplas.",
+        "texto": "Três traços.",
         "correta": false,
-        "feedback": "Barras de compasso não ligam notas; elas separam compassos."
+        "feedback": "Três traços seriam utilizados para Fusas (𝅘𝅥𝅰)."
       },
       {
-        "texto": "São ligadas por um colchete que une a cabeça da nota.",
+        "texto": "Nenhum traço; o agrupamento só é feito por bandeirolas individuais.",
         "correta": false,
-        "feedback": "A ligação ocorre nas hastes, não na cabeça da nota."
+        "feedback": "As notas com bandeirola, quando estão juntas, podem ser ligadas por traços (ou barras)."
       }
     ]
   },
   {
-    "id": "f2_q048",
+    "id": "f02_q025",
     "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
+    "dificuldade": "media",
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "O que representa o intervalo entre uma Barra Simples e a próxima Barra Simples?",
+    "pergunta": "Há casos em que a Barra Dupla (duas linhas verticais paralelas) é utilizada apenas para divisão entre seções e não tem a função de indicar o final de um compasso. Qual exemplo é dado para essa situação?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.3 Barras de compasso simples, dupla e final",
+      "pagina": 21
+    },
+    "opcoes": [
+      {
+        "texto": "Quando é utilizada para ligar notas de mesma altura.",
+        "correta": false,
+        "feedback": "A ligadura de valor é uma linha curva utilizada para ligar notas de mesma altura, e não uma barra dupla."
+      },
+      {
+        "texto": "Quando é utilizada para a divisão entre a estrofe e a seção 'Coro' (ex: hino 3).",
+        "correta": false,
+        "feedback": "Neste caso (hino 3), a barra dupla tem a função de indicar o final do compasso e a divisão de seção."
+      },
+      {
+        "texto": "Quando é utilizada para a divisão entre duas seções, como é o caso dos hinos 46 e 54.",
+        "correta": true,
+        "feedback": "A Barra Dupla não tem a função de indicar o final de um compasso, mas apenas a divisão entre duas seções, como é o caso dos hinos 46 e 54."
+      },
+      {
+        "texto": "Quando a segunda linha é mais grossa que a primeira.",
+        "correta": false,
+        "feedback": "Esta é a definição da Barra Final."
+      }
+    ]
+  },
+  {
+    "id": "f02_q026",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual é a principal razão pela qual o compositor divide um trecho musical em compassos?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -1853,229 +996,72 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "A divisão da música em movimentos anacrúsicos.",
+        "texto": "Para aumentar a velocidade de execução da música.",
         "correta": false,
-        "feedback": "Isso se refere a ritmos iniciais (Fase 13)."
+        "feedback": "A velocidade (andamento) é definida pela marcação de M.M., não pela divisão em compassos."
       },
       {
-        "texto": "Uma pausa completa, independentemente da fórmula de compasso.",
+        "texto": "Para indicar a altura das notas escritas.",
         "correta": false,
-        "feedback": "O intervalo entre barras contém figuras de som ou silêncio, não necessariamente só silêncio."
+        "feedback": "A altura das notas é indicada pela Clave e pelo Pentagrama (Fase 1)."
       },
       {
-        "texto": "Um compasso, onde figuras de som ou de silêncio são distribuídas para preencher um valor pré-definido de pulsações.",
+        "texto": "Para auxiliar o músico a entoar a música de maneira correta, organizando as figuras em pequenas seções.",
         "correta": true,
-        "feedback": "O intervalo entre barras é o compasso, que organiza os sons e silêncios de acordo com a fórmula de compasso."
+        "feedback": "Compassos são pequenas seções que auxiliam o músico na organização das figuras e na entonação correta da música."
       },
       {
-        "texto": "A região da partitura destinada apenas para a voz do Baixo.",
+        "texto": "Para dividir o trecho em seções de tempo irregular (pulsação variável).",
         "correta": false,
-        "feedback": "O pentagrama completo é dividido em compassos para todas as vozes."
+        "feedback": "O compasso divide o trecho musical em séries regulares de tempos."
       }
     ]
   },
   {
-    "id": "f2_q049",
-    "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
+    "id": "f02_q027",
+    "dificuldade": "media",
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Em um compasso 4/4 (U.T. = Semínima), qual figura de som preenche exatamente 2 tempos?",
+    "pergunta": "O que a Fórmula de Compasso 4/4 determina sobre a Semínima (𝅘𝅥)?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
       "livro": "MSA",
       "periodo": 1,
       "fase": 2,
-      "item": "2.1 Figuras musicais",
-      "pagina": 17
-    },
-    "opcoes": [
-      {
-        "texto": "Mínima",
-        "correta": true,
-        "feedback": "A mínima (2) vale o dobro da semínima (4), ou seja, 2 tempos."
-      },
-      {
-        "texto": "Semibreve",
-        "correta": false,
-        "feedback": "A semibreve preenche 4 tempos."
-      },
-      {
-        "texto": "Duas colcheias",
-        "correta": false,
-        "feedback": "Duas colcheias preenchem apenas 1 tempo (uma semínima)."
-      },
-      {
-        "texto": "Uma semínima e uma colcheia.",
-        "correta": false,
-        "feedback": "Essa combinação preenche 1 tempo e meio."
-      }
-    ]
-  },
-  {
-    "id": "f2_q050",
-    "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
-    "tipo": "texto",
-    "pergunta": "Em exercícios de leitura rítmica que utilizam a sílaba 'TAAAA...' em notas longas, qual a orientação fundamental para a emissão da voz?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 2,
-      "item": "2.6 Forma de realização dos exercícios rítmicos",
-      "pagina": 24
-    },
-    "opcoes": [
-      {
-        "texto": "Falar 'TÁÁÁÁ' com variação de intensidade, marcando a pulsação da mão.",
-        "correta": false,
-        "feedback": "Deve-se evitar a pronúncia inadequada ('TÁ Á Á Á') e manter a voz constante."
-      },
-      {
-        "texto": "Falar 'TAAAA...' mantendo a voz constante e sem interromper o som durante toda a extensão da nota.",
-        "correta": true,
-        "feedback": "O som deve ser constante e ininterrupto, e a voz deve ser mantida suave e igualada ao grupo."
-      },
-      {
-        "texto": "Falar a sílaba 'TA' em cada batida (pulso) da nota longa.",
-        "correta": false,
-        "feedback": "Falar a sílaba em cada batida anularia o alongamento da nota longa."
-      },
-      {
-        "texto": "Respirar no meio da execução da nota longa, caso a figura tenha duração de 4 tempos.",
-        "correta": false,
-        "feedback": "Não se deve respirar durante a execução da nota, pois isso cortaria o som."
-      }
-    ]
-  },
-  {
-    "id": "f2_q051",
-    "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
-    "tipo": "texto",
-    "pergunta": "Qual deve ser a postura e o movimento do braço e da mão ao bater a pulsação, de acordo com as instruções do MSA?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 2,
-      "item": "2.6 Forma de realização dos exercícios rítmicos",
-      "pagina": 23
-    },
-    "opcoes": [
-      {
-        "texto": "O movimento deve ser arredondado, vindo do pulso, para suavizar a batida.",
-        "correta": false,
-        "feedback": "O movimento deve ser reto e o pulso não deve ser movimentado."
-      },
-      {
-        "texto": "O antebraço deve estar imóvel, enquanto a mão se movimenta em linha reta na altura dos olhos.",
-        "correta": false,
-        "feedback": "O movimento vem do antebraço e a mão não deve ultrapassar a linha dos olhos."
-      },
-      {
-        "texto": "Movimentar o braço e a mão de forma reta e precisa, iniciando o movimento embaixo e mantendo o pulso imóvel.",
-        "correta": true,
-        "feedback": "A pulsação é feita em movimento reto, constante, começando embaixo, sem movimentar o pulso."
-      },
-      {
-        "texto": "A preparação deve ser no ponto de batida, sem subir a mão além do peito.",
-        "correta": false,
-        "feedback": "A preparação é na altura do peito, e a mão sobe até um limite superior para o pulso seguinte."
-      }
-    ]
-  },
-  {
-    "id": "f2_q052",
-    "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
-    "tipo": "texto",
-    "pergunta": "Para a correta grafia de uma nota musical, como a haste (traço vertical) deve ser posicionada em relação à cabeça da nota?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 2,
-      "item": "2.1 Figuras musicais",
-      "pagina": 19
-    },
-    "opcoes": [
-      {
-        "texto": "Para cima e à esquerda, ou para baixo e à direita da cabeça da nota.",
-        "correta": false,
-        "feedback": "A haste deve ser colocada para cima e à direita, ou para baixo e à esquerda."
-      },
-      {
-        "texto": "Para cima e à direita, ou para baixo e à esquerda da cabeça da nota.",
-        "correta": true,
-        "feedback": "A haste é colocada para cima e à direita, ou para baixo e à esquerda da cabeça da nota."
-      },
-      {
-        "texto": "Sempre para cima e à direita da cabeça da nota, em qualquer posição.",
-        "correta": false,
-        "feedback": "A posição da haste depende da localização da nota no pentagrama."
-      },
-      {
-        "texto": "Sempre na lateral direita, independente da direção (para cima ou para baixo).",
-        "correta": false,
-        "feedback": "Se a haste for para baixo, ela fica à esquerda da cabeça."
-      }
-    ]
-  },
-  {
-    "id": "f2_q053",
-    "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
-    "tipo": "texto",
-    "pergunta": "Qual das seguintes funções NÃO é atribuída à Barra Dupla no hinário?",
-    "imagemUrl": null,
-    "audioUrl": null,
-    "referencia": {
-      "livro": "MSA",
-      "periodo": 1,
-      "fase": 2,
-      "item": "2.3 Barras de compasso simples, dupla e final",
+      "item": "2.4 Fórmula de compasso em 4",
       "pagina": 21
     },
     "opcoes": [
       {
-        "texto": "Indicar o final de uma seção ou trecho musical.",
+        "texto": "Que cabem quatro Semínimas (𝅘𝅥) na Semibreve (𝅝), mas ela não representa um tempo.",
         "correta": false,
-        "feedback": "Essa é uma das principais funções da Barra Dupla (ex.: entre Estrofe e Coro)."
+        "feedback": "O número inferior (4) define que a Semínima (𝅘𝅥) é a figura que representa cada tempo ou pulso (Unidade de Tempo)."
       },
       {
-        "texto": "Indicar o final definitivo do hino ou peça musical.",
+        "texto": "Que a Semínima (𝅘𝅥) equivale a quatro compassos.",
+        "correta": false,
+        "feedback": "A Semínima (𝅘𝅥) é a figura que equivale a um tempo no compasso 4/4."
+      },
+      {
+        "texto": "Que o compasso tem 4 tempos, e a Semínima (𝅘𝅥) representa cada um desses tempos ou movimentos.",
         "correta": true,
-        "feedback": "A Barra Final, e não a Barra Dupla, indica o final definitivo do hino ou peça musical."
+        "feedback": "A Fórmula de Compasso 4/4 indica 4 tempos (número superior) e que a Semínima (𝅘𝅥), cujo número de equivalência é 4, é a figura que representa cada tempo."
       },
       {
-        "texto": "Indicar o fim de um compasso e o início do próximo.",
+        "texto": "Que a Semínima (𝅘𝅥) tem a duração de quatro Semibreves (𝅝).",
         "correta": false,
-        "feedback": "Em certos casos, ela cumpre essa função, além de indicar a divisão de seções."
-      },
-      {
-        "texto": "Separar duas seções musicais distintas no decorrer da partitura.",
-        "correta": false,
-        "feedback": "Essa é a função de dividir trechos, como na transição para o Coro ou Final."
+        "feedback": "A Semibreve (𝅝) tem a maior duração (equivalência 1), e a Semínima (𝅘𝅥) tem duração menor (equivalência 4)."
       }
     ]
   },
   {
-    "id": "f2_q054",
+    "id": "f02_q028",
     "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
+    "dificuldade": "media",
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Em um compasso 4/4 (U.T. = Semínima), que vale 1 tempo, quanto valem juntas uma colcheia e duas semicolcheias?",
+    "pergunta": "Se o número inferior de uma Fórmula de Compasso fosse 16, qual figura musical representaria a Unidade de Tempo (U.T.)?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -2087,34 +1073,34 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "Três quartos (3/4) de tempo.",
+        "texto": "Colcheia (𝅘𝅥𝅮).",
         "correta": false,
-        "feedback": "A soma é de 1/2 tempo + 1/4 tempo + 1/4 tempo, que totaliza 1 tempo."
+        "feedback": "A Colcheia (𝅘𝅥𝅮) é representada pelo número 8."
       },
       {
-        "texto": "Um tempo e meio.",
+        "texto": "Semínima (𝅘𝅥).",
         "correta": false,
-        "feedback": "Um tempo e meio é preenchido por uma semínima pontuada."
+        "feedback": "A Semínima (𝅘𝅥) é representada pelo número 4."
       },
       {
-        "texto": "Um tempo completo.",
+        "texto": "Semicolcheia (𝅘𝅥𝅯).",
         "correta": true,
-        "feedback": "Uma colcheia vale 1/2 tempo, e duas semicolcheias (1/4 + 1/4) somam 1/2 tempo. O total é 1 tempo, equivalente a uma semínima."
+        "feedback": "O número inferior representa a figura musical que equivale a um tempo. A Semicolcheia (𝅘𝅥𝅯) tem Número de Equivalência 16."
       },
       {
-        "texto": "Dois tempos completos.",
+        "texto": "Fusa (𝅘𝅥𝅰).",
         "correta": false,
-        "feedback": "Dois tempos são preenchidos por uma mínima."
+        "feedback": "A Fusa (𝅘𝅥𝅰) é representada pelo número 32."
       }
     ]
   },
   {
-    "id": "f2_q055",
+    "id": "f02_q029",
     "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
+    "dificuldade": "media",
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Qual a distinção crucial entre Ritmo e Pulsação, conforme definido no MSA?",
+    "pergunta": "Qual a relação correta entre Ritmo e Pulsação, conforme o Tópico 2.5?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -2126,34 +1112,73 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "A Pulsação é um sinônimo de andamento, enquanto o Ritmo é um elemento secundário da música.",
+        "texto": "Ritmo e Pulsação são a mesma coisa, sendo sinônimos de andamento.",
         "correta": false,
-        "feedback": "Ritmo é um elemento principal da música e Pulsação não é exatamente sinônimo de andamento."
+        "feedback": "O MSA destaca que Ritmo não é o mesmo que Pulsação."
       },
       {
-        "texto": "O Ritmo determina a duração dos sons e silêncios, enquanto a Pulsação é a batida constante que marca a regularidade do tempo.",
+        "texto": "Ritmo é a distribuição dos sons, e a Pulsação é a batida que marca o início e o fim do tempo dentro do ritmo.",
         "correta": true,
-        "feedback": "O Ritmo trata da organização das durações, e a Pulsação, da marcação regular e constante do tempo."
+        "feedback": "Ritmo é a distribuição dos sons (longos ou curtos) num espaço de tempo, e a Pulsação é a batida constante que marca o início e o fim desse tempo, interrompendo o silêncio."
       },
       {
-        "texto": "O Ritmo é sempre constante (como o metrônomo), e a Pulsação é variável (sons longos ou curtos).",
+        "texto": "Pulsação é um elemento da música, e Ritmo é uma propriedade do som.",
         "correta": false,
-        "feedback": "Essa afirmação inverte os conceitos. O Pulso é constante; o Ritmo varia (sons longos/curtos)."
+        "feedback": "Ritmo é que é um elemento da música (Fase 1), mas Pulsação não é uma propriedade do som (Fase 1)."
       },
       {
-        "texto": "Ambos são fenômenos acústicos da física, não havendo diferença na prática musical.",
+        "texto": "Ritmo é o movimento constante e uniforme, enquanto Pulsação são os sons longos e curtos.",
         "correta": false,
-        "feedback": "Embora ambos se expliquem pela ciência, a teoria musical os diferencia claramente."
+        "feedback": "A Pulsação é o movimento constante e uniforme, e o Ritmo é a disposição ordenada de sons longos, curtos e silêncios."
       }
     ]
   },
   {
-    "id": "f2_q056",
+    "id": "f02_q030",
     "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
+    "dificuldade": "media",
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Ao marcar a pulsação, a instrução para o movimento ser 'reto, preciso e constante, sem curvas, como se seguisse uma linha reta invisível' visa evitar qual erro de execução?",
+    "pergunta": "Qual é o exemplo de pulsação constante citado no MSA para ilustrar o conceito de Pulsação?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.5 Ritmo e pulsação",
+      "pagina": 22
+    },
+    "opcoes": [
+      {
+        "texto": "A oscilação do pêndulo do metrônomo (Fase 3).",
+        "correta": false,
+        "feedback": "Embora o metrônomo gere pulsação constante (Fase 3), o exemplo citado para ilustrar o conceito de pulsação no Tópico 2.5 é outro."
+      },
+      {
+        "texto": "O pisca-alerta do carro.",
+        "correta": true,
+        "feedback": "A batida do coração e o pisca-alerta do carro são citados como exemplos de pulsações constantes (Tópico 2.5)."
+      },
+      {
+        "texto": "A batida de palmas ritmada em uma Semínima (𝅘𝅥).",
+        "correta": false,
+        "feedback": "A batida de palmas é usada para marcar a pulsação em exercícios, mas não é o exemplo conceitual citado."
+      },
+      {
+        "texto": "A variação de sons agudos e graves.",
+        "correta": false,
+        "feedback": "A variação de altura não está relacionada ao conceito de pulsação constante."
+      }
+    ]
+  },
+  {
+    "id": "f02_q031",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Ao marcar o tempo nos exercícios rítmicos batendo a mão sobre uma superfície, qual parte do corpo o candidato deve tomar o cuidado de movimentar?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -2165,73 +1190,112 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "Fazer o movimento acima da linha dos olhos.",
+        "texto": "Somente o pulso.",
         "correta": false,
-        "feedback": "Isso se relaciona à 'Janela de Movimento' (Fase 3), mas não é o foco do movimento ser 'reto'."
+        "feedback": "O candidato deve tomar o cuidado de movimentar o braço e não o pulso."
       },
       {
-        "texto": "Variações na velocidade e duração dos espaços de tempo entre as batidas.",
+        "texto": "O braço (e não o pulso).",
         "correta": true,
-        "feedback": "O movimento reto e constante assegura que o espaço de tempo entre as batidas mantenha a mesma duração."
+        "feedback": "O candidato deve tomar o cuidado de movimentar o braço (e não o pulso) durante a batida, mantendo sempre a pulsação."
       },
       {
-        "texto": "Bater o pulso na superfície.",
+        "texto": "O ombro, para movimentos mais amplos.",
         "correta": false,
-        "feedback": "Bater o pulso é um erro de técnica, mas o foco da instrução é a geometria do movimento."
+        "feedback": "O braço é o ponto de movimento primário recomendado, em linha reta, sem curvas."
       },
       {
-        "texto": "Falar 'TAAAA...' com variação de intensidade.",
+        "texto": "O corpo todo, para sentir o ritmo.",
         "correta": false,
-        "feedback": "Isso se refere à voz, e não ao movimento da mão."
+        "feedback": "O movimento é focado no braço para precisão e constância do pulso."
       }
     ]
   },
   {
-    "id": "f2_q057",
+    "id": "f02_q032",
     "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
+    "dificuldade": "media",
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "A Fórmula de Compasso é essencial para a organização rítmica, pois ela define:",
+    "pergunta": "Na realização da pulsação com a mão ou objeto, o movimento deve ser reto e constante. Onde ele deve começar e terminar para marcar o pulso?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
       "livro": "MSA",
       "periodo": 1,
       "fase": 2,
-      "item": "2.4 Fórmula de compasso em 4",
-      "pagina": 21
+      "item": "2.6 Forma de realização dos exercícios rítmicos",
+      "pagina": 23
     },
     "opcoes": [
       {
-        "texto": "O andamento mínimo e máximo (em BPM) da peça musical.",
+        "texto": "Começar no peito e terminar na linha dos olhos.",
         "correta": false,
-        "feedback": "O andamento é definido pela marcação metronômica."
+        "feedback": "A preparação é na altura do peito, mas o movimento de pulsação é de baixo para cima e terminando embaixo."
       },
       {
-        "texto": "A quantidade de tempos e a figura musical que representa cada tempo, pulso ou movimento.",
+        "texto": "Começar em cima e terminar embaixo, em linha curva.",
+        "correta": false,
+        "feedback": "O movimento deve ser em linha reta, sem curvas."
+      },
+      {
+        "texto": "Começar embaixo e terminar embaixo, em um movimento reto, subindo e descendo.",
         "correta": true,
-        "feedback": "A fórmula define tanto o numerador (quantidade de tempos) quanto o denominador (U.T.)."
+        "feedback": "O movimento deve ser de baixo para cima, iniciando e terminando no mesmo ponto embaixo, em um movimento reto, preciso e constante."
       },
       {
-        "texto": "A correta separação entre figuras de som e figuras de silêncio.",
+        "texto": "Começar na parte de cima e terminar na lateral direita.",
         "correta": false,
-        "feedback": "Isso é definido pelas figuras musicais em si."
-      },
-      {
-        "texto": "A altura do som (grave, médio ou agudo), através do número superior.",
-        "correta": false,
-        "feedback": "A altura é definida pela clave e pela posição das notas no pentagrama."
+        "feedback": "O movimento é reto (vertical) e não na lateral. Esta descrição está mais próxima do movimento de solfejo em 4 (Fase 3)."
       }
     ]
   },
   {
-    "id": "f2_q058",
+    "id": "f02_q033",
     "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
+    "dificuldade": "media",
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Qual figura de som é representada por uma cabeça elíptica sem haste e sem preenchimento, possuindo o número de equivalência 1?",
+    "pergunta": "Ao realizar a Leitura Rítmica, qual é a instrução específica para a pronúncia da sílaba 'TAAAA...' nas notas longas, como as Mínimas (𝅗𝅥)?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.6 Forma de realização dos exercícios rítmicos",
+      "pagina": 24
+    },
+    "opcoes": [
+      {
+        "texto": "Falar 'TAAAA...' mantendo a voz constante, independentemente dos movimentos da mão.",
+        "correta": true,
+        "feedback": "Deve-se falar 'TAAAA...' mantendo a voz constante, e não 'TÁ Á Á Á...' ou 'TÁááááá...', garantindo que o som não seja interrompido no meio da sua duração."
+      },
+      {
+        "texto": "Falar 'TÁ' apenas no início da nota, e silenciar o restante do valor.",
+        "correta": false,
+        "feedback": "O som deve ser mantido durante toda a extensão da nota longa."
+      },
+      {
+        "texto": "Falar 'TÁ' mais forte para marcar o tempo da pulsação.",
+        "correta": false,
+        "feedback": "O instrutor orienta a ter cuidado com a intensidade da voz e não exagerar."
+      },
+      {
+        "texto": "Fazer uma pequena respiração no meio da nota para sustentar a voz.",
+        "correta": false,
+        "feedback": "Não se deve respirar durante a execução da nota, pois isso cortaria o som."
+      }
+    ]
+  },
+  {
+    "id": "f02_q034",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual é a definição da figura que representa o silêncio, também chamada de Pausa musical?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -2243,34 +1307,34 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "Mínima",
+        "texto": "Figura que representa a altura do som.",
         "correta": false,
-        "feedback": "A mínima possui haste e número de equivalência 2."
+        "feedback": "As notas musicais, o pentagrama e a clave representam a altura do som."
       },
       {
-        "texto": "Semínima",
+        "texto": "Figura que representa o ritmo, combinando sons curtos e longos.",
         "correta": false,
-        "feedback": "A semínima possui haste, cabeça preenchida e número de equivalência 4."
+        "feedback": "O ritmo é a disposição ordenada de sons e silêncios no tempo."
       },
       {
-        "texto": "Semibreve",
+        "texto": "Figura que representa a duração do som.",
+        "correta": false,
+        "feedback": "Essa é a definição de Nota musical."
+      },
+      {
+        "texto": "Figura que representa a duração do silêncio.",
         "correta": true,
-        "feedback": "A semibreve é representada apenas pela cabeça (elíptica e sem preenchimento) e possui o número de equivalência 1."
-      },
-      {
-        "texto": "Colcheia",
-        "correta": false,
-        "feedback": "A colcheia possui haste, bandeirola e número de equivalência 8."
+        "feedback": "Pausa musical é a figura que representa o silêncio."
       }
     ]
   },
   {
-    "id": "f2_q059",
+    "id": "f02_q035",
     "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
+    "dificuldade": "media",
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Quantas semicolcheias (16) são necessárias para preencher o valor de uma semínima (4)?",
+    "pergunta": "O que o Número de Equivalência de uma figura musical define?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -2282,34 +1346,112 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "Duas",
+        "texto": "A duração exata da figura em segundos.",
         "correta": false,
-        "feedback": "Duas semicolcheias preenchem uma colcheia, que é metade da semínima."
+        "feedback": "A duração exata é determinada pelo andamento (velocidade), não pelo Número de Equivalência."
       },
       {
-        "texto": "Quatro",
+        "texto": "Uma comparação com a Semibreve (𝅝), demonstrando quantas unidades cabem dentro dela.",
         "correta": true,
-        "feedback": "Quatro semicolcheias preenchem o valor de uma semínima, uma vez que a semicolcheia é 1/4 do valor da semínima."
+        "feedback": "O Número de Equivalência define uma comparação de cada figura com a Semibreve (𝅝), demonstrando quantas unidades daquela figura cabem na Semibreve."
       },
       {
-        "texto": "Oito",
+        "texto": "O tipo de compasso (binário, ternário ou quaternário).",
         "correta": false,
-        "feedback": "Oito semicolcheias preenchem uma mínima."
+        "feedback": "O tipo de compasso é definido pelo número superior da Fórmula de Compasso."
       },
       {
-        "texto": "Dezesseis",
+        "texto": "Se a figura deve ser tocada forte ou fraco.",
         "correta": false,
-        "feedback": "Dezesseis semicolcheias preenchem uma semibreve."
+        "feedback": "O Número de Equivalência trata da duração/proporção, não da intensidade sonora."
       }
     ]
   },
   {
-    "id": "f2_q060",
+    "id": "f02_q036",
     "ativo": true,
-    "dificuldade": "dificil",
-    "pontos": 20,
+    "dificuldade": "media",
+    "pontos": 15,
     "tipo": "texto",
-    "pergunta": "Se um trecho musical contendo apenas semínimas e pausas de semínima totaliza 16 figuras, e é dividido por 3 barras simples seguidas de uma barra final, qual a fórmula de compasso mais provável?",
+    "pergunta": "Qual é a forma da 'cabeça' da figura de som (nota musical)?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.1 Figuras musicais",
+      "pagina": 19
+    },
+    "opcoes": [
+      {
+        "texto": "Circular.",
+        "correta": false,
+        "feedback": "A forma da cabeça da figura é elíptica, e não circular."
+      },
+      {
+        "texto": "Quadrangular.",
+        "correta": false,
+        "feedback": "A cabeça da figura tem uma forma elíptica."
+      },
+      {
+        "texto": "Elíptica, podendo ser vazia ou preenchida.",
+        "correta": true,
+        "feedback": "A cabeça da figura tem uma forma elíptica, sendo vazia (𝅝 ou 𝅗𝅥) ou preenchida (𝅘𝅥, 𝅘𝅥𝅮, etc.)."
+      },
+      {
+        "texto": "Ovalada, mas sempre preenchida.",
+        "correta": false,
+        "feedback": "A cabeça pode ser vazia (Semibreve 𝅝 e Mínima 𝅗𝅥)."
+      }
+    ]
+  },
+  {
+    "id": "f02_q037",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "A haste (traço vertical) de uma figura de som (nota musical) é colocada de que forma?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.1 Figuras musicais",
+      "pagina": 19
+    },
+    "opcoes": [
+      {
+        "texto": "Para cima e à esquerda da cabeça da nota (𝅘𝅥) ou para baixo e à direita.",
+        "correta": false,
+        "feedback": "Quando a haste está para cima, é colocada à direita; quando está para baixo, é colocada à esquerda."
+      },
+      {
+        "texto": "Sempre para cima, independentemente da altura da nota.",
+        "correta": false,
+        "feedback": "A haste pode ser colocada para cima ou para baixo, dependendo da posição da nota no pentagrama."
+      },
+      {
+        "texto": "Para cima e à direita da cabeça da nota (𝅘𝅥) ou para baixo e à esquerda.",
+        "correta": true,
+        "feedback": "A haste é um traço vertical colocado para cima e à direita da cabeça da nota (𝅘𝅥), ou para baixo e à esquerda."
+      },
+      {
+        "texto": "Sempre no meio da cabeça da nota (𝅘𝅥).",
+        "correta": false,
+        "feedback": "A haste deve ser colocada ao lado da cabeça da nota."
+      }
+    ]
+  },
+  {
+    "id": "f02_q038",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "De acordo com o Tópico 2.4 do MSA, o que a Fórmula de Compasso 4/4 determina sobre a estrutura do compasso?",
     "imagemUrl": null,
     "audioUrl": null,
     "referencia": {
@@ -2321,25 +1463,1665 @@ window.bancoQuestoes = window.bancoQuestoes.concat([
     },
     "opcoes": [
       {
-        "texto": "4/4",
+        "texto": "Que o compasso terá 2 tempos, sendo que a Mínima (𝅗𝅥) representa cada um deles.",
+        "correta": false,
+        "feedback": "O número superior (4) da Fórmula de Compasso 4/4 indica que o compasso terá 4 tempos, e não 2."
+      },
+      {
+        "texto": "Que o compasso terá 4 tempos e que a Semibreve (𝅝) representa cada tempo ou movimento.",
+        "correta": false,
+        "feedback": "A Semibreve (𝅝) é representada pelo número 1, e não pelo número 4 no denominador."
+      },
+      {
+        "texto": "Que o compasso terá 4 tempos e que a Semínima (𝅘𝅥) representa cada tempo ou movimento.",
         "correta": true,
-        "feedback": "O trecho é composto por 4 compassos no total (3 barras simples + 1 barra final). Ao dividir 16 figuras (semínimas) por 4 compassos, encontramos 4 figuras por compasso, o que define a fórmula 4/4."
+        "feedback": "A Fórmula de Compasso 4/4 determina que o compasso terá 4 tempos (número superior) e que a Semínima (𝅘𝅥), cujo Número de Equivalência é 4, representa a figura de um tempo (número inferior)."
       },
       {
-        "texto": "2/4",
+        "texto": "Que o compasso terá 8 tempos, e que a Colcheia (𝅘𝅥𝅮) representa a unidade de tempo.",
         "correta": false,
-        "feedback": "Se a fórmula fosse 2/4 (2 tempos), o trecho de 16 figuras precisaria de 8 compassos (16 divididos por 2), não 4 compassos, para ser preenchido integralmente."
+        "feedback": "A Fórmula de Compasso 4/4 indica 4 tempos (número superior) e a Semínima (𝅘𝅥) como unidade de tempo (número inferior 4)."
+      }
+    ]
+  },
+  {
+    "id": "f02_q039",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Ao realizar exercícios rítmicos coletivos, qual é a instrução importante sobre a intensidade da voz?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.6 Forma de realização dos exercícios rítmicos",
+      "pagina": 23
+    },
+    "opcoes": [
+      {
+        "texto": "Usar intensidade fraca para as batidas e forte para os sons longos.",
+        "correta": false,
+        "feedback": "A instrução principal é procurar se igualar ao grupo em velocidade e intensidade."
       },
       {
-        "texto": "2/2",
+        "texto": "Manter a voz constante, independentemente da intensidade, que deve ser ajustada individualmente.",
         "correta": false,
-        "feedback": "A fórmula 2/2 tem a mínima como Unidade de Tempo (U.T.). Quatro compassos 2/2 totalizariam 8 mínimas (ou 16 semínimas). No entanto, o conceito de 2/2 ainda não foi detalhado na Fase 2 e sua adoção não seria a mais provável dado o contexto da U.T. semínima esperada."
+        "feedback": "Embora a voz deva ser constante ('TAAAA...'), a intensidade deve ser igualada à do grupo: 'um só pulso, uma só voz!'"
       },
       {
-        "texto": "3/4",
+        "texto": "Não exagerar na intensidade, procurando se igualar ao grupo na mesma velocidade e na mesma intensidade.",
+        "correta": true,
+        "feedback": "O instrutor orienta a ter cuidado com a intensidade da voz — não exagerar; procurar se igualar ao grupo: todos na mesma velocidade e na mesma intensidade - um só pulso, uma só voz!"
+      },
+      {
+        "texto": "Aumentar a intensidade no início do compasso para marcar o acento métrico.",
         "correta": false,
-        "feedback": "A fórmula 3/4 (3 tempos) só comportaria 12 figuras (semínimas) em 4 compassos (4 x 3 = 12), mas o trecho dado contém 16 figuras."
+        "feedback": "A leitura rítmica não exige o aumento da intensidade para marcar o acento métrico (Fase 11)."
+      }
+    ]
+  },
+  {
+    "id": "f02_q040",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Se o número inferior de uma Fórmula de Compasso fosse 2, qual figura musical representaria cada tempo ou pulso (Unidade de Tempo - U.T.)?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.4 Fórmula de compasso em 4",
+      "pagina": 21
+    },
+    "opcoes": [
+      {
+        "texto": "Semibreve (𝅝).",
+        "correta": false,
+        "feedback": "A Semibreve (𝅝) é representada pelo número 1."
+      },
+      {
+        "texto": "Mínima (𝅗𝅥).",
+        "correta": true,
+        "feedback": "O número inferior representa a figura musical que equivale a um tempo (pulso). A Mínima (𝅗𝅥) tem Número de Equivalência 2."
+      },
+      {
+        "texto": "Semínima (𝅘𝅥).",
+        "correta": false,
+        "feedback": "A Semínima (𝅘𝅥) é representada pelo número 4."
+      },
+      {
+        "texto": "Colcheia (𝅘𝅥𝅮).",
+        "correta": false,
+        "feedback": "A Colcheia (𝅘𝅥𝅮) é representada pelo número 8."
+      }
+    ]
+  },
+  {
+    "id": "f02_q041",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "O que indica a Barra Simples em uma partitura?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.3 Barras de compasso simples, dupla e final",
+      "pagina": 21
+    },
+    "opcoes": [
+      {
+        "texto": "O final da peça musical (hino).",
+        "correta": false,
+        "feedback": "O final da peça musical é indicado pela Barra Final."
+      },
+      {
+        "texto": "O início de uma repetição de seção.",
+        "correta": false,
+        "feedback": "O início ou final de uma repetição de seção é indicado pelas barras de repetição (ritornello)."
+      },
+      {
+        "texto": "O final de um compasso e o início do compasso seguinte.",
+        "correta": true,
+        "feedback": "A Barra Simples é uma linha vertical individual que indica o final de um compasso e o início do compasso seguinte."
+      },
+      {
+        "texto": "A divisão entre estrofe e Coro.",
+        "correta": false,
+        "feedback": "A divisão entre estrofe e Coro é uma função da Barra Dupla."
+      }
+    ]
+  },
+  {
+    "id": "f02_q042",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Conforme a proporção das figuras, quantas Pausas de Colcheia (𝄾) cabem em uma Pausa de Mínima (𝄼)?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.1 Figuras musicais",
+      "pagina": 17
+    },
+    "opcoes": [
+      {
+        "texto": "2 Pausas de Colcheia (𝄾).",
+        "correta": false,
+        "feedback": "Em uma Mínima (𝅗𝅥) cabem 4 Colcheias (𝅘𝅥𝅮). Logo, em uma Pausa de Mínima (𝄼) cabem 4 Pausas de Colcheia (𝄾)."
+      },
+      {
+        "texto": "4 Pausas de Colcheia (𝄾).",
+        "correta": true,
+        "feedback": "A Pausa de Mínima (𝄼) tem Número de Equivalência 2, e a Pausa de Colcheia (𝄾) tem Número de Equivalência 8. Pela proporção, 4 Pausas de Colcheia cabem em 1 Pausa de Mínima."
+      },
+      {
+        "texto": "8 Pausas de Colcheia (𝄾).",
+        "correta": false,
+        "feedback": "Em uma Semibreve (𝅝) cabem 8 Colcheias (𝅘𝅥𝅮), não em uma Mínima (𝅗𝅥)."
+      },
+      {
+        "texto": "16 Pausas de Colcheia (𝄾).",
+        "correta": false,
+        "feedback": "Esta proporção é incorreta."
+      }
+    ]
+  },
+  {
+    "id": "f02_q043",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual termo é utilizado para a figura que representa o som na música escrita (partitura)?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.1 Figuras musicais",
+      "pagina": 17
+    },
+    "opcoes": [
+      {
+        "texto": "Pauta Musical.",
+        "correta": false,
+        "feedback": "Pauta Musical (Pentagrama) é o conjunto de linhas e espaços onde as notas são escritas."
+      },
+      {
+        "texto": "Pausa Musical.",
+        "correta": false,
+        "feedback": "Pausa Musical é a figura que representa o silêncio."
+      },
+      {
+        "texto": "Nota Musical.",
+        "correta": true,
+        "feedback": "Nota musical é a figura que representa o som na música escrita."
+      },
+      {
+        "texto": "Clave Musical.",
+        "correta": false,
+        "feedback": "A Clave é um sinal que determina o nome da nota em sua linha de referência."
+      }
+    ]
+  },
+  {
+    "id": "f02_q044",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Como é chamada a linha vertical que separa o pentagrama em pequenas partes (compassos)?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.3 Barras de compasso simples, dupla e final",
+      "pagina": 21
+    },
+    "opcoes": [
+      {
+        "texto": "Linha Suplementar.",
+        "correta": false,
+        "feedback": "Linhas suplementares são usadas acima ou abaixo do pentagrama para notas mais agudas ou graves."
+      },
+      {
+        "texto": "Haste.",
+        "correta": false,
+        "feedback": "Haste é a parte da figura de som (nota musical)."
+      },
+      {
+        "texto": "Linha Divisória.",
+        "correta": false,
+        "feedback": "O termo correto para essa linha vertical é Barra de Compasso."
+      },
+      {
+        "texto": "Barra de Compasso.",
+        "correta": true,
+        "feedback": "O intervalo entre uma Barra de Compasso e outra denomina-se compasso, e as barras indicam o início ou o fim de um compasso."
+      }
+    ]
+  },
+  {
+    "id": "f02_q045",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "O que acontece com a haste (traço vertical) de uma figura de som quando ela é colocada para baixo?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.1 Figuras musicais",
+      "pagina": 19
+    },
+    "opcoes": [
+      {
+        "texto": "Ela é colocada à direita da cabeça da nota.",
+        "correta": false,
+        "feedback": "Quando a haste está para cima, é colocada à direita; quando está para baixo, é colocada à esquerda."
+      },
+      {
+        "texto": "Ela é colocada à esquerda da cabeça da nota.",
+        "correta": true,
+        "feedback": "A haste é um traço vertical colocado para cima e à direita da cabeça da nota (𝅘𝅥), ou para baixo e à esquerda da cabeça da nota."
+      },
+      {
+        "texto": "A figura passa a ser considerada uma pausa.",
+        "correta": false,
+        "feedback": "A haste define a orientação da nota, não a transforma em pausa (silêncio)."
+      },
+      {
+        "texto": "A figura se torna uma Semibreve (𝅝).",
+        "correta": false,
+        "feedback": "A Semibreve (𝅝) não tem haste."
+      }
+    ]
+  },
+  {
+    "id": "f02_q046",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Na realização de exercícios rítmicos marcando o tempo batendo a mão, o movimento deve ser reto, sem curvas. Qual é a altura máxima que a mão deve atingir ao subir?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.6 Forma de realização dos exercícios rítmicos",
+      "pagina": 23
+    },
+    "opcoes": [
+      {
+        "texto": "Acima da cabeça.",
+        "correta": false,
+        "feedback": "A mão, ao subir, não deve passar da linha dos olhos."
+      },
+      {
+        "texto": "Na altura do peito.",
+        "correta": false,
+        "feedback": "A altura do peito é o local de preparação e onde o movimento se inicia (embaixo)."
+      },
+      {
+        "texto": "Na linha dos olhos.",
+        "correta": true,
+        "feedback": "Para iniciar o primeiro movimento, o candidato se prepara posicionando a mão na altura do peito. Ao subir a mão, não deve passar da linha dos olhos."
+      },
+      {
+        "texto": "A altura não importa, desde que o pulso seja regular.",
+        "correta": false,
+        "feedback": "A forma de realização dos exercícios rítmicos estabelece limites, como não passar da linha dos olhos."
+      }
+    ]
+  },
+  {
+    "id": "f02_q047",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Na Fórmula de Compasso 4/4, qual figura representa a duração de 4 tempos (ou pulsos)?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.4 Fórmula de compasso em 4",
+      "pagina": 21
+    },
+    "opcoes": [
+      {
+        "texto": "A Mínima (𝅗𝅥), pois vale dois tempos.",
+        "correta": false,
+        "feedback": "A Mínima (𝅗𝅥) vale dois tempos em 4/4."
+      },
+      {
+        "texto": "A Semínima (𝅘𝅥), pois representa um tempo.",
+        "correta": false,
+        "feedback": "A Semínima (𝅘𝅥) representa um tempo em 4/4."
+      },
+      {
+        "texto": "A Colcheia (𝅘𝅥𝅮), pois vale meio tempo.",
+        "correta": false,
+        "feedback": "A Colcheia (𝅘𝅥𝅮) vale meio tempo em 4/4."
+      },
+      {
+        "texto": "A Semibreve (𝅝), pois vale quatro tempos.",
+        "correta": true,
+        "feedback": "A Semibreve (𝅝) tem Número de Equivalência 1 (U.T. da Semibreve 𝅝), e na Fórmula de Compasso 4/4, ela preenche o compasso inteiro, valendo 4 tempos."
+      }
+    ]
+  },
+  {
+    "id": "f02_q048",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Onde o candidato que utiliza metrônomo deve se atentar para manter a pulsação no pé de forma correta?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.6 Forma de realização dos exercícios rítmicos",
+      "pagina": 23
+    },
+    "opcoes": [
+      {
+        "texto": "O movimento no pé deve ser feito com a planta do pé ou o calcanhar, para um som forte.",
+        "correta": false,
+        "feedback": "O movimento deve ser leve, apenas com os dedos dos pés, e nunca a planta do pé ou o calcanhar, evitando ruídos fortes."
+      },
+      {
+        "texto": "O movimento deve ser leve, apenas com os dedos dos pés, e executado junto com a batida do metrônomo.",
+        "correta": true,
+        "feedback": "É recomendado que os movimentos no pé sejam leves, apenas com os dedos dos pés, e executados na mesma batida do metrônomo."
+      },
+      {
+        "texto": "O movimento no pé só deve ser feito em compassos 4/4.",
+        "correta": false,
+        "feedback": "O movimento no pé é um auxílio geral para manter a pulsação nesta fase do aprendizado."
+      },
+      {
+        "texto": "O movimento deve ser feito de modo expansivo para criar um pulso claro.",
+        "correta": false,
+        "feedback": "O músico não deve fazer movimentos demasiadamente expansivos, nem ruídos perceptíveis."
+      }
+    ]
+  },
+  {
+    "id": "f02_q049",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual é a função adicional da Barra Dupla (duas linhas verticais paralelas) que a torna semelhante à Barra Simples, conforme a descrição do MSA?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.3 Barras de compasso simples, dupla e final",
+      "pagina": 21
+    },
+    "opcoes": [
+      {
+        "texto": "Indicar o início de um trecho a ser tocado duas vezes (ritornello).",
+        "correta": false,
+        "feedback": "A indicação de repetição (ritornello) é feita com as Barras de Repetição, que contêm pontos, sendo um tópico mais avançado (Fase 9)."
+      },
+      {
+        "texto": "Sinalizar a conclusão da música ou o final da peça musical.",
+        "correta": false,
+        "feedback": "Essa é a função exclusiva da Barra Final, que possui a segunda linha mais grossa que a primeira."
+      },
+      {
+        "texto": "Indicar o final de um compasso e o início do compasso seguinte.",
+        "correta": true,
+        "feedback": "A Barra Dupla tem a função de indicar o final de uma seção e, em certos casos (quando colocada ao final de um compasso), de indicar também o final de um compasso e o início do seguinte."
+      },
+      {
+        "texto": "Dividir um compasso em partes menores, como semifrases.",
+        "correta": false,
+        "feedback": "A Barra Dupla é utilizada para dividir seções maiores (como estrofe e Coro), não para subdividir compassos."
+      }
+    ]
+  },
+  {
+    "id": "f02_q050",
+    "ativo": true,
+    "dificuldade": "media",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Na proporção das figuras, quantas Pausas de Semínima (𝄽) cabem em uma Pausa de Mínima (𝄼)?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.1 Figuras musicais",
+      "pagina": 17
+    },
+    "opcoes": [
+      {
+        "texto": "2 Pausas de Semínima (𝄽).",
+        "correta": true,
+        "feedback": "A Pausa de Mínima (𝄼) tem Número de Equivalência 2, e a Pausa de Semínima (𝄽) tem Número de Equivalência 4. Pela proporção, cabem 2 Pausas de Semínima em 1 Pausa de Mínima."
+      },
+      {
+        "texto": "4 Pausas de Semínima (𝄽).",
+        "correta": false,
+        "feedback": "Cabem 4 Pausas de Semínima (𝄽) em uma Pausa de Semibreve (𝄻)."
+      },
+      {
+        "texto": "1 Pausa de Semínima (𝄽).",
+        "correta": false,
+        "feedback": "A Mínima (𝅗𝅥) vale o dobro da Semínima (𝅘𝅥)."
+      },
+      {
+        "texto": "8 Pausas de Semínima (𝄽).",
+        "correta": false,
+        "feedback": "Esta proporção está incorreta."
+      }
+    ]
+  },
+  {
+    "id": "f02_q051",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual é a fração que demonstra o valor de uma Semicolcheia (𝅘𝅥𝅯) em relação à Semibreve (𝅝)?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.1 Figuras musicais",
+      "pagina": 18
+    },
+    "opcoes": [
+      {
+        "texto": "1/2 (um meio).",
+        "correta": false,
+        "feedback": "1/2 (um meio) é a fração correspondente à Mínima (𝅗𝅥), cujo Número de Equivalência é 2."
+      },
+      {
+        "texto": "1/4 (um quarto).",
+        "correta": false,
+        "feedback": "1/4 (um quarto) é a fração correspondente à Semínima (𝅘𝅥), cujo Número de Equivalência é 4."
+      },
+      {
+        "texto": "1/8 (um oitavo).",
+        "correta": false,
+        "feedback": "1/8 (um oitavo) é a fração correspondente à Colcheia (𝅘𝅥𝅮), cujo Número de Equivalência é 8."
+      },
+      {
+        "texto": "1/16 (um dezesseis avos).",
+        "correta": true,
+        "feedback": "A Semicolcheia (𝅘𝅥𝅯) tem Número de Equivalência 16, e sua fração correspondente em relação à Semibreve (𝅝) é 1/16 (um dezesseis avos)."
+      }
+    ]
+  },
+  {
+    "id": "f02_q052",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "De acordo com a proporção demonstrada na Fase 2, se a Semibreve (𝅝) for dividida em quatro partes iguais, qual figura de som preenche uma dessas partes?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.1 Figuras musicais",
+      "pagina": 18
+    },
+    "opcoes": [
+      {
+        "texto": "A Mínima (𝅗𝅥).",
+        "correta": false,
+        "feedback": "A Mínima (𝅗𝅥) representa 1/2 (metade) da Semibreve (𝅝)."
+      },
+      {
+        "texto": "A Semínima (𝅘𝅥).",
+        "correta": true,
+        "feedback": "A Semínima (𝅘𝅥) tem Número de Equivalência 4, o que significa que cabem quatro Semínimas (𝅘𝅥) em uma Semibreve (𝅝)."
+      },
+      {
+        "texto": "A Colcheia (𝅘𝅥𝅮).",
+        "correta": false,
+        "feedback": "A Colcheia (𝅘𝅥𝅮) representa 1/8 da Semibreve (𝅝)."
+      },
+      {
+        "texto": "A Semicolcheia (𝅘𝅥𝅯).",
+        "correta": false,
+        "feedback": "A Semicolcheia (𝅘𝅥𝅯) representa 1/16 da Semibreve (𝅝)."
+      }
+    ]
+  },
+  {
+    "id": "f02_q053",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Como a haste (traço vertical) deve ser posicionada quando é colocada para CIMA na figura de som (nota musical)?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.1 Figuras musicais",
+      "pagina": 19
+    },
+    "opcoes": [
+      {
+        "texto": "À esquerda da cabeça da nota.",
+        "correta": false,
+        "feedback": "Quando a haste está para cima, ela é colocada à direita da cabeça da nota."
+      },
+      {
+        "texto": "À direita da cabeça da nota.",
+        "correta": true,
+        "feedback": "A haste é colocada para cima e à direita da cabeça da nota (𝅘𝅥), ou para baixo e à esquerda."
+      },
+      {
+        "texto": "No topo da cabeça da nota.",
+        "correta": false,
+        "feedback": "A haste é colocada ao lado da cabeça da nota (𝅘𝅥)."
+      },
+      {
+        "texto": "Na mesma linha da bandeirola (ou colchete).",
+        "correta": false,
+        "feedback": "A bandeirola (ou colchete) é adicionada à haste e fica sempre à direita dela."
+      }
+    ]
+  },
+  {
+    "id": "f02_q054",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "De acordo com o MSA, qual é a quantidade de traços (ou barras) que ligam as notas quando as Colcheias (𝅘𝅥𝅮) são agrupadas?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.1 Figuras musicais",
+      "pagina": 19
+    },
+    "opcoes": [
+      {
+        "texto": "Nenhum traço, apenas bandeirolas individuais.",
+        "correta": false,
+        "feedback": "As notas com bandeirola, quando estão juntas, podem ser ligadas por traços (ou barras)."
+      },
+      {
+        "texto": "Um traço, pois Colcheias (𝅘𝅥𝅮) possuem uma bandeirola.",
+        "correta": true,
+        "feedback": "As notas que têm uma bandeirola (Colcheia 𝅘𝅥𝅮) serão ligadas por um traço. Notas com duas bandeirolas (Semicolcheia 𝅘𝅥𝅯) terão dois traços."
+      },
+      {
+        "texto": "Dois traços, seguindo a regra geral de agrupamento.",
+        "correta": false,
+        "feedback": "Dois traços são usados para Semicolcheias (𝅘𝅥𝅯), que têm duas bandeirolas."
+      },
+      {
+        "texto": "A quantidade varia, dependendo da fórmula de compasso.",
+        "correta": false,
+        "feedback": "A quantidade de traços para agrupamento depende do número de bandeirolas da figura (e não da fórmula de compasso)."
+      }
+    ]
+  },
+  {
+    "id": "f02_q055",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Em qual situação a Barra Dupla (duas linhas verticais paralelas) é utilizada unicamente para indicar a divisão entre duas seções (como estrofe e Coro), sem ter a função de indicar o final de um compasso?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.3 Barras de compasso simples, dupla e final",
+      "pagina": 21
+    },
+    "opcoes": [
+      {
+        "texto": "Quando a segunda linha é mais grossa que a primeira.",
+        "correta": false,
+        "feedback": "Esta é a definição da Barra Final, que indica a conclusão da música ou peça musical, sendo a segunda linha mais grossa que a primeira."
+      },
+      {
+        "texto": "Quando ela é utilizada para a divisão entre duas seções e não está colocada ao final de um compasso.",
+        "correta": true,
+        "feedback": "A Barra Dupla, composta por duas linhas verticais paralelas, pode ser utilizada para indicar o final de uma seção da música. Existem casos em que ela não tem a função de indicar o final de um compasso, mas apenas a divisão entre duas seções."
+      },
+      {
+        "texto": "Quando a Barra Dupla é colocada ao final de um compasso.",
+        "correta": false,
+        "feedback": "Quando a Barra Dupla está colocada ao final de um compasso (como na divisão entre estrofe e 'Coro'), ela tem a dupla função de indicar o final de uma seção e o final do compasso."
+      },
+      {
+        "texto": "Sempre, pois ela é utilizada somente para a divisão seccional, nunca para indicar o final de um compasso.",
+        "correta": false,
+        "feedback": "A Barra Dupla pode ter a função dupla: indicar o final de uma seção e, ao mesmo tempo, indicar o final de um compasso, quando colocada ao final dele."
+      }
+    ]
+  },
+  {
+    "id": "f02_q056",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Na Fórmula de Compasso, o número inferior (denominador) indica qual figura musical que representa o pulso ou movimento. Qual é o nome que se dá a essa figura?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.4 Fórmula de compasso em 4",
+      "pagina": 21
+    },
+    "opcoes": [
+      {
+        "texto": "Unidade de Andamento (U.A.).",
+        "correta": false,
+        "feedback": "O termo correto para essa figura que representa o pulso ou tempo é Unidade de Tempo (U.T.)."
+      },
+      {
+        "texto": "Unidade de Ritmo (U.R.).",
+        "correta": false,
+        "feedback": "O termo técnico para a figura que representa cada tempo é Unidade de Tempo (U.T.)."
+      },
+      {
+        "texto": "Unidade de Duração (U.D.).",
+        "correta": false,
+        "feedback": "O termo 'Unidade de Duração' não é o utilizado, mas sim 'Unidade de Tempo' (U.T.)."
+      },
+      {
+        "texto": "Unidade de Tempo (U.T.).",
+        "correta": true,
+        "feedback": "A figura musical representada pelo número inferior é a Unidade de Tempo (U.T.), que equivale a um tempo ou pulso dentro do compasso."
+      }
+    ]
+  },
+  {
+    "id": "f02_q057",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Se o número inferior de uma Fórmula de Compasso fosse 1, qual figura musical representaria cada tempo ou pulso (Unidade de Tempo - U.T.)?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.1 Figuras musicais",
+      "pagina": 17
+    },
+    "opcoes": [
+      {
+        "texto": "Semínima (𝅘𝅥).",
+        "correta": false,
+        "feedback": "A Semínima (𝅘𝅥) é representada pelo número 4 (Número de Equivalência)."
+      },
+      {
+        "texto": "Mínima (𝅗𝅥).",
+        "correta": false,
+        "feedback": "A Mínima (𝅗𝅥) é representada pelo número 2 (Número de Equivalência)."
+      },
+      {
+        "texto": "Semibreve (𝅝).",
+        "correta": true,
+        "feedback": "O número 1 na Fórmula de Compasso corresponde à Semibreve (𝅝), pois ela tem Número de Equivalência 1, sendo a figura de maior duração."
+      },
+      {
+        "texto": "Colcheia (𝅘𝅥𝅮).",
+        "correta": false,
+        "feedback": "A Colcheia (𝅘𝅥𝅮) é representada pelo número 8 (Número de Equivalência)."
+      }
+    ]
+  },
+  {
+    "id": "f02_q058",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "O que a divisão do trecho musical em Compassos alcança para o músico?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.2 Compasso",
+      "pagina": 21
+    },
+    "opcoes": [
+      {
+        "texto": "O aumento da precisão na identificação da altura das notas agudas.",
+        "correta": false,
+        "feedback": "A altura das notas (agudas ou graves) é determinada pela Clave e pelo Pentagrama."
+      },
+      {
+        "texto": "A organização e o agrupamento adequado das figuras de som e de silêncio.",
+        "correta": true,
+        "feedback": "Os compassos são pequenas seções que auxiliam na organização das figuras de som e de silêncio, de modo a agrupá-las adequadamente para que o músico entoe a música de maneira correta."
+      },
+      {
+        "texto": "O estabelecimento do andamento (velocidade) da música.",
+        "correta": false,
+        "feedback": "O andamento é estabelecido pela marcação de velocidade (por exemplo, M.M.=100), não pela divisão em compassos."
+      },
+      {
+        "texto": "A definição do Número de Equivalência para todas as figuras.",
+        "correta": false,
+        "feedback": "O Número de Equivalência é fixo para cada figura em relação à Semibreve (𝅝) e não depende do compasso."
+      }
+    ]
+  },
+  {
+    "id": "f02_q059",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "A Pulsação, definida como batida constante que marca o início e o fim do tempo, cumpre qual função essencial dentro do contexto do Ritmo?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.5 Ritmo e pulsação",
+      "pagina": 22
+    },
+    "opcoes": [
+      {
+        "texto": "Promove o silêncio entre as notas curtas.",
+        "correta": false,
+        "feedback": "A pulsação, ao contrário, interrompe o silêncio para marcar o tempo."
+      },
+      {
+        "texto": "Interrompe o silêncio, criando pequenos espaços de tempo entre as batidas.",
+        "correta": true,
+        "feedback": "Ao bater a mão ou um objeto, interrompemos o silêncio. A constância desses pulsos forma a Pulsação, e o intervalo entre as batidas cria pequenos espaços de tempo."
+      },
+      {
+        "texto": "Determina a Altura correta dos sons no compasso.",
+        "correta": false,
+        "feedback": "A pulsação lida com a distribuição dos sons no tempo, não com a altura."
+      },
+      {
+        "texto": "Define a Harmonia da música, soando simultaneamente com o ritmo.",
+        "correta": false,
+        "feedback": "Harmonia é a produção de sons diferentes simultâneos."
+      }
+    ]
+  },
+  {
+    "id": "f02_q060",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Ao realizar a leitura rítmica, qual é a instrução específica em relação à respiração e à emissão do som da nota (sílaba 'TAAAA...')?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.6 Forma de realização dos exercícios rítmicos",
+      "pagina": 24
+    },
+    "opcoes": [
+      {
+        "texto": "Respirar na metade da duração da nota longa para melhor sustentação.",
+        "correta": false,
+        "feedback": "Não se deve respirar durante a execução da nota, pois isso cortaria o som, que deve ser constante durante toda a sua extensão."
+      },
+      {
+        "texto": "Respirar no início do compasso, antes da primeira Semínima (𝅘𝅥).",
+        "correta": false,
+        "feedback": "A instrução não se refere especificamente ao início do compasso, mas sim a evitar a respiração durante a nota para não cortá-la."
+      },
+      {
+        "texto": "Não interromper o som da nota no meio de sua duração, mantendo-o constante, e respirar somente se necessário entre as notas.",
+        "correta": true,
+        "feedback": "O som deve ser mantido constante durante toda a sua extensão, e o candidato deve respirar quando necessário, mas nunca durante a execução da nota, para não cortá-la."
+      },
+      {
+        "texto": "Pronunciar 'TÁ' para cada pulso da mão para manter a constância da voz.",
+        "correta": false,
+        "feedback": "Deve-se falar 'TAAAA...' mantendo a voz constante, sem articular cada pulso (evitando 'TÁ-Á-Á-Á...')."
+      }
+    ]
+  },
+  {
+    "id": "f02_q061",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "De acordo com a proporção das figuras, quantas Pausas de Colcheia (𝄾) cabem em uma Pausa de Semínima (𝄽)?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.1 Figuras musicais",
+      "pagina": 17
+    },
+    "opcoes": [
+      {
+        "texto": "1 Pausa de Colcheia (𝄾).",
+        "correta": false,
+        "feedback": "A Semínima (𝅘𝅥) vale o dobro da Colcheia (𝅘𝅥𝅮). Portanto, cabem 2 Pausas de Colcheia (𝄾) em 1 Pausa de Semínima (𝄽)."
+      },
+      {
+        "texto": "2 Pausas de Colcheia (𝄾).",
+        "correta": true,
+        "feedback": "A Pausa de Semínima (𝄽) tem Número de Equivalência 4, e a Pausa de Colcheia (𝄾) tem Número de Equivalência 8. Pela proporção, 2 Pausas de Colcheia cabem em 1 Pausa de Semínima."
+      },
+      {
+        "texto": "4 Pausas de Colcheia (𝄾).",
+        "correta": false,
+        "feedback": "Cabem 4 Pausas de Colcheia (𝄾) em uma Pausa de Mínima (𝄼)."
+      },
+      {
+        "texto": "8 Pausas de Colcheia (𝄾).",
+        "correta": false,
+        "feedback": "Cabem 8 Pausas de Colcheia (𝄾) em uma Pausa de Semibreve (𝄻)."
+      }
+    ]
+  },
+  {
+    "id": "f02_q062",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Na tabela de Figuras Musicais, qual é o símbolo exato para a Pausa de Semínima?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.1 Figuras musicais",
+      "pagina": 17
+    },
+    "opcoes": [
+      {
+        "texto": "𝄻.",
+        "correta": false,
+        "feedback": "O símbolo 𝄻 representa a Pausa de Semibreve."
+      },
+      {
+        "texto": "𝄼.",
+        "correta": false,
+        "feedback": "O símbolo 𝄼 representa a Pausa de Mínima."
+      },
+      {
+        "texto": "𝄾.",
+        "correta": false,
+        "feedback": "O símbolo 𝄾 representa a Pausa de Colcheia."
+      },
+      {
+        "texto": "𝄽.",
+        "correta": true,
+        "feedback": "O símbolo 𝄽 representa a Pausa de Semínima, a figura de silêncio com Número de Equivalência 4."
+      }
+    ]
+  },
+  {
+    "id": "f02_q063",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual é o posicionamento CORRETO da bandeirola (ou colchete) em relação à haste da figura de som?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.1 Figuras musicais",
+      "pagina": 19
+    },
+    "opcoes": [
+      {
+        "texto": "Sempre à esquerda da haste.",
+        "correta": false,
+        "feedback": "A bandeirola (ou colchete) deve estar sempre colocada à direita da haste."
+      },
+      {
+        "texto": "Sempre à direita da haste.",
+        "correta": true,
+        "feedback": "A bandeirola (ou colchete) deve estar sempre colocada à direita da haste, independentemente de ela estar para cima ou para baixo."
+      },
+      {
+        "texto": "Para cima na haste quando a nota for aguda.",
+        "correta": false,
+        "feedback": "O posicionamento (para cima/para baixo) refere-se à haste, mas a bandeirola (ou colchete) fica sempre à direita."
+      },
+      {
+        "texto": "Alternando entre esquerda e direita, dependendo da direção da haste.",
+        "correta": false,
+        "feedback": "A bandeirola (ou colchete) é sempre colocada à direita da haste."
+      }
+    ]
+  },
+  {
+    "id": "f02_q064",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Na realização de exercícios rítmicos marcando a pulsação com a mão ou objeto, onde o movimento deve iniciar e onde deve terminar para marcar o pulso completo?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.6 Forma de realização dos exercícios rítmicos",
+      "pagina": 23
+    },
+    "opcoes": [
+      {
+        "texto": "Deve começar no peito e terminar em cima (na linha dos olhos).",
+        "correta": false,
+        "feedback": "A preparação é no peito. O movimento deve ser de baixo para cima, iniciando e terminando no mesmo ponto embaixo."
+      },
+      {
+        "texto": "Deve começar embaixo (batida) e terminar em cima (subida).",
+        "correta": false,
+        "feedback": "O movimento é completo, subindo e descendo. O pulso finaliza onde começa."
+      },
+      {
+        "texto": "Deve começar embaixo (batida) e terminar no mesmo ponto embaixo, em um movimento reto, preciso e constante.",
+        "correta": true,
+        "feedback": "O movimento é de baixo para cima, iniciando e terminando no mesmo ponto embaixo, em um movimento reto, preciso e constante."
+      },
+      {
+        "texto": "Deve começar no meio do movimento (subida) e terminar embaixo (batida).",
+        "correta": false,
+        "feedback": "O pulso deve começar na parte de baixo da batida."
+      }
+    ]
+  },
+  {
+    "id": "f02_q065",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Para marcar o tempo nos exercícios rítmicos com a mão ou objeto, o instrutor adverte o candidato a NÃO fazer qual tipo de movimento?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.6 Forma de realização dos exercícios rítmicos",
+      "pagina": 23
+    },
+    "opcoes": [
+      {
+        "texto": "Movimentar o braço e o antebraço em conjunto.",
+        "correta": false,
+        "feedback": "O instrutor orienta a manter o antebraço e a mão alinhados, movimentando o braço (e não o pulso)."
+      },
+      {
+        "texto": "Movimentar somente o pulso.",
+        "correta": true,
+        "feedback": "O candidato deve tomar o cuidado de movimentar o braço (e não o pulso) durante a batida, mantendo-os alinhados."
+      },
+      {
+        "texto": "Movimentar em linha reta, com precisão.",
+        "correta": false,
+        "feedback": "O movimento deve ser feito em linha reta, preciso e constante."
+      },
+      {
+        "texto": "Começar a pulsação na parte de baixo da batida.",
+        "correta": false,
+        "feedback": "A pulsação deve começar sempre na parte de baixo da batida."
+      }
+    ]
+  },
+  {
+    "id": "f02_q066",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "No contexto da Fórmula de Compasso 4/4, qual conceito o número inferior (4) estabelece?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.4 Fórmula de compasso em 4",
+      "pagina": 21
+    },
+    "opcoes": [
+      {
+        "texto": "A quantidade de pulsações por Semínima (𝅘𝅥).",
+        "correta": false,
+        "feedback": "O número superior define a quantidade de tempos no compasso. O número inferior define qual figura equivale a 1 tempo (U.T.)."
+      },
+      {
+        "texto": "A figura musical que equivale à Semibreve (𝅝).",
+        "correta": false,
+        "feedback": "O número 4 indica a Semínima (𝅘𝅥) como unidade de tempo, não a Semibreve (𝅝)."
+      },
+      {
+        "texto": "O Número de Equivalência da Semínima (𝅘𝅥) para determinar que ela é a Unidade de Tempo (U.T.).",
+        "correta": true,
+        "feedback": "O número inferior (4) utiliza o Número de Equivalência da figura para determinar qual delas será a Unidade de Tempo (U.T.) ou pulso completo (Semínima 𝅘𝅥)."
+      },
+      {
+        "texto": "A duração exata do compasso em segundos.",
+        "correta": false,
+        "feedback": "A Fórmula de Compasso trata da métrica (organização temporal), não da velocidade (andamento)."
+      }
+    ]
+  },
+  {
+    "id": "f02_q067",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "De acordo com a proporção das figuras de som, quantas Semínimas (𝅘𝅥) são necessárias para equivaler a uma Mínima (𝅗𝅥)?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.1 Figuras musicais",
+      "pagina": 17
+    },
+    "opcoes": [
+      {
+        "texto": "Quatro Semínimas (𝅘𝅥).",
+        "correta": false,
+        "feedback": "Quatro Semínimas (𝅘𝅥) equivalem a uma Semibreve (𝅝). Uma Mínima (𝅗𝅥) equivale a apenas metade disso."
+      },
+      {
+        "texto": "Duas Semínimas (𝅘𝅥).",
+        "correta": true,
+        "feedback": "A Mínima (𝅗𝅥) tem Número de Equivalência 2 e a Semínima (𝅘𝅥) tem Número de Equivalência 4. A proporção é que a Mínima vale o dobro da Semínima."
+      },
+      {
+        "texto": "Oito Semínimas (𝅘𝅥).",
+        "correta": false,
+        "feedback": "Oito Colcheias (𝅘𝅥𝅮) equivalem a uma Semibreve (𝅝), não Semínimas (𝅘𝅥)."
+      },
+      {
+        "texto": "Uma Semínima (𝅘𝅥).",
+        "correta": false,
+        "feedback": "A Mínima (𝅗𝅥) vale o dobro de uma Semínima (𝅘𝅥)."
+      }
+    ]
+  },
+  {
+    "id": "f02_q068",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual característica visual distingue a Barra Final de todas as outras barras de compasso abordadas na Fase 2?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.3 Barras de compasso simples, dupla e final",
+      "pagina": 21
+    },
+    "opcoes": [
+      {
+        "texto": "É sempre tracejada.",
+        "correta": false,
+        "feedback": "As barras de compasso são linhas verticais, não tracejadas."
+      },
+      {
+        "texto": "É uma linha vertical individual.",
+        "correta": false,
+        "feedback": "A Barra Simples é uma linha vertical individual. A Barra Final é composta por duas linhas paralelas."
+      },
+      {
+        "texto": "A segunda linha paralela é mais grossa que a primeira.",
+        "correta": true,
+        "feedback": "A Barra Final é a única que possui duas linhas paralelas, sendo a segunda mais grossa que a primeira, indicando o final do hino ou peça musical."
+      },
+      {
+        "texto": "Possui dois pontos alinhados ao centro da segunda linha.",
+        "correta": false,
+        "feedback": "A Barra de Repetição (ritornello) contém pontos, não a Barra Final."
+      }
+    ]
+  },
+  {
+    "id": "f02_q069",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual é a instrução específica para o movimento de pulsação no pé, usado como auxílio ao aprendizado?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.6 Forma de realização dos exercícios rítmicos",
+      "pagina": 23
+    },
+    "opcoes": [
+      {
+        "texto": "Realizar movimentos fortes com a planta do pé ou o calcanhar para marcar claramente o pulso.",
+        "correta": false,
+        "feedback": "É proibido fazer movimentos muito fortes ou ruídos que possam ser percebidos. O movimento deve ser leve, apenas com os dedos dos pés."
+      },
+      {
+        "texto": "Realizar movimentos leves, apenas com os dedos dos pés, e nunca com a planta do pé ou calcanhar.",
+        "correta": true,
+        "feedback": "É recomendado que os movimentos no pé sejam leves, apenas com os dedos dos pés, e nunca a planta do pé ou o calcanhar, para evitar ruídos perceptíveis."
+      },
+      {
+        "texto": "Executar movimentos expansivos para compensar a falta de metrônomo (Fase 3).",
+        "correta": false,
+        "feedback": "Os movimentos não devem ser demasiadamente expansivos."
+      },
+      {
+        "texto": "É opcional, mas deve ser feito de forma irregular para treinar a percepção rítmica.",
+        "correta": false,
+        "feedback": "O pulso deve ser sempre regular e constante (Tópico 2.5)."
+      }
+    ]
+  },
+  {
+    "id": "f02_q070",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "A relação de equivalência entre as figuras musicais (Semibreve 𝅝, Mínima 𝅗𝅥, Semínima 𝅘𝅥, etc.) demonstra qual conceito fundamental?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.1 Figuras musicais",
+      "pagina": 17
+    },
+    "opcoes": [
+      {
+        "texto": "O número de tempos que cabem em um compasso.",
+        "correta": false,
+        "feedback": "Essa é a função do número superior da Fórmula de Compasso, que utiliza o Número de Equivalência da figura inferior."
+      },
+      {
+        "texto": "A proporção entre as figuras, mostrando que cada figura tem a duração da metade da figura anterior.",
+        "correta": true,
+        "feedback": "O Número de Equivalência demonstra a proporção entre as figuras, e cada figura tem duração da metade da figura anterior (por exemplo, a Mínima 𝅗𝅥 é metade da Semibreve 𝅝)."
+      },
+      {
+        "texto": "A fração de cada nota em relação à Semínima (𝅘𝅥).",
+        "correta": false,
+        "feedback": "As frações demonstram o valor de cada figura em relação à Semibreve (𝅝), não à Semínima (𝅘𝅥)."
+      },
+      {
+        "texto": "O valor exato (em segundos) de cada figura na música.",
+        "correta": false,
+        "feedback": "A duração exata (em segundos) é determinada pelo andamento."
+      }
+    ]
+  },
+  {
+    "id": "f02_q071",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual é o nome da parte da figura de som que é um traço vertical, podendo ser colocado para cima e à direita da cabeça da nota (𝅘𝅥) ou para baixo e à esquerda?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.1 Figuras musicais",
+      "pagina": 19
+    },
+    "opcoes": [
+      {
+        "texto": "Bandeirola (ou Colchete).",
+        "correta": false,
+        "feedback": "A bandeirola (ou colchete) é a parte adicionada à haste a partir da Colcheia (𝅘𝅥𝅮)."
+      },
+      {
+        "texto": "Cabeça.",
+        "correta": false,
+        "feedback": "A cabeça é a parte elíptica da figura."
+      },
+      {
+        "texto": "Haste.",
+        "correta": true,
+        "feedback": "A haste é o traço vertical colocado para cima e à direita da cabeça da nota (𝅘𝅥), ou para baixo e à esquerda."
+      },
+      {
+        "texto": "Clave.",
+        "correta": false,
+        "feedback": "A Clave é um sinal que determina o nome da nota em sua linha de referência."
+      }
+    ]
+  },
+  {
+    "id": "f02_q072",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Na prática da leitura rítmica, o instrutor recomenda se igualar ao grupo em velocidade e intensidade. Qual é o conceito que resume essa uniformidade de execução?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.6 Forma de realização dos exercícios rítmicos",
+      "pagina": 23
+    },
+    "opcoes": [
+      {
+        "texto": "Um só Timbre, uma só Dinâmica.",
+        "correta": false,
+        "feedback": "O termo correto para a uniformidade de pulsação e voz é 'um só pulso, uma só voz!'"
+      },
+      {
+        "texto": "Um só Pulso, uma só Voz!",
+        "correta": true,
+        "feedback": "O instrutor orienta a procurar se igualar ao grupo: todos na mesma velocidade e na mesma intensidade - um só pulso, uma só voz!"
+      },
+      {
+        "texto": "Um só Movimento, um só Andamento.",
+        "correta": false,
+        "feedback": "Esta expressão não é a citada no MSA para resumir a união do grupo."
+      },
+      {
+        "texto": "Uma só Figura, uma só Proporção.",
+        "correta": false,
+        "feedback": "Embora a proporção deva ser mantida, esta frase não reflete a instrução sobre a união do grupo."
+      }
+    ]
+  },
+  {
+    "id": "f02_q073",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual é a figura de silêncio (Pausa) que tem um Número de Equivalência igual a 2?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.1 Figuras musicais",
+      "pagina": 17
+    },
+    "opcoes": [
+      {
+        "texto": "Pausa de Semínima (𝄽).",
+        "correta": false,
+        "feedback": "A Pausa de Semínima (𝄽) tem Número de Equivalência 4."
+      },
+      {
+        "texto": "Pausa de Colcheia (𝄾).",
+        "correta": false,
+        "feedback": "A Pausa de Colcheia (𝄾) tem Número de Equivalência 8."
+      },
+      {
+        "texto": "Pausa de Semibreve (𝄻).",
+        "correta": false,
+        "feedback": "A Pausa de Semibreve (𝄻) tem Número de Equivalência 1, sendo a figura de silêncio de maior duração."
+      },
+      {
+        "texto": "Pausa de Mínima (𝄼).",
+        "correta": true,
+        "feedback": "A Pausa de Mínima (𝄼) tem Número de Equivalência 2, indicando que cabem duas Pausas de Mínima em uma Pausa de Semibreve (𝄻)."
+      }
+    ]
+  },
+  {
+    "id": "f02_q074",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Na Fórmula de Compasso em 4 (4/4), uma Mínima (𝅗𝅥) tem a duração de quantos tempos ou pulsos?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.4 Fórmula de compasso em 4",
+      "pagina": 21
+    },
+    "opcoes": [
+      {
+        "texto": "1 tempo (pulso).",
+        "correta": false,
+        "feedback": "A Semínima (𝅘𝅥) equivale a 1 tempo em 4/4."
+      },
+      {
+        "texto": "2 tempos (pulsos).",
+        "correta": true,
+        "feedback": "Na fórmula 4/4, a Semínima (𝅘𝅥) vale 1 tempo. Como a Mínima (𝅗𝅥) vale o dobro da Semínima, ela tem a duração de 2 tempos."
+      },
+      {
+        "texto": "4 tempos (pulsos).",
+        "correta": false,
+        "feedback": "A Semibreve (𝅝) equivale a 4 tempos em 4/4."
+      },
+      {
+        "texto": "1/2 tempo (pulso).",
+        "correta": false,
+        "feedback": "A Colcheia (𝅘𝅥𝅮) equivale a 1/2 tempo em 4/4."
+      }
+    ]
+  },
+  {
+    "id": "f02_q075",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual o significado do Número de Equivalência 8, atribuído à Colcheia (𝅘𝅥𝅮) e à Pausa de Colcheia (𝄾)?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.1 Figuras musicais",
+      "pagina": 17
+    },
+    "opcoes": [
+      {
+        "texto": "A figura Colcheia (𝅘𝅥𝅮) tem duração da metade da Semínima (𝅘𝅥).",
+        "correta": false,
+        "feedback": "Embora a Colcheia (𝅘𝅥𝅮) seja metade da Semínima (𝅘𝅥), o Número de Equivalência é uma comparação com a Semibreve (𝅝)."
+      },
+      {
+        "texto": "Cabem oito Semibreves (𝅝) na Colcheia (𝅘𝅥𝅮).",
+        "correta": false,
+        "feedback": "O Número de Equivalência 8 significa que cabem 8 Colcheias (𝅘𝅥𝅮) em 1 Semibreve (𝅝)."
+      },
+      {
+        "texto": "A Colcheia (𝅘𝅥𝅮) representa o tempo em compassos de 8/8.",
+        "correta": false,
+        "feedback": "O número 8 no denominador define a Colcheia (𝅘𝅥𝅮) como Unidade de Tempo, mas o significado do Número de Equivalência 8 é universal em relação à Semibreve (𝅝)."
+      },
+      {
+        "texto": "Cabem oito unidades dessa figura (Colcheia 𝅘𝅥𝅮 ou Pausa de Colcheia 𝄾) dentro de uma Semibreve (𝅝) ou Pausa de Semibreve (𝄻).",
+        "correta": true,
+        "feedback": "O Número de Equivalência define uma comparação com a Semibreve (𝅝), demonstrando quantas unidades daquela figura cabem nela. Logo, o número 8 indica 8 Colcheias (𝅘𝅥𝅮)."
+      }
+    ]
+  },
+  {
+    "id": "f02_q076",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "A Barra Dupla (duas linhas verticais paralelas) pode, em alguns casos, atuar como Barra Simples. Em qual condição ela assume essa função dual de final de seção E final de compasso?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.3 Barras de compasso simples, dupla e final",
+      "pagina": 21
+    },
+    "opcoes": [
+      {
+        "texto": "Apenas em hinos com a Fórmula de Compasso 2/4.",
+        "correta": false,
+        "feedback": "A função da barra dupla não depende da fórmula de compasso, mas de sua posição e contexto no trecho musical."
+      },
+      {
+        "texto": "Quando é colocada ao final do compasso.",
+        "correta": true,
+        "feedback": "A Barra Dupla tem a função de indicar o final de uma seção. Quando está colocada ao final do compasso (ex: hino 3), ela também tem a função de indicar o final do compasso e o início do compasso seguinte."
+      },
+      {
+        "texto": "Quando as duas linhas têm a mesma espessura (Barra Final).",
+        "correta": false,
+        "feedback": "Na Barra Final, a segunda linha é mais grossa que a primeira. A Barra Dupla é composta por duas linhas paralelas de mesma espessura."
+      },
+      {
+        "texto": "Quando substitui a Semibreve (𝅝) em um compasso.",
+        "correta": false,
+        "feedback": "A barra de compasso é um sinal gráfico de divisão métrica, não uma figura musical."
+      }
+    ]
+  },
+  {
+    "id": "f02_q077",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Na Fórmula de Compasso em 4 (4/4), qual figura musical tem a duração de meio tempo (ou pulso)?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.4 Fórmula de compasso em 4",
+      "pagina": 21
+    },
+    "opcoes": [
+      {
+        "texto": "Semínima (𝅘𝅥).",
+        "correta": false,
+        "feedback": "A Semínima (𝅘𝅥) tem a duração de 1 tempo (U.T.) em 4/4."
+      },
+      {
+        "texto": "Mínima (𝅗𝅥).",
+        "correta": false,
+        "feedback": "A Mínima (𝅗𝅥) tem a duração de 2 tempos em 4/4."
+      },
+      {
+        "texto": "Colcheia (𝅘𝅥𝅮).",
+        "correta": true,
+        "feedback": "Na fórmula 4/4, a Semínima (𝅘𝅥) vale 1 tempo. Como a Colcheia (𝅘𝅥𝅮) vale metade da Semínima, ela tem a duração de 1/2 tempo."
+      },
+      {
+        "texto": "Semicolcheia (𝅘𝅥𝅯).",
+        "correta": false,
+        "feedback": "A Semicolcheia (𝅘𝅥𝅯) tem a duração de 1/4 de tempo em 4/4."
+      }
+    ]
+  },
+  {
+    "id": "f02_q078",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "No contexto do Ritmo e Pulsação (Tópico 2.5), a Pulsação é uma batida constante que marca o início e o fim do tempo. Como a quantidade de tempos ou pulsos em um compasso é representada na escrita musical?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.5 Ritmo e pulsação",
+      "pagina": 22
+    },
+    "opcoes": [
+      {
+        "texto": "Pelo número superior da Fórmula de Compasso.",
+        "correta": true,
+        "feedback": "A quantidade de tempos ou pulsos (batidas) é representada pelo número superior da Fórmula de Compasso."
+      },
+      {
+        "texto": "Pela figura musical que tem o menor Número de Equivalência (Semibreve 𝅝).",
+        "correta": false,
+        "feedback": "A Semibreve (𝅝) é a figura de maior duração (Número de Equivalência 1)."
+      },
+      {
+        "texto": "Pelo tamanho do Compasso (largura do compasso no pentagrama).",
+        "correta": false,
+        "feedback": "O tamanho do compasso no pentagrama é visual e não define a quantidade de tempos."
+      },
+      {
+        "texto": "Pelo número inferior da Fórmula de Compasso.",
+        "correta": false,
+        "feedback": "O número inferior representa a figura musical que equivale a um tempo (U.T.)."
+      }
+    ]
+  },
+  {
+    "id": "f02_q079",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual figura musical preenche exatamente metade da duração de uma Mínima (𝅗𝅥)?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.1 Figuras musicais",
+      "pagina": 17
+    },
+    "opcoes": [
+      {
+        "texto": "Semibreve (𝅝).",
+        "correta": false,
+        "feedback": "A Semibreve (𝅝) vale o dobro da Mínima (𝅗𝅥)."
+      },
+      {
+        "texto": "Semínima (𝅘𝅥).",
+        "correta": true,
+        "feedback": "A Mínima (𝅗𝅥) tem Número de Equivalência 2, e a Semínima (𝅘𝅥) tem Número de Equivalência 4. Portanto, a Semínima (𝅘𝅥) preenche metade da Mínima (𝅗𝅥)."
+      },
+      {
+        "texto": "Colcheia (𝅘𝅥𝅮).",
+        "correta": false,
+        "feedback": "A Colcheia (𝅘𝅥𝅮) preenche um quarto da Mínima (𝅗𝅥)."
+      },
+      {
+        "texto": "Semicolcheia (𝅘𝅥𝅯).",
+        "correta": false,
+        "feedback": "A Semicolcheia (𝅘𝅥𝅯) preenche um oitavo da Mínima (𝅗𝅥)."
+      }
+    ]
+  },
+  {
+    "id": "f02_q080",
+    "ativo": true,
+    "dificuldade": "dificil",
+    "pontos": 15,
+    "tipo": "texto",
+    "pergunta": "Qual é o principal objetivo dos exercícios rítmicos, que envolvem marcar o tempo batendo a mão, palmas ou lápis?",
+    "imagemUrl": null,
+    "audioUrl": null,
+    "referencia": {
+      "livro": "MSA",
+      "periodo": 1,
+      "fase": 2,
+      "item": "2.6 Forma de realização dos exercícios rítmicos",
+      "pagina": 23
+    },
+    "opcoes": [
+      {
+        "texto": "Memorizar o nome das notas agudas.",
+        "correta": false,
+        "feedback": "Os exercícios rítmicos têm como objetivo desenvolver a pulsação e a distribuição dos sons no tempo (Ritmo)."
+      },
+      {
+        "texto": "Aprimorar a distinção entre sons graves e agudos.",
+        "correta": false,
+        "feedback": "A distinção de altura (grave/agudo) é uma propriedade do som estudada na Fase 1, não o objetivo principal dos exercícios rítmicos."
+      },
+      {
+        "texto": "Desenvolver a Pulsação (pulso regular, com batidas constantes e a mesma duração).",
+        "correta": true,
+        "feedback": "O objetivo dos exercícios rítmicos é desenvolver a pulsação, que é um pulso regular, com batidas constantes e com a mesma duração."
+      },
+      {
+        "texto": "Treinar a articulação das notas curtas (Colcheia 𝅘𝅥𝅮 e Semicolcheia 𝅘𝅥𝅯).",
+        "correta": false,
+        "feedback": "Embora envolva figuras curtas, o foco principal é na regularidade do pulso em geral."
       }
     ]
   }
-]);
+]
+
+);
